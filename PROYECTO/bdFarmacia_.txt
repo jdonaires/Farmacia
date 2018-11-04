@@ -1,0 +1,140 @@
+﻿DROP DATABASE IF EXISTS farmacia;
+CREATE DATABASE IF NOT EXISTS farmacia;
+USE farmacia;
+________________________________________________________________
+-- CREACIÓN DE TABLAS
+CREATE TABLE Empresa(
+	RUC 		VARCHAR(20) 	PRIMARY KEY,
+	RazónSocial 	VARCHAR(40) 	NOT NULL,
+	Telefono 	VARCHAR(10),
+	Dirección 	VARCHAR(20),
+	TipoEmpresa	ENUM('Laboratorio','Transporte')		
+) ;
+CREATE TABLE Laboratorio(
+	RUC		VARCHAR(20) 	,
+	IdLaboratorio	INT  PRIMARY KEY AUTO_INCREMENT,
+	RegSanitario	VARCHAR(20) ,
+	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
+);
+CREATE TABLE Transporte(
+	RUC 		VARCHAR(20) 	,
+	IdTransporte 	INT 		PRIMARY KEY AUTO_INCREMENT,
+	Placa 		VARCHAR(20)	NOT NULL,
+	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
+);
+CREATE TABLE Persona(
+	DNI		CHAR(8) NOT NULL PRIMARY KEY, 
+	Nombre 		VARCHAR(25) 	NOT NULL,
+	Apellido 	VARCHAR(20)	NOT NULL,
+	FecNac 		DATE 		NOT NULL,
+	Genero 		ENUM ('M','F')  NOT NULL,
+	Direccion	VARCHAR(20)	NOT NULL,
+	TipoPersona	ENUM ('Empleado','Transportista')
+);
+CREATE TABLE Empleado(
+	IdEmpleado 	INT AUTO_INCREMENT PRIMARY KEY,
+	Turno		VARCHAR(20)	NOT NULL,
+	Especialidad	VARCHAR(20)	NOT NULL,
+	Usuario		VARCHAR(20)	UNIQUE	NOT NULL,
+	Clave		VARCHAR(20)	NOT NULL,
+	DNI		VARCHAR(20)		,
+	FOREIGN KEY (DNI)REFERENCES Persona(DNI)	
+);
+CREATE TABLE Transportista(
+	DNI 		VARCHAR(8)	,
+	IdTransporte	INT,
+	NroLicencia	VARCHAR(15)	NOT NULL,
+	FOREIGN KEY (DNI)REFERENCES Persona(DNI),
+	FOREIGN KEY (IdTransporte) REFERENCES Transporte(IdTransporte)
+);
+CREATE TABLE GuiaRemision(
+	NroGuia 	VARCHAR(20) 	PRIMARY KEY,
+	PuntoPartida 	VARCHAR(20) 	NOT NULL,
+	PuntoLLegada	VARCHAR(20) 	NOT NULL,
+	FecEmision 	DATE		NOT NULL,
+	FecInicTraslado DATE 		NOT NULL,
+	MotTraslado	VARCHAR(20)	NOT NULL,
+	IdTransporte	INT ,
+	FOREIGN KEY (IdTransporte) REFERENCES Transporte(IdTransporte)
+	
+);
+CREATE TABLE UnidadMedida(
+	Id 		INT		PRIMARY KEY AUTO_INCREMENT,
+	Descripcion 	VARCHAR(10)	NOT NULL
+);
+CREATE TABLE TipoPresentacion(
+	Id		INT 		PRIMARY KEY AUTO_INCREMENT,
+	Nombre		VARCHAR(20)	NOT NULL,
+	Descripcion	VARCHAR(30)	NOT NULL
+);
+CREATE TABLE Medicamento(
+	CodMed		VARCHAR(20)	PRIMARY KEY,
+	Nombre		VARCHAR(20)	NOT NULL,
+	NomLaboratorio	VARCHAR(20) 	NOT NULL,
+	IdLaboratorio	INT,
+	FOREIGN KEY (IdLaboratorio)REFERENCES Laboratorio(IdLaboratorio)
+);
+CREATE TABLE dtMED(
+	CodMed		VARCHAR(20) 	,
+	CodPre		INT		,
+	CodDtMed	INT		PRIMARY KEY	AUTO_INCREMENT,
+	Psicotrópico	ENUM ('Si','No') NOT NULL,
+	PesoUnitario	DECIMAL(6,2)	NOT NULL,
+	FecVenc		DATE 		NOT NULL,
+	Descripcion	VARCHAR(20)	NOT NULL,
+	FOREIGN KEY (CodMed) REFERENCES Medicamento(CodMed),
+	FOREIGN KEY (CodPre) REFERENCES TipoPresentacion(Id)
+);
+
+CREATE TABLE Posologia(
+	CodDtMed	INT		,
+	Dosis		VARCHAR(20)	NOT NULL,
+	Indicaciones	VARCHAR(20)	NOT NULL,
+	FOREIGN KEY (CodDtMed) REFERENCES dtMED(CodDtMed)
+);
+CREATE TABLE PrecioActual(
+	CodDtMed	INT		REFERENCES dtMED(CodDtMed),
+	Precio		DECIMAL(6,2)	NOT NULL,
+	Estado		ENUM ('True','False') NOT NULL,
+	FecAct		DATE	NOT NULL,
+	FOREIGN KEY (CodDtMed) REFERENCES dtMED(CodDtMed)
+);
+CREATE TABLE	Componentes(
+	CodDtMed	INT		,
+	Nombre		VARCHAR(20) 	NOT NULL,
+	Tipo		VARCHAR(20)	NOT NULL,
+	Cantidad	INT		NOT NULL,
+	CodUniMedida	INT		,
+	FOREIGN KEY (CodUniMedida) REFERENCES UnidadMedida(Id),
+	FOREIGN KEY (CodDtMed) REFERENCES dtMED(CodDtMed)
+);
+CREATE TABLE Almacen(
+	CodDtMed	INT		,
+	StockActual	VARCHAR(20)	NOT NULL,
+	Ubicacion	VARCHAR(20)	NOT NULL,
+	FOREIGN KEY (CodDtMed) REFERENCES dtMED(CodDtMed)
+);
+
+
+CREATE TABLE dtGuiaMED(
+	NroGuiaRemision  VARCHAR(20) NOT NULL	,
+	CodMed	VARCHAR(20),
+	IdDt 		INT	PRIMARY KEY	AUTO_INCREMENT,
+	Cantidad	VARCHAR(20)	NOT NULL,
+	PesoTotal	DECIMAL(6,2),
+	Lote		VARCHAR(20)	NOT NULL,
+	Descripcion	VARCHAR(20)	NOT NULL,
+	FOREIGN KEY (NroGuiaRemision) REFERENCES GuiaRemision(NroGuia),
+	FOREIGN KEY (CodMed) REFERENCES Medicamento(CodMed)
+);
+CREATE TABLE Factura(
+	IdDt		INT		,
+	CostoUnitario	DECIMAL(6,2),
+	CostoTotal	DECIMAL(6,2),
+	IGV		DECIMAL(6,2),
+	SubTotal	DECIMAL(6,2),
+	FOREIGN KEY (IdDt) REFERENCES dtGuiaMED(IdDt)
+);
+
+
+
