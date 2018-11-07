@@ -1,0 +1,11 @@
+﻿registrar empleado
+registrar medicamento
+registrar guiaremision
+registrar *
+_________
+Buscar empleado
+Buscar GuiaRemision
+Buscar medicamento(Precio, Posologia)
+Buscar medicamento por PA,Posologia
+Buscar por filtros (Botones)
+
