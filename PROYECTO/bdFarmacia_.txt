@@ -8,7 +8,7 @@ CREATE TABLE Empresa(
 	RazónSocial 	VARCHAR(40) 	NOT NULL,
 	Telefono 	VARCHAR(10),
 	Dirección 	VARCHAR(20),
-	TipoEmpresa	ENUM('Laboratorio','Transporte')		
+	TipoEmpresa	ENUM('Laboratorio','Transporte')
 ) ;
 CREATE TABLE Laboratorio(
 	RUC		VARCHAR(20) 	,
@@ -23,7 +23,7 @@ CREATE TABLE Transporte(
 	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
 );
 CREATE TABLE Persona(
-	DNI		CHAR(8) NOT NULL PRIMARY KEY, 
+	DNI		CHAR(8) NOT NULL PRIMARY KEY,
 	Nombre 		VARCHAR(25) 	NOT NULL,
 	Apellido 	VARCHAR(20)	NOT NULL,
 	FecNac 		DATE 		NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE Empleado(
 	Usuario		VARCHAR(20)	UNIQUE	NOT NULL,
 	Clave		VARCHAR(20)	NOT NULL,
 	DNI		VARCHAR(20)		,
-	FOREIGN KEY (DNI)REFERENCES Persona(DNI)	
+	FOREIGN KEY (DNI)REFERENCES Persona(DNI)
 );
 CREATE TABLE Transportista(
 	DNI 		VARCHAR(8)	,
@@ -56,7 +56,7 @@ CREATE TABLE GuiaRemision(
 	MotTraslado	VARCHAR(20)	NOT NULL,
 	IdTransporte	INT ,
 	FOREIGN KEY (IdTransporte) REFERENCES Transporte(IdTransporte)
-	
+
 );
 CREATE TABLE UnidadMedida(
 	Id 		INT		PRIMARY KEY AUTO_INCREMENT,
@@ -137,4 +137,58 @@ CREATE TABLE Factura(
 );
 
 
+________________________________________________________________
 
+--Creacion de procedimientos almacenados
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_empresa`(
+	IN p_ruc varchar(20) ,
+    IN p_razonsocial varchar(40) ,
+    IN p_telefono varchar(10) ,
+    IN p_direccion varchar(20) ,
+    IN p_tipoempresa varchar(13)
+)
+BEGIN
+	INSERT INTO Empresa (ruc,razonsocial,direccion,tipoempresa)
+    values (p_ruc,p_razonsocial,p_telefono,p_direccion,p_tipoempresa);
+END ;;
+DELIMITER ;
+
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_persona`(
+    IN p_dni		    CHAR(8),
+	IN p_nombre 		VARCHAR(25),
+	IN p_apellido 	VARCHAR(20),
+	IN p_fecnac 		DATE,
+	IN p_genero 		varchar(1),
+	IN p_direccion	VARCHAR(20),
+	IN p_tipo_persona	varchar(20)
+)
+BEGIN
+	INSERT INTO Persona(dni,nombre,apellido,fecnac,genero,direccion,tipoPersona)
+    VALUES (p_dni,p_nombre,p_apellido,p_fecnac,p_genero,p_direccion,p_tipo_persona);
+END ;;
+DELIMITER ;
+
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_tipopresentacion`(
+	in p_nombre varchar(20),
+    in p_descripcion varchar(30)
+)
+BEGIN
+	INSERT INTO TipoPresentacion(Nombre,Descripcion) VALUES(p_nombre,p_descripcion);
+END ;;
+DELIMITER ;
+
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_unidadmedida`(
+	IN p_descripcion varchar(10)
+)
+BEGIN
+	INSERT INTO UnidadMedida(descripcion) values(p_descripcion);
+END ;;
+DELIMITER ;
