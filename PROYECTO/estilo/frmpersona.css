@@ -1,0 +1,63 @@
+#form2{
+	background: white;
+	position: relative;
+	margin:0 auto;
+	padding:40px;
+	width:350px;
+	height: 350px;
+	align-items: center;
+	border-radius:0px;
+}
+#form2 table{
+	position: relative;
+	margin-top: 0%;
+	margin-left: 9%;
+	border:none;
+	size:30px;
+}
+#form2 td{
+	
+	padding-bottom: 0px;
+}
+
+
+input[type=date]{
+	background: transparent;
+	padding:5px;
+	position: relative;
+	overflow: hidden;
+	width: 101%;
+	border: 1px solid #F2F3F4;
+	margin:4px 0px;
+}
+select{
+	overflow: hidden;
+	background: #fff ;
+	padding:5px;
+	position: relative;
+	width: 108%;
+	border: 1px solid #F2F3F4;
+	transition: 0.3s border;
+}
+select:hover{
+	border:1px solid #4DBDDB;
+}
+
+input[type=date]{
+	border: solid 1px #F2F3F4;
+	transition: 0.3s border;
+	width:218px;
+	position: relative;
+}
+input[type=date]:hover{
+	border: solid 1px #4DBDDB;
+
+}
+option{
+	background: white;
+	margin:23px;
+	font-size: 15px;
+	color:#4DBDDB;
+}
+select:focus{ outline: none;}
+input[type=date]:focus{ outline: none;}
