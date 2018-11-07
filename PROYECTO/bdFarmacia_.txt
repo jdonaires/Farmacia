@@ -192,3 +192,31 @@ BEGIN
 	INSERT INTO UnidadMedida(descripcion) values(p_descripcion);
 END ;;
 DELIMITER ;
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_medicamento`(
+IN p_nombre		VARCHAR(20)	,
+IN p_nomLaboratorio	VARCHAR(20) ,
+IN p_idLaboratorio	INT,
+)
+BEGIN
+	INSERT INTO Medicamento(Nombre,NomLaboratorio,IdLaboratorio	) values(p_nombre,p_nomLaboratorio,p_idLaboratorio);
+END ;;
+DELIMITER ;
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_guiaremision`(
+
+IN p_puntoPartida 	VARCHAR(20) 	,
+IN p_puntoLLegada	VARCHAR(20) ,
+IN p_fecEmision 	DATE		,
+IN p_fecInicTraslado DATE 		,
+IN p_motTraslado	VARCHAR(20)	,
+IN p_idTransporte	INT
+)
+BEGIN
+	INSERT INTO Medicamento(PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte	)
+	 values(p_puntoPartida,p_puntoLLegada,p_fecEmision,p_fecInicTraslado,p_motTraslado,p_idTransporte);
+END ;;
+DELIMITER ;
