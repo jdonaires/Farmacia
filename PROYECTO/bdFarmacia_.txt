@@ -141,16 +141,17 @@ ________________________________________________________________
 
 --Creacion de procedimientos almacenados
 
+
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_empresa`(
-	IN p_ruc varchar(20) ,
-    IN p_razonsocial varchar(40) ,
-    IN p_telefono varchar(10) ,
-    IN p_direccion varchar(20) ,
-    IN p_tipoempresa varchar(13)
+	IN p_ruc char(11) ,
+		IN p_razonsocial varchar(40) ,
+		IN p_telefono varchar(10) ,
+		IN p_direccion varchar(40) ,
+		IN p_tipoempresa varchar(13)
 )
 BEGIN
-	INSERT INTO Empresa (ruc,razonsocial,direccion,tipoempresa)
+	INSERT INTO Empresa (ruc,razonsocial,telefono,direccion,tipoempresa)
     values (p_ruc,p_razonsocial,p_telefono,p_direccion,p_tipoempresa);
 END ;;
 DELIMITER ;
