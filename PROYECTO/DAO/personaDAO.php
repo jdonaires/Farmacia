@@ -13,15 +13,15 @@ class PersonaDAO
 	{
 		try
 		{
-		$statement = $this->pdo->prepare("insert into persona values(?,?,?,?,?,?,?)");
-    	$statement->bindParam(1,$persona->__GET('dni'));
-		$statement->bindParam(2,$persona->__GET('Nombre'));
-		$statement->bindParam(3,$persona->__GET('Apellido'));
+		$statement = $this->pdo->prepare("insert into persona values(?,?,?,?,?,?,?,?)");
+    $statement->bindParam(1,$persona->__GET('dni'));
+		$statement->bindParam(2,$persona->__GET('nombre'));
+		$statement->bindParam(3,$persona->__GET('apellido'));
 		$statement->bindParam(4,$persona->__GET('correo'));
 		$statement->bindParam(5,$persona->__GET('fecnac'));
 		$statement->bindParam(6,$persona->__GET('genero'));
 		$statement->bindParam(7,$persona->__GET('direccion'));
-		$statement->bindParam(8,$persona->__GET('TipoPersona'));
+		$statement->bindParam(8,$persona->__GET('tipoPersona'));
     $statement -> execute();
 		} catch (Exception $e)
 		{
