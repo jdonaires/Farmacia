@@ -13,7 +13,7 @@ class PersonaDAO
 	{
 		try
 		{
-		$statement = $this->pdo->prepare("CALL insertar_persona(?,?,?,?,?,?,?)");
+		$statement = $this->pdo->prepare("insert into persona values(?,?,?,?,?,?,?)");
     $statement->bindParam(1,$persona->__GET('dni'));
 		$statement->bindParam(2,$persona->__GET('Nombre'));
 		$statement->bindParam(3,$persona->__GET('Apellido'));
