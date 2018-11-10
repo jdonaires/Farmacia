@@ -2,7 +2,7 @@
 class Persona
 {
 	private $dni;
-	private $nombre;
+	private $nombres;
 	private $apellidos;
 	private $correo;
 	private $fecnac;
