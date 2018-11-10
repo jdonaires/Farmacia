@@ -15,8 +15,8 @@ class PersonaDAO
 		{
 		$statement = $this->pdo->prepare("insert into persona values(?,?,?,?,?,?,?,?)");
     $statement->bindParam(1,$persona->__GET('dni'));
-		$statement->bindParam(2,$persona->__GET('nombre'));
-		$statement->bindParam(3,$persona->__GET('apellido'));
+		$statement->bindParam(2,$persona->__GET('nombres'));
+		$statement->bindParam(3,$persona->__GET('apellidos'));
 		$statement->bindParam(4,$persona->__GET('correo'));
 		$statement->bindParam(5,$persona->__GET('fecnac'));
 		$statement->bindParam(6,$persona->__GET('genero'));

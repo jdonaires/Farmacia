@@ -8,7 +8,7 @@ CREATE TABLE Empresa(
 	RazónSocial 	VARCHAR(40) 	NOT NULL,
 	Telefono 	VARCHAR(10),
 	Dirección 	VARCHAR(20),
-	TipoEmpresa	ENUM('Laboratorio','Transporte')
+	TipoEmpresa	VARCHAR(30)
 ) ;
 CREATE TABLE Laboratorio(
 	RUC		VARCHAR(20) 	,

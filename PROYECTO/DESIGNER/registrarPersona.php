@@ -28,14 +28,14 @@ if(isset($_POST['guardar']))
         <title>Formulario </title>
         <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
         <link rel="stylesheet" type="text/css" href="../estilo/frmpersona.css">
-       
+
 
 
     </head>
     <body style="padding:15px;" class="cajon">
                 <form action="registrarpersona.php" method="post" class="formulario" id="form2" name="form" >
                     <span align="center">REGISTRAR PERSONA</span>
-                    <table  border="0"> 
+                    <table  border="0">
                         <tr>
                             <td><input type="text" name="nombres" value="" style="width:100%;" placeholder="Nombres" id="namee" /></td>
                         </tr>
@@ -74,17 +74,17 @@ if(isset($_POST['guardar']))
                         </tr>
                         <tr>
                             <td >
-                                <input type="submit" value="GUARDAR" name="guardar" style="width:108%"> 
+                                <input type="submit" value="GUARDAR" name="guardar" style="width:108%">
                             </td>
                         </tr>
                     </table>
                 </form>
-                
-               
+
+
 
             </div>
         </div>
 
-                
+
     </body>
 </html>
