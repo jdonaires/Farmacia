@@ -21,7 +21,7 @@ class PersonaDAO
 		$statement->bindParam(5,$persona->__GET('fecnac'));
 		$statement->bindParam(6,$persona->__GET('genero'));
 		$statement->bindParam(7,$persona->__GET('direccion'));
-		$statement->bindParam(8,$persona->__GET('tipoPersona'));
+		$statement->bindParam(8,$persona->__GET('tipopersona'));
     $statement -> execute();
 		} catch (Exception $e)
 		{
