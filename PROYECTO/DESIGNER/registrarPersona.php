@@ -50,7 +50,7 @@ if(isset($_POST['guardar']))
                             <td><input type="text" name="correo" value="" style="width:100%;" placeholder="Correo" required/></td>
                         </tr>
                         <tr >
-                            <td><div class="caja" required>
+                            <td><div class="caja">
                                 <select name="sexo" >
                                     <option value="M">Masculino</option>
                                     <option value="F">Femenino</option>
@@ -62,7 +62,7 @@ if(isset($_POST['guardar']))
                                <td><input type="date" name="fecnac" value="" required/></td>
                         </tr>
                         <tr>
-                            <td><div class="caja" required>
+                            <td><div class="caja">
                                 <select name="tipopersona" >
                                     <option value="Empleado">Empleado</option>
                                     <option value="Transportista">Transportista</option>
