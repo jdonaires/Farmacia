@@ -26,7 +26,7 @@ if(isset($_POST['guardar']))
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Formulario </title>
+        <title>Formulario para persona</title>
         <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
         <link rel="stylesheet" type="text/css" href="../estilo/frmpersona.css">
 

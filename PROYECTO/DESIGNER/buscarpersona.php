@@ -1,4 +1,4 @@
-<?php  
+<?php
 require_once('../BOL/persona.php');
 require_once('../DAO/personaDAO.php');
 
@@ -8,20 +8,20 @@ $perDAO = new PersonaDAO();
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title> Formulario para Buscar Persona</title>
 </head>
 <body>
 	 <form action="buscarpersona.php" method="post" class="formulario" >
 
                     <table  border="0">
-                        
+
                         <tr>
-                            
+
                             <td><input type="text" name="dni" value="" style="width:100%;" /></td>
                         </tr>
                         <tr>
                             <td >
-                                
+
                                 <input type="submit" value="BUSCAR" name="buscar"class="pure-button pure-button-primary" style="width:100%">
                             </td>
                         </tr>
