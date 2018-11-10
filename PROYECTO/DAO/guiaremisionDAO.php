@@ -27,3 +27,4 @@ class GuiaRemisionDAO
 			die($e->getMessage());
 		}
 	}
+	}
