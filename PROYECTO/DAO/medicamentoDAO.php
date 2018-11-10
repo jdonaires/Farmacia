@@ -13,6 +13,7 @@
       {
         try
         {
+            $statement = $this->pdo->prepare("insert into medicamento values(?,?,?,?)");
             $statement->bindParam(1,$medicamento->__GET('codmed'));
             $statement->bindParam(2,$medicamento->__GET('nombre'));
             $statement->bindParam(3,$medicamento->__GET('nombrelaboratorio'));

@@ -13,7 +13,7 @@
     $medi->__SET('idlaboratorio', $_POST['idlaboratorio']);
     $mediDAO->Registrar($medi);
 
-    header('Location: medicamento.php');
+    header('Location: registrarmedicamento.php');
   }
 ?>
 
