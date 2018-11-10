@@ -28,14 +28,18 @@ if (isset($_POST['guardar']))
 </head>
 <body>
   <div>
-  	<h1>Guia Remision</h1>
+  	<h1> Registro de Guia Remision</h1>
     <form class="contact_form">
-    	<ul>
-    	 <li><span for="NroGuia">Nro Guia:</span><input type="text" style="width : 100 % ;"  placeholder=""></li>
-       <li><span for="PPartida">Punto Partida:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
-       <li><span for="PLlegada">Punto Llegada:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
+      <ul>
+       <li><span for="NroGuia">NroGuia:</span><input type="text" style="width : 100 % ;"  placeholder=""></li>
+       <li><span for="PPartida">PuntoPartida:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
+       <li><span for="PLlegada">PuntoLlegada:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
+       <li><span for="FecEmision">FechaEmision:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
+       <li><span for="FecInicTraslado">FecInicTraslado:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
+       <li><span for="MotTraslado">MotivoTraslado:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
+       <li><span for="IdTransporte">IdTransporte:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
         <input type="submit" value="Guardar"  id="boton">
-    	</ul>
+      </ul>
     </form>
   </div>
 </body>

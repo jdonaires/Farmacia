@@ -21,12 +21,12 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-	<title>Formulario</title>
+	<title>Formulario para Medicamento</title>
 	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
 </head>
 <body>
   <div>
-  	<h1>FMedicamento</h1>
+  	<h1>Registrar medicamento</h1>
     <form class="contact_form">
     	<ul>
     		<li><label for="codMedicamento">Codigo:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
