@@ -1,109 +1,90 @@
 <?php
-require_once '../BOL/persona.php';
-require_once '../DAO/persona.modelo.php';
+require_once('../BOL/persona.php');
+require_once('../DAO/personaDAO.php');
 
-// Lógica
-$alm = new persona();
-$model = new personamodelo();
+$per = new Persona();
+$perDAO = new PersonaDAO();
 
-if(isset($_REQUEST['action']))
+if(isset($_POST['guardar']))
 {
-    switch($_REQUEST['action'])
-    {
-        case 'registrar':
-            $alm->__SET('dni',$_POST['dni']);
-            $alm->__SET('nombre',$_POST['nombre']);
-            $alm->__SET('apellido',$_POST['apellido']);
-            $alm->__SET('fecnac',$_POST['fecnac']);
-            $alm->__SET('genero',$_POST['genero']);
-            $alm->__SET('direccion',$_POST['direccion']);
-            
-            $model->Registrar($alm);
-            header('Location: registrarPersona.php');
-            
-            break;
-
-        case 'eliminar':
-            $model->Eliminar($_REQUEST['dni']);
-            header('Location: registrarPersona.php');
-            break;
-    }
-    echo "<p>REGISTRADO</p>";
+    $per->__SET('dni', $_POST['dni']);
+    $per->__SET('nombres',$_POST['nombres']);
+    $per->__SET('apellidos',$_POST['apellidos']);
+    $per->__SET('correo', $_POST['correo']);
+    $per->__SET('genero', $_POST['sexo']);
+    $per->__SET('fecnac', $_POST['fecnac']);
+    $per->__SET('direccion', $_POST['direccion']);
+    $per->__SET('tipopersona', $_POST['tipopersona']);
+    $perDAO->Registrar($per);
+    header('Location: registrarpersona.php');
 }
+/**<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>**/
+
 
 ?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>EPICS</title>
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <title>Formulario </title>
         <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+        <link rel="stylesheet" type="text/css" href="../estilo/frmpersona.css">
+       
+
+
     </head>
-    <body style="padding:15px;">
-REGISTRAR CICLO
-        <div class="pure-g">
-            <div class="pure-u-1-12">
-
-                <form action="?action=registrar" method="post" class="pure-form pure-form-stacked" style="margin-bottom:30px;">
-
-
-                    <table style="width:500px;" border="0">
+    <body style="padding:15px;" class="cajon">
+                <form action="registrarpersona.php" method="post" class="formulario" id="form2" name="form" >
+                    <span align="center">REGISTRAR PERSONA</span>
+                    <table  border="0"> 
                         <tr>
-                            <th style="text-align:left;">DNI</th>
-                            <td>
-                                <input type="text" name="dni" value="" style="width:100%;" required maxlength="8"/>
-                               
-                            </td>
+                            <td><input type="text" name="nombres" value="" style="width:100%;" placeholder="Nombres" id="namee" /></td>
                         </tr>
                         <tr>
-                            <th style="text-align:left;">Nombres</th>
-                            <td>
-                                <input type="text" name="nombre" value="" style="width:100%;" required />
-                               
-                            </td>
+                            <td><input type="text" name="apellidos" value="" style="width:100%;" placeholder="Apellidos" /></td>
                         </tr>
                         <tr>
-                            <th style="text-align:left;">Apellidos</th>
-                            <td>
-                                <input type="text" name="apellido" value="" style="width:100%;" required />
-                               
-                            </td>
-                        </tr>
-
-                        
-                        
-
-                        <tr>
-                            <th style="text-align:left;">Fecha Nacimiento</th>
-                            <td><input type="date" name="fecnac" value="" style="width:100%;" required "/></td>
+                            <td><input type="text" name="dni" value="" style="width:100%;" placeholder="DNI" id="dni" /></td>
                         </tr>
                         <tr>
-                            <th style="text-align:left;">Genero</th>
-                            <td><select name="genero" value="">
+                            <td><input type="text" name="correo" value="" style="width:100%;" placeholder="Correo" /></td>
+                        </tr>
+                        <tr >
+                            <td><div class="caja">
+                                <select name="sexo" >
                                     <option value="M">Masculino</option>
                                     <option value="F">Femenino</option>
-   
-                            </select>
+                                </select>
+                            </div>
                             </td>
                         </tr>
                         <tr>
-                            <th style="text-align:left;">Direccion</th>
-                            <td><input type="text" name="direccion" value="" style="width:100%;" required /></td>
+                               <td><input type="date" name="fecnac" value="" /></td>
+                        </tr>
+                        <tr >
+                            <td><div class="caja">
+                                <select name="tipopersona" >
+                                    <option value="Empleado">Empleado</option>
+                                    <option value="Transportista">Transportista</option>
+                                </select>
+                            </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td colspan="2">
-                                <button type="submit" class="pure-button pure-button-primary">Guardar</button>
-                                 <button type="reset" class="pure-button pure-button-primary">Reset</button>
-                            </td>
-                            
+                               <td><input type="text" name="direccion" value="" placeholder="Direccion" /></td>
                         </tr>
-                        
+                        <tr>
+                            <td >
+                                <input type="submit" value="GUARDAR" name="guardar" style="width:108%"> 
+                            </td>
+                        </tr>
                     </table>
                 </form>
-
+                
+               
 
             </div>
         </div>
 
+                
     </body>
 </html>
