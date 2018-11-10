@@ -30,7 +30,7 @@ CREATE TABLE Persona(
 	FecNac 		DATE 		NOT NULL,
 	Genero 		ENUM ('M','F')  NOT NULL,
 	Direccion	VARCHAR(20)	NOT NULL,
-	TipoPersona	ENUM ('Empleado','Transportista')
+	TipoPersona	ENUM ('Empleado','Transportista') NOT NULL
 );
 CREATE TABLE Empleado(
 	IdEmpleado 	INT AUTO_INCREMENT PRIMARY KEY,
