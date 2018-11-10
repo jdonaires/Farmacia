@@ -17,13 +17,13 @@
 	background: white;
 	position: relative;
 	margin:0 auto;
-
+	
 	padding:20px;
 	width:350px;
 	height: 350px;
 	align-items: center;
 	border-radius:200px;
-
+	
 }
 
 
@@ -32,11 +32,11 @@
 	position: relative;
 	margin-top: 27%;
 	margin-left: 12%;
-
+	
 }
 .formulario td{
 	padding-bottom: 10px;
-
+	
 }
 
 .formulario input[type=text],input[type=password]{
@@ -80,3 +80,4 @@
 	color:#4DBDDB;
 	position:relative;
 }
+
