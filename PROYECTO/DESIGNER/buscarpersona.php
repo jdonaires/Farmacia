@@ -11,7 +11,7 @@ $perDAO = new PersonaDAO();
 	<title></title>
 </head>
 <body>
-	 <form action="frmpersona.php" method="post" class="formulario" >
+	 <form action="buscarpersona.php" method="post" class="formulario" >
 
                     <table  border="0">
                         
