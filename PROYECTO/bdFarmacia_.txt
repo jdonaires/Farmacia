@@ -26,6 +26,7 @@ CREATE TABLE Persona(
 	DNI		CHAR(8) NOT NULL PRIMARY KEY,
 	Nombre 		VARCHAR(25) 	NOT NULL,
 	Apellido 	VARCHAR(20)	NOT NULL,
+	Correo		VARCHAR(20)	NOT NULL,
 	FecNac 		DATE 		NOT NULL,
 	Genero 		ENUM ('M','F')  NOT NULL,
 	Direccion	VARCHAR(20)	NOT NULL,
