@@ -16,11 +16,11 @@
 		<table >
 			<tr >
 
-				<td><input type="text" name="" placeholder="Usuario" oninput="check_text(this);"></td>
+				<td><input type="text" name="" placeholder="Usuario" title="se necesita un usuario" required ></td> <!--Esta edicion se utiliza para que el usuario Ingrese datos al Campo y no lo deje vacio-->
 			</tr>
 			<tr >
 
-				<td><input type="password" name="" placeholder="Clave" ></td>
+				<td><input type="password" name="" placeholder="Clave" title="se necesita una contraseña" required ></td>
 			</tr>
 			<tr>
 
