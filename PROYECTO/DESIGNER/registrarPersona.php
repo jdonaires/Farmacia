@@ -16,6 +16,7 @@ if(isset($_POST['guardar']))
     $per->__SET('direccion', $_POST['direccion']);
     $per->__SET('tipopersona', $_POST['tipopersona']);
     $perDAO->Registrar($per);
+
     header('Location: registrarpersona.php');
 }
 /**<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>**/
@@ -37,19 +38,19 @@ if(isset($_POST['guardar']))
                     <span align="center">REGISTRAR PERSONA</span>
                     <table  border="0">
                         <tr>
-                            <td><input type="text" name="nombres" value="" style="width:100%;" placeholder="Nombres" id="namee" /></td>
+                            <td><input type="text" name="nombres" value="" style="width:100%;" placeholder="Nombres" id="namee" required/></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="apellidos" value="" style="width:100%;" placeholder="Apellidos" /></td>
+                            <td><input type="text" name="apellidos" value="" style="width:100%;" placeholder="Apellidos" required/></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="dni" value="" style="width:100%;" placeholder="DNI" id="dni" /></td>
+                            <td><input type="text" name="dni" value="" style="width:100%;" placeholder="DNI" id="dni" required/></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="correo" value="" style="width:100%;" placeholder="Correo" /></td>
+                            <td><input type="text" name="correo" value="" style="width:100%;" placeholder="Correo" required/></td>
                         </tr>
                         <tr >
-                            <td><div class="caja">
+                            <td><div class="caja" required>
                                 <select name="sexo" >
                                     <option value="M">Masculino</option>
                                     <option value="F">Femenino</option>
@@ -58,10 +59,10 @@ if(isset($_POST['guardar']))
                             </td>
                         </tr>
                         <tr>
-                               <td><input type="date" name="fecnac" value="" /></td>
+                               <td><input type="date" name="fecnac" value="" required/></td>
                         </tr>
-                        <tr >
-                            <td><div class="caja">
+                        <tr>
+                            <td><div class="caja" required>
                                 <select name="tipopersona" >
                                     <option value="Empleado">Empleado</option>
                                     <option value="Transportista">Transportista</option>
@@ -70,7 +71,7 @@ if(isset($_POST['guardar']))
                             </td>
                         </tr>
                         <tr>
-                               <td><input type="text" name="direccion" value="" placeholder="Direccion" /></td>
+                               <td><input type="text" name="direccion" value="" placeholder="Direccion" required/></td>
                         </tr>
                         <tr>
                             <td >
