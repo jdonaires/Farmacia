@@ -22,19 +22,32 @@
 <head>
 <meta charset="utf-8">
 	<title>Formulario para Medicamento</title>
-	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+	        <link rel="stylesheet" type="text/css" href="../estilo/frmMedicamento.css">
 </head>
-<body>
+<body style="padding:15px;" class="cajon">
   <div>
-  	<h1>Registrar medicamento</h1>
-    <form class="contact_form">
-    	<ul>
-    		<li><label for="codMedicamento">Codigo:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
-    		<li><label for="Nombre">Nombre:</label><input type="text" style="width : 100 % ;"  placeholder="" ></li>
-    		<li><label for="NomLaboratorio">NomLaboratorio:</label><input type="text" style="width : 100 % ;"  placeholder="" ></li>
-        <li><label for="IDLaboratorio">IDLaboratorio:</label><input type="text" style="width : 100 % ;"  placeholder="" ></li>
-        <input type="submit" value="Guardar"  id="boton">
-    	</ul>
+
+    <form action="registrarmedicamento.php" method="post" class="formulario" id="form2" name="form">
+      <font face="Comic Sans MS,arial,verdana" size=6> Registrar Medicamento</font>
+      <table border="0">
+        <tr>
+          <td><input type="text" name="codMedicamento" style="width:30%" placeholder="Codigo"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="Nombre" style="width:70%" placeholder="Nombre"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="NomLaboratorio"  placeholder="Laboratorio">
+            <input type="text" name="IDLaboratorio" placeholder="ID">
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <input type="submit" value="Guardar">
+            </td>
+        </tr>
+      </table>
     </form>
   </div>
 </body>

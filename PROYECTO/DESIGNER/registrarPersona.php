@@ -35,7 +35,7 @@ if(isset($_POST['guardar']))
     </head>
     <body style="padding:15px;" class="cajon">
                 <form action="registrarpersona.php" method="post" class="formulario" id="form2" name="form" >
-                    <span align="center">REGISTRAR PERSONA</span>
+                    <span align="center">Registrar Persona</span>
                     <table  border="0">
                         <tr>
                             <td><input type="text" name="nombres" value="" style="width:100%;" placeholder="Nombres" id="namee" required/></td>

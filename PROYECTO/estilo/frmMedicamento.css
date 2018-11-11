@@ -1,0 +1,25 @@
+#form2{
+	background: white;
+	position: relative;
+	margin:0 auto;
+	padding:40px;
+	width:350px;
+	height: 350px;
+	align-items: center;
+	border-radius:0px;
+}
+.cajon{
+	background-color:#F2F3F4;
+}
+#form2 table{
+	position: relative;
+	margin-top: 0%;
+	margin-left: 9%;
+	border:none;
+	size:30px;
+}
+}
+#form2 td{
+
+	padding-bottom: 0px;
+}
