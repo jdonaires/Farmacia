@@ -18,29 +18,33 @@
 				$result = array();
 
 				$statement = $this->pdo->prepare("call up_listar_persona(?)");
-				$statement->bindParam(1,$persona->__GET('dni'));
-				$statement -> execute();
+				echo("------------------> ".$persona->__GET('dni'));
 
-				foreach($statement->fetchAll(PDO::FETCH_OBJ) as $r)
+				$statement->bindValue(1,$persona->__GET('dni'));
+				$statement -> execute();
+                $result = $statement->fetchAll(PDO::FETCH_OBJ);
+				foreach($result as $r)
 				{
 					$per = new Persona();
 
-					$per->__SET('dni', $r->dni);
+					$per->__SET("dni", $r>dni);
 					$per->__SET('nombres', $r->nombres);
 					$per->__SET('apellidos', $r->apellidos);
 					$per->__SET('correo', $r->correo);
+
 					$per->__SET('fecnac', $r->fecnac);
+                    $per->__SET('genero', $r->genero);
 					$per->__SET('direccion', $r->direccion);
 					$per->__SET('tipopersona', $r->tipopersona);
 
-					$result[] = $per;
+                    $result[] = $per;
 				}
 
 				return $result;
 
 			} catch (Exception $e)
 			{
-				die("listarPersona function  ->".$e->getMessage());
+				die("listarPersona function  ->".$e->getMessage()." - error message: > ".$e->getLine()." - ".$e->getCode());
 			}
 		}
 
@@ -51,14 +55,14 @@
 			{
 				$statement = $this->pdo->prepare("call up_insertar_persona(?,?,?,?,?,?,?,?)");
 
-				$statement->bindParam(1,$persona->__GET('dni'));
-				$statement->bindParam(2,$persona->__GET('nombres'));
-				$statement->bindParam(3,$persona->__GET('apellidos'));
-				$statement->bindParam(4,$persona->__GET('fecnac'));
-				$statement->bindParam(5,$persona->__GET('genero'));
-				$statement->bindParam(6,$persona->__GET('direccion'));
-				$statement->bindParam(7,$persona->__GET('tipopersona'));
-				$statement->bindParam(8,$persona->__GET('correo'));
+				$statement->bindValue(1,$persona->__GET('dni'));
+				$statement->bindValue(2,$persona->__GET('nombres'));
+				$statement->bindValue(3,$persona->__GET('apellidos'));
+				$statement->bindValue(4,$persona->__GET('fecnac'));
+				$statement->bindValue(5,$persona->__GET('genero'));
+				$statement->bindValue(6,$persona->__GET('direccion'));
+				$statement->bindValue(7,$persona->__GET('tipopersona'));
+				$statement->bindValue(8,$persona->__GET('correo'));
 
 				$statement -> execute();
 			} catch (Exception $e)
@@ -67,19 +71,19 @@
 			}
 		}
 
-		public function actualizarPersona(){
+		public function actualizarPersona(Persona $persona){
 			try
 			{
 				$statement = $this->pdo->prepare("call up_actualizar_persona(?,?,?,?,?,?,?,?)");
 
-				$statement->bindParam(1,$persona->__GET('dni'));
-				$statement->bindParam(2,$persona->__GET('nombres'));
-				$statement->bindParam(3,$persona->__GET('apellidos'));
-				$statement->bindParam(4,$persona->__GET('fecnac'));
-				$statement->bindParam(5,$persona->__GET('genero'));
-				$statement->bindParam(6,$persona->__GET('direccion'));
-				$statement->bindParam(7,$persona->__GET('tipopersona'));
-				$statement->bindParam(8,$persona->__GET('correo'));
+				$statement->bindValue(1,$persona->__GET('dni'));
+				$statement->bindValue(2,$persona->__GET('nombres'));
+				$statement->bindValue(3,$persona->__GET('apellidos'));
+				$statement->bindValue(4,$persona->__GET('fecnac'));
+				$statement->bindValue(5,$persona->__GET('genero'));
+				$statement->bindValue(6,$persona->__GET('direccion'));
+				$statement->bindValue(7,$persona->__GET('tipopersona'));
+				$statement->bindValue(8,$persona->__GET('correo'));
 
 				$statement -> execute();
 			}
