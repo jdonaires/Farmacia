@@ -1,4 +1,18 @@
-﻿DROP DATABASE IF EXISTS farmacia;
+﻿/*
+	--------CAMBIOS-------
+	11/11/2018
+		*Se corrigio errores en los procedimientos de insertarpersona,medicamento y guia de remision.
+		*Se agrego el campo correo a la tabla Persona
+		*Se se agrego "up_" a los nombre de los procemientos y otras cosas mas.....
+		
+
+
+
+*/
+
+
+
+DROP DATABASE IF EXISTS farmacia;
 CREATE DATABASE IF NOT EXISTS farmacia;
 USE farmacia;
 ________________________________________________________________
@@ -158,19 +172,21 @@ END ;;
 DELIMITER ;
 
 
+/*  INSERTAR PERSONA  */
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_persona`(
-    IN p_dni		    CHAR(8),
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_persona(
+  IN p_dni		    CHAR(8),       
 	IN p_nombre 		VARCHAR(25),
-	IN p_apellido 	VARCHAR(20),
-	IN p_fecnac 		DATE,
+	IN p_apellido 	VARCHAR(20),    
+	IN p_fecnac 		DATE,    
 	IN p_genero 		varchar(1),
-	IN p_direccion	VARCHAR(20),
-	IN p_tipo_persona	varchar(20)
+	IN p_direccion	VARCHAR(40), 
+	IN p_tipo_persona	varchar(20),
+   IN p_correo 	VARCHAR(50)
 )
 BEGIN
-	INSERT INTO Persona(dni,nombre,apellido,fecnac,genero,direccion,tipoPersona)
-    VALUES (p_dni,p_nombre,p_apellido,p_fecnac,p_genero,p_direccion,p_tipo_persona);
+	INSERT INTO Persona(dni,nombre,apellido,fecnac,genero,direccion,tipoPersona,correo) 
+    VALUES (p_dni,p_nombre,p_apellido,p_fecnac,p_genero,p_direccion,p_tipo_persona,p_correo);
 END ;;
 DELIMITER ;
 
@@ -195,30 +211,34 @@ BEGIN
 END ;;
 DELIMITER ;
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_medicamento`(
-IN p_nombre		VARCHAR(20)	,
-IN p_nomLaboratorio	VARCHAR(20) ,
-IN p_idLaboratorio	INT,
+/*  INSERTAR MEDICAMENTO  */
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_medicamento(
+	IN p_cod_med varchar(20),
+    IN p_nombre varchar(20),
+    IN p_nom_laboratorio varchar(20),
+    IN p_id_laboratorio int
 )
 BEGIN
-	INSERT INTO Medicamento(Nombre,NomLaboratorio,IdLaboratorio	) values(p_nombre,p_nomLaboratorio,p_idLaboratorio);
+	INSERT INTO Medicamento (codmed,nombre,nomlaboratorio,idlaboratorio)
+    VALUES(p_cod_med,p_nombre,p_nom_laboratorio,p_id_laboratorio);
 END ;;
 DELIMITER ;
 
 
-
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertar_guiaremision`(
-
-IN p_puntoPartida 	VARCHAR(20) 	,
-IN p_puntoLLegada	VARCHAR(20) ,
-IN p_fecEmision 	DATE		,
-IN p_fecInicTraslado DATE 		,
-IN p_motTraslado	VARCHAR(20)	,
-IN p_idTransporte	INT
+/*  INSERTAR GUIA REMISION  */
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_guia_remision(
+	IN p_nro_guia 	VARCHAR(20),
+    IN p_punto_partida 	VARCHAR(20),
+	IN p_punto_llegada	VARCHAR(20),
+	IN p_fec_emision 	DATE,
+	IN p_fec_inic_traslado DATE,
+	IN p_motiv_traslado	VARCHAR(20),
+	IN p_id_transporte	INT
 )
 BEGIN
-	INSERT INTO Medicamento(PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte	)
-	 values(p_puntoPartida,p_puntoLLegada,p_fecEmision,p_fecInicTraslado,p_motTraslado,p_idTransporte);
+	INSERT INTO GuiaRemision(nroguia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
+	 values(p_nro_guia,p_punto_partida,p_punto_llegada,p_fec_emision,p_fec_inic_traslado,p_motiv_traslado,p_id_transporte);
 END ;;
 DELIMITER ;
