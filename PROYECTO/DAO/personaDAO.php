@@ -70,7 +70,7 @@
 			}
 			catch (Exception $e)
 			{
-				die("actualizarPersona function  ->".$e->getMessage());
+				die("actualizarPersona function  ->".$e->getMessage()."\nLinea-->".$e->getLine());
 			}
 		}
 

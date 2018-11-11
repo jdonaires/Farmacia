@@ -5,10 +5,6 @@
     /*Cualquier duda me informan.................. */
     
     private $conn;
-    private $host = "software-if.mysql.database.azure.com";
-    private $user = "meister@software-if";
-    private $password = "@sd12345678";
-    private $dbname = "farmacia";
 
     public function __CONSTRUCT()
     {
