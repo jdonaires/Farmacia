@@ -23,7 +23,7 @@ if (isset($_POST['guardar'])) {
   <head>
     <meta charset="utf-8">
     <title>Registro de Empleados</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../estilo/frmempleado.css">
   </head>
   <body>
     <div class="container">
