@@ -67,6 +67,29 @@
 			}
 		}
 
+		public function actualizarPersona(){
+			try
+			{
+				$statement = $this->pdo->prepare("call up_actualizar_persona(?,?,?,?,?,?,?,?)");
+
+				$statement->bindParam(1,$persona->__GET('dni'));
+				$statement->bindParam(2,$persona->__GET('nombres'));
+				$statement->bindParam(3,$persona->__GET('apellidos'));
+				$statement->bindParam(4,$persona->__GET('fecnac'));
+				$statement->bindParam(5,$persona->__GET('genero'));
+				$statement->bindParam(6,$persona->__GET('direccion'));
+				$statement->bindParam(7,$persona->__GET('tipopersona'));
+				$statement->bindParam(8,$persona->__GET('correo'));
+
+				$statement -> execute();
+			} 
+			catch (Exception $e)
+			{
+				die("actualizarPersona function  ->".$e->getMessage());
+			}
+		}
+
+
 		public function eliminarPersona($dni){
 			try
 			{
