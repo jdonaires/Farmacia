@@ -22,12 +22,14 @@
 
 				$statement->bindValue(1,$persona->__GET('dni'));
 				$statement -> execute();
-                $result = $statement->fetchAll(PDO::FETCH_OBJ);
-				foreach($result as $r)
+                $result = $statement->fetchAll(PDO::FETCH_CLASS,"Persona");
+
+			/*	foreach($result as $r)
 				{
+
 					$per = new Persona();
 
-					$per->__SET("dni", $r>dni);
+					$per->__SET("dni", $r->$dni);
 					$per->__SET('nombres', $r->nombres);
 					$per->__SET('apellidos', $r->apellidos);
 					$per->__SET('correo', $r->correo);
@@ -38,7 +40,7 @@
 					$per->__SET('tipopersona', $r->tipopersona);
 
                     $result[] = $per;
-				}
+				}*/
 
 				return $result;
 

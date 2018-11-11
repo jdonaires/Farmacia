@@ -1,2 +1,15 @@
 
 PROYECTO/DESIGNER/FComponentes.html
+*.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+PROYECTO/DAO/.idea/misc.xml
+PROYECTO/DAO/.idea/modules.xml
+PROYECTO/DAO/.idea/php.xml
+PROYECTO/DAO/.idea/vcs.xml
+PROYECTO/DAO/.idea/workspace.xml
+PROYECTO/DAO/.idea/vcs.xml
+PROYECTO/DAO/.idea/php.xml
+PROYECTO/DAO/PersonaDAOTest.php
