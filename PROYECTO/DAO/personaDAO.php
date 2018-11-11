@@ -15,32 +15,11 @@
 		public function listarPersona(Persona $persona) {
 			try
 			{
-				$result = array();
-
 				$statement = $this->pdo->prepare("call up_listar_persona(?)");
-				echo("------------------> ".$persona->__GET('dni'));
 
 				$statement->bindValue(1,$persona->__GET('dni'));
 				$statement -> execute();
-                $result = $statement->fetchAll(PDO::FETCH_CLASS,"Persona");
-
-			/*	foreach($result as $r)
-				{
-
-					$per = new Persona();
-
-					$per->__SET("dni", $r->$dni);
-					$per->__SET('nombres', $r->nombres);
-					$per->__SET('apellidos', $r->apellidos);
-					$per->__SET('correo', $r->correo);
-
-					$per->__SET('fecnac', $r->fecnac);
-                    $per->__SET('genero', $r->genero);
-					$per->__SET('direccion', $r->direccion);
-					$per->__SET('tipopersona', $r->tipopersona);
-
-                    $result[] = $per;
-				}*/
+                $result = (array)$statement->fetchAll(PDO::FETCH_CLASS,"Persona");
 
 				return $result;
 

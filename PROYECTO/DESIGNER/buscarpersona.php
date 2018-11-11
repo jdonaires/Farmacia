@@ -56,9 +56,9 @@ $perDAO = new PersonaDAO();
                             ?>
                                 <tr>
                                         <td><?php echo $r->__GET('id'); ?></td>
-                                        <td><?php echo $r->__GET('nombres'); ?></td>
-                                        <td><?php echo $r->__GET('apellidos'); ?></td>
-                                        <td><?php echo $r->__GET('dni'); ?></td>
+                                        <td><?php echo $r->__GET('Nombre'); ?></td>
+                                        <td><?php echo $r->__GET('Apellido'); ?></td>
+                                        <td><?php echo $r->__GET('DNI'); ?></td>
                                 </tr>
                         <?php endforeach;
                     }
