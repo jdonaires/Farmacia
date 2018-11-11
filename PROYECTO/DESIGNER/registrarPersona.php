@@ -15,7 +15,7 @@ if(isset($_POST['guardar']))
     $per->__SET('fecnac', $_POST['fecnac']);
     $per->__SET('direccion', $_POST['direccion']);
     $per->__SET('tipopersona', $_POST['tipopersona']);
-    $perDAO->Registrar($per);
+    $perDAO->listarPersona($per);
 
     header('Location: registrarpersona.php');
 }
