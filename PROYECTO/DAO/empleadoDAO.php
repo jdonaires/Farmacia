@@ -13,12 +13,12 @@
     {
       try
       {
-        $statement = $this->pdo->prepare("CALL insertar_empleado(?,?,?,?,?)");
-        $statement->bindParam(2,$empleado->__GET('Turno'));
-        $statement->bindParam(3,$empleado->__GET('especialidad'));
-        $statement->bindParam(4,$empleado->__GET('usuario'));
-        $statement->bindParam(5,$empleado->__GET('clave'));
-        $statement->bindParam(6,$empleado->__GET('dni'));
+        $statement = $this->pdo->prepare("CALL up_insertar_empleado(?,?,?,?,?)");
+        $statement->bindParam(1,$empleado->__GET('Turno'));
+        $statement->bindParam(2,$empleado->__GET('especialidad'));
+        $statement->bindParam(3,$empleado->__GET('usuario'));
+        $statement->bindParam(4,$empleado->__GET('clave'));
+        $statement->bindParam(5,$empleado->__GET('dni'));
         $statement -> execute();
       } catch (Exception $e)
       {

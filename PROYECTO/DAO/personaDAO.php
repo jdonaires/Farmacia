@@ -11,6 +11,21 @@
 				$dba = new DBAccess();
 				$this->pdo = $dba->get_connection();
 		}
+
+		/*public function listarPersona(Persona $per) {
+			try
+			{
+				$statement = $this->pdo->prepare("call up_insertar_persona(?)");
+
+				$statement->bindParam(1,$persona->__GET('dni'));
+
+				$statement -> execute();
+			} catch (Exception $e)
+			{
+				die("listarPersona function  ->".$e->getMessage());
+			}
+		}*/
+
 		public function insertarPersona(Persona $persona)
 		{
 		
@@ -31,6 +46,19 @@
 			} catch (Exception $e)
 			{
 				die("insertarPersona function  ->".$e->getMessage());
+			}
+		}
+
+		public function eliminarPersona($dni){
+			try
+			{
+				$statement = $this->pdo->prepare("call up_eliminar_persona(?)");
+				$statement->bindParam(1,$dni);
+				$statement -> execute();
+
+			} catch (Exception $e)
+			{
+				die("eliminarPersona function  ->".$e->getMessage());
 			}
 		}
 
