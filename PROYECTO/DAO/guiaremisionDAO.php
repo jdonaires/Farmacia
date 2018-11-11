@@ -13,7 +13,7 @@ class GuiaRemisionDAO
 	{
 		try
 		{
-		$statement = $this->pdo->prepare("CALL insertar_guiaremision(?,?,?,?,?,?,?)");
+		$statement = $this->pdo->prepare("CALL up_insertar_guia_remision(?,?,?,?,?,?,?)");
 		$statement->bindParam(1,$guiaremision->__GET('nroguia'));
     $statement->bindParam(2,$guiaremision->__GET('puntopartida'));
 		$statement->bindParam(3,$guiaremision->__GET('puntollegada'));

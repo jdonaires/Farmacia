@@ -13,9 +13,11 @@ class tipopresentacionDAO
 	{
 		try
 		{
-		$statement = $this->pdo->prepare("CALL insertar_tipopresentacion(?)");
+		$statement = $this->pdo->prepare("CALL up_insertar_tipo_presentacion(?,?)");
+		$statement->bindParam(1,$tipopresentacion->__GET('Nombre'));
 		$statement->bindParam(1,$tipopresentacion->__GET('Descripcion'));
-    $statement -> execute();
+		$statement -> execute();
+		   
 		} catch (Exception $e)
 		{
 			die($e->getMessage());

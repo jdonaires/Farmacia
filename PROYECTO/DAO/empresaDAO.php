@@ -13,13 +13,13 @@ class empresaDAO
 	{
 		try
 		{
-		$statement = $this->pdo->prepare("CALL insertar_empresa(?,?,?,?,?)");
-    $statement->bindParam(1,$empresa->__GET('RUC'));
-		$statement->bindParam(2,$empresa->__GET('RazonSocial'));
-		$statement->bindParam(3,$empresa->__GET('Telefono'));
-		$statement->bindParam(4,$empresa->__GET('Direccion'));
-		$statement->bindParam(5,$empresa->__GET('TipoEmpresa'));
-    $statement -> execute();
+			$statement = $this->pdo->prepare("CALL up_insertar_empresa(?,?,?,?,?)");
+			$statement->bindParam(1,$empresa->__GET('RUC'));
+			$statement->bindParam(2,$empresa->__GET('RazonSocial'));
+			$statement->bindParam(3,$empresa->__GET('Telefono'));
+			$statement->bindParam(4,$empresa->__GET('Direccion'));
+			$statement->bindParam(5,$empresa->__GET('TipoEmpresa'));
+			$statement -> execute();
 		} catch (Exception $e)
 		{
 			die($e->getMessage());

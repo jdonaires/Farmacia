@@ -13,9 +13,10 @@ class unidadmedidaDAO
 	{
 		try
 		{
-		$statement = $this->pdo->prepare("CALL insertar_unidadmedida(?)");
-		$statement->bindParam(1,$unidadmedida->__GET('Descripcion'));
-    $statement -> execute();
+			$statement = $this->pdo->prepare("CALL up_insertar_unidad_medida(?)");
+			$statement->bindParam(1,$unidadmedida->__GET('Descripcion'));
+			$statement -> execute();
+
 		} catch (Exception $e)
 		{
 			die($e->getMessage());

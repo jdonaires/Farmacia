@@ -8,16 +8,20 @@ $perDAO = new PersonaDAO();
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title> Formulario para Buscar Persona</title>
 </head>
 <body>
+
 	 <form action="buscarpersona.php" method="post" class="formulario" >
 
                     <table  border="0">
 
                         <tr>
 
-                            <td><input type="text" name="dni" value="" style="width:100%;" /></td>
+                            <td><input type="text" name="dni" value=""  placeholder="Ingrese DNI"  required style="width:100%;" />
+                             <!--Esta edicion se utiliza para que el usuario Ingrese datos al Campo y no lo deje vacio-->
+														</td>
                         </tr>
                         <tr>
                             <td >
@@ -34,7 +38,7 @@ $perDAO = new PersonaDAO();
                 {
                     $resultado = array();//VARIABLE TIPO RESULTADO
                     $per->__SET('dni',$_POST['dni']);//ESTABLECEMOS EL VALOR DEL DNI
-                    $resultado = $perDAO->Listar($per); //CARGAMOS LOS REGISTRO EN EL ARRAY RESULTADO
+                    $resultado = $perDAO->listarPersona($per); //CARGAMOS LOS REGISTRO EN EL ARRAY RESULTADO
                     if(!empty($resultado)) //PREGUNTAMOS SI NO ESTA VACIO EL ARRAY
                     {
                         ?>
