@@ -10,10 +10,13 @@
 
 <body  class="cajon">
 	<nav class="navegador" align="center">
-		<span>FamiSalud</span>
+		<span><h1>FarmiSalud</h1></span>
 	</nav>
 	<form class="formulario">
 		<table >
+			<center>
+			<img src="img/login.png" >  <!--posicion de Imagen login-->
+		   </center>
 			<tr >
 
 				<td><input type="text" name="" placeholder="Usuario"  required ></td> <!--Esta edicion se utiliza para que el usuario Ingrese datos al Campo y no lo deje vacio-->
@@ -23,10 +26,19 @@
 				<td><input type="text" name="" placeholder="Clave"  required ></td>
 			</tr>
 			<tr>
+			 <select name="tipopersona" >
+                                    <option value="Empleado">Empleado</option>
+                                    <option value="Transportista">Transportista</option>
+                                </select>
+                            </tr>
+			<tr>
 
-				<td ><input type="submit" name="" value="INSERTAR" style="width:100%;"></td>
-				<td ><input type="submit"  name="" value="Registrar Empleado" style="width:100%;"> <a href="DESIGNER/registrarPersona.php" > Registrar Empleado</a></td><!--ACCEDO PARA ENTRAR A LA DIRECCION DEL REGITRO DE EMPLEADO-->
+				<td ><input type="submit" name="" value="INGRESAR" style="width:100%;"></td>
+
 			</tr>
+
+			<td ><input type="submit" value="REGISTRARSE" onclick=" location.href='http://localhost:8090/Farmacia/PROYECTO/DESIGNER/registrarPersona.php' ">
+			</td>  <!--ACCESO PARA ENTRAR A LA DIRECCION DEL REGITRO DE EMPLEADO CON ONCLICK-->
 		</table>
 	</form>
 </body>

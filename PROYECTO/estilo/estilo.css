@@ -1,3 +1,9 @@
+img {
+   width: 30%;
+   height: 30%;  <!-- Se agrega la imagen con su respectiva medida-->
+
+}
+
 *{
 	margin:0px;
 }
@@ -29,9 +35,9 @@
 
 
 .formulario table{
-	position: relative;
-	margin-top: 27%;
-	margin-left: 12%;
+	text-align: center;
+	margin-top: 10%;
+	margin-left: 25%;
 
 }
 .formulario td{
@@ -41,14 +47,12 @@
 
 .formulario input[type=text],input[type=password]{
 	background: rgba(233,233,233,0);
-	padding:10px;
-	margin:auto;
-	font-size: 20px;
+	text-align: center;
 	border-top:none;
 	border-left:none;
 	border-right:none;
-	border-bottom:solid 1px #F2F3F4;
-	transition:0.5s border;
+	border-bottom:solid 4px #CCEEFF ;
+	transition:0.4s border;
 	outline: none;
 }
 
@@ -70,13 +74,13 @@
 	background-color:#4DBDDB;
 	border: none;
 	color:white;
+	text-align: center;
 	position:relative;
 	padding:15px;
 	transition:0.2s ;
-	font-size: 20px;
+	font-size: 15px;
 }
 .formulario input[type=submit]:hover{
-	background-color:#F2F3F4;
-	color:#4DBDDB;
-	position:relative;
+
+
 }
