@@ -28,8 +28,11 @@
 			<tr>
 
 				<td ><input type="submit" name="" value="INSERTAR" style="width:100%;"></td>
-				<td ><input type="submit"  name="" value="Registrar Empleado" style="width:100%;"> <a href="DESIGNER/registrarPersona.php" > Registrar Empleado</a></td><!--ACCEDO PARA ENTRAR A LA DIRECCION DEL REGITRO DE EMPLEADO-->
+
 			</tr>
+
+			<td ><input type="submit" value="REGISTRARSE" onclick=" location.href='http://localhost:8090/Farmacia/PROYECTO/DESIGNER/registrarPersona.php' ">
+			</td>  <!--ACCESO PARA ENTRAR A LA DIRECCION DEL REGITRO DE EMPLEADO CON ONCLICK-->
 		</table>
 	</form>
 </body>
