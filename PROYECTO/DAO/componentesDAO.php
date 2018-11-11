@@ -9,7 +9,7 @@ class ComponentesDAO
 			$dba = new DBAccess();
 			$this->pdo = $dba->get_connection();
 	}
-	public function componentes(componentes $componentes)
+	public function Registrar(componentes $componentes)
 	{
 		try
 		{
