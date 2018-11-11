@@ -14,6 +14,9 @@
 	</nav>
 	<form class="formulario">
 		<table >
+			<center>
+			<img src="login.png" >  <!--posicion de Imagen login-->
+		   </center>
 			<tr >
 
 				<td><input type="text" name="" placeholder="Usuario"  required ></td> <!--Esta edicion se utiliza para que el usuario Ingrese datos al Campo y no lo deje vacio-->
