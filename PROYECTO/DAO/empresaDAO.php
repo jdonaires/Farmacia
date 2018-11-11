@@ -25,3 +25,5 @@ class empresaDAO
 			die($e->getMessage());
 		}
 	}
+}
+?>

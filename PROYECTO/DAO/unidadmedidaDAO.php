@@ -21,3 +21,5 @@ class unidadmedidaDAO
 			die($e->getMessage());
 		}
 	}
+}
+?>

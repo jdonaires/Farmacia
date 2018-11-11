@@ -21,3 +21,5 @@ class tipopresentacionDAO
 			die($e->getMessage());
 		}
 	}
+}
+?>	
