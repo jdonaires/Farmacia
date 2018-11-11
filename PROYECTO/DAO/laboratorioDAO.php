@@ -17,7 +17,7 @@
         $statement->bindParam(2,$laboratorio->__GET('IdLaboratorio'));
         $statement->bindParam(3,$laboratorio->__GET('RegSanitario'));
         $statement -> execute();
-      } catch (\Exception $e)
+      } catch (Exception $e)
       {
           die($e->getMessage());
       }

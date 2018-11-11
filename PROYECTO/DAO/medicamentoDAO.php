@@ -19,7 +19,7 @@
             $statement->bindParam(3,$medicamento->__GET('nombrelaboratorio'));
             $statement->bindParam(4,$medicamento->__GET('idlaboratorio'));
             $statement -> execute();
-        } catch (\Exception $e)
+        } catch (Exception $e)
         {
             die($e->getMessage());
         }

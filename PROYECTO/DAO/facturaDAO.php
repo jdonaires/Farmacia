@@ -20,7 +20,7 @@
         $statement->bindParam(1,$factura->__GET('igv'));
         $statement->bindParam(1,$factura->__GET('subtotal'));
         $statement -> execute();
-      } catch (\Exception $e)
+      } catch (Exception $e)
       {
           die($e->getMessage());
       }
