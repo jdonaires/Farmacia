@@ -15,7 +15,7 @@
 	<form class="formulario">
 		<table >
 			<center>
-			<img src="login.png" >  <!--posicion de Imagen login-->
+			<img src="img/login.png" >  <!--posicion de Imagen login-->
 		   </center>
 			<tr >
 
