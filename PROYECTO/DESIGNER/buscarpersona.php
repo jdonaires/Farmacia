@@ -8,7 +8,7 @@ $perDAO = new PersonaDAO();
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="icon" type="img/jpg" href="DESIGNER/a.jpg">
+	
 	<title> Formulario para Buscar Persona</title>
 </head>
 <body>
