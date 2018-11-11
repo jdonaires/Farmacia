@@ -8,7 +8,7 @@ $perDAO = new PersonaDAO();
 <!DOCTYPE html>
 <html>
 <head>
-	
+
 	<title> Formulario para Buscar Persona</title>
 </head>
 <body>
@@ -38,7 +38,7 @@ $perDAO = new PersonaDAO();
                 {
                     $resultado = array();//VARIABLE TIPO RESULTADO
                     $per->__SET('dni',$_POST['dni']);//ESTABLECEMOS EL VALOR DEL DNI
-                    $resultado = $perDAO->Listar($per); //CARGAMOS LOS REGISTRO EN EL ARRAY RESULTADO
+                    $resultado = $perDAO->listarPersona($per); //CARGAMOS LOS REGISTRO EN EL ARRAY RESULTADO
                     if(!empty($resultado)) //PREGUNTAMOS SI NO ESTA VACIO EL ARRAY
                     {
                         ?>
