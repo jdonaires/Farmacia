@@ -8,9 +8,13 @@
         /** @test */
         public function test_sinFuncion()
         {
+            $per = new Persona();
+            $ni='1';
+            $per->__SET('dni',$ni);
+
             $dao= new PersonaDAO();
-            $dao->eliminarPersona('33333338');
-            $this->assertFalse(false);
+            $result=$dao->listarPersona($per);
+            $this->assertTrue(!empty($resultado));
         }
     }
 

@@ -1,6 +1,6 @@
 <?php
-	require_once("../../BOL/persona.php");
-	require_once("../../DAL/DBAccess.php");
+	require_once("../BOL/persona.php");
+	require_once("../DAL/DBAccess.php");
 	
 	class PersonaDAO
 	{
@@ -12,19 +12,37 @@
 				$this->pdo = $dba->get_connection();
 		}
 
-		/*public function listarPersona(Persona $per) {
+		public function listarPersona(Persona $persona) {
 			try
 			{
+				$result = array();
+
 				$statement = $this->pdo->prepare("call up_insertar_persona(?)");
-
 				$statement->bindParam(1,$persona->__GET('dni'));
-
 				$statement -> execute();
+
+				foreach($statement->fetchAll(PDO::FETCH_OBJ) as $r)
+				{
+					$per = new Persona();
+	
+					$per->__SET('dni', $r->dni);
+					$per->__SET('nombres', $r->nombres);
+					$per->__SET('apellidos', $r->apellidos);
+					$per->__SET('correo', $r->correo);
+					$per->__SET('fecnac', $r->fecnac);
+					$per->__SET('direccion', $r->direccion);
+					$per->__SET('tipopersona', $r->tipopersona);
+	
+					$result[] = $per;
+				}
+	
+				return $result;
+
 			} catch (Exception $e)
 			{
 				die("listarPersona function  ->".$e->getMessage());
 			}
-		}*/
+		}
 
 		public function insertarPersona(Persona $persona)
 		{
