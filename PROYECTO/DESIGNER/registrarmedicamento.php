@@ -1,4 +1,4 @@
-<?php
+  <?php
   require_once('../BOL/medicamento.php');
   require_once('../DAO/medicamentoDAO.php');
 
@@ -31,15 +31,15 @@
       <font face="Comic Sans MS,arial,verdana" size=6> Registrar Medicamento</font>
       <table border="0">
         <tr>
-          <td><input type="text" name="codMedicamento" style="width:30%" placeholder="Codigo"></td>
+          <td><input type="text" name="codMedicamento" style="width:30%" placeholder="Codigo" required></td>
         </tr>
         <tr>
-          <td><input type="text" name="Nombre" style="width:70%" placeholder="Nombre"></td>
+          <td><input type="text" name="Nombre" style="width:70%" placeholder="Nombre" required></td>
         </tr>
         <tr>
           <td>
-            <input type="text" name="NomLaboratorio"  placeholder="Laboratorio">
-            <input type="text" name="IDLaboratorio" placeholder="ID">
+            <input type="text" name="NomLaboratorio"  placeholder="Laboratorio" required>
+            <input type="text" name="IDLaboratorio" placeholder="ID" required>
           </td>
         </tr>
         <tr>
