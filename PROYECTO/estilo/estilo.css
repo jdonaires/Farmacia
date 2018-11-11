@@ -1,3 +1,9 @@
+img {
+   width: 30%;
+   height: 30%;  <!-- Se agrega la imagen con su respectiva medida-->
+
+}
+
 *{
 	margin:0px;
 }
@@ -29,9 +35,9 @@
 
 
 .formulario table{
-	position: relative;
-	margin-top: 27%;
-	margin-left: 12%;
+	text-align: center;
+	margin-top: 10%;
+	margin-left: 25%;
 
 }
 .formulario td{
