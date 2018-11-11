@@ -9,7 +9,7 @@ class transporteDAO
       $dba = new DBAccess();
       $this->pdo = $dba->get_connection();
   }
-  public function transportista(transporte $transporte)
+  public function transporte(transporte $transporte)
   {
     try
     {
@@ -24,5 +24,29 @@ class transporteDAO
     }
   }
 
+
+  public function listarTransporte(transporte $transporte)
+	{
+		try
+		{
+			$result = array();
+			$statement = $this->pdo->prepare("call listar_transporte(?)");
+			$statement->bindParam(1,$transporte->__GET('RUC'));
+			$statement->execute();
+			foreach($statement->fetchAll(PDO::FETCH_OBJ) as $r)
+			{
+				$transpor = new Transporte();
+				$transpor->__SET('RUC', $r->RUC);
+				$transpor->__SET('idtransporte', $r->idtransporte);
+				$transpor->__SET('placa', $r->placa);
+				$result[] = $transpor;
+			}
+			return $result;
+		}
+		catch(Exception $e)
+		{
+			die($e->getMessage());
+		}
+	}
 }
 ?>
