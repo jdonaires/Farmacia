@@ -4,7 +4,7 @@
 		*Se corrigio errores en los procedimientos de insertarpersona,medicamento y guia de remision.
 		*Se agrego el campo correo a la tabla Persona
 		*Se se agrego "up_" a los nombre de los procemientos y otras cosas mas.....
-		
+
 
 
 
@@ -175,17 +175,17 @@ DELIMITER ;
 /*  INSERTAR PERSONA  */
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_persona(
-  IN p_dni		    CHAR(8),       
+  IN p_dni		    CHAR(8),
 	IN p_nombre 		VARCHAR(25),
-	IN p_apellido 	VARCHAR(20),    
-	IN p_fecnac 		DATE,    
+	IN p_apellido 	VARCHAR(20),
+	IN p_fecnac 		DATE,
 	IN p_genero 		varchar(1),
-	IN p_direccion	VARCHAR(40), 
+	IN p_direccion	VARCHAR(40),
 	IN p_tipo_persona	varchar(20),
    IN p_correo 	VARCHAR(50)
 )
 BEGIN
-	INSERT INTO Persona(dni,nombre,apellido,fecnac,genero,direccion,tipoPersona,correo) 
+	INSERT INTO Persona(dni,nombre,apellido,fecnac,genero,direccion,tipoPersona,correo)
     VALUES (p_dni,p_nombre,p_apellido,p_fecnac,p_genero,p_direccion,p_tipo_persona,p_correo);
 END ;;
 DELIMITER ;
@@ -240,5 +240,38 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_guia_remision(
 BEGIN
 	INSERT INTO GuiaRemision(nroguia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
 	 values(p_nro_guia,p_punto_partida,p_punto_llegada,p_fec_emision,p_fec_inic_traslado,p_motiv_traslado,p_id_transporte);
+END ;;
+DELIMITER ;
+
+
+/* ELIMINAR EMPLEADO */
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `up_eliminar_empleado`(
+	IN pDNI VARCHAR(20)
+)
+BEGIN
+	DELETE FROM empleado WHERE DNI = pDNI;
+END ;;
+DELIMITER ;
+
+/* ELIMINAR EMPRESA*/
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `up_eliminar_empresa`(
+	IN pRUC VARCHAR(20)
+)
+BEGIN
+	DELETE FROM empresa WHERE RUC = pRUC;
+END ;;
+DELIMITER ;
+
+/* ELIMINAR TRANSPORTE */
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `up_eliminar_transporte`(
+	IN pRUC VARCHAR(20)
+)
+BEGIN
+	DELETE FROM transporte WHERE RUC = pRUC;
 END ;;
 DELIMITER ;
