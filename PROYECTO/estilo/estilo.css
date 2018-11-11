@@ -47,14 +47,12 @@ img {
 
 .formulario input[type=text],input[type=password]{
 	background: rgba(233,233,233,0);
-	padding:10px;
-	margin:auto;
-	font-size: 20px;
+	text-align: center;
 	border-top:none;
 	border-left:none;
 	border-right:none;
-	border-bottom:solid 1px #F2F3F4;
-	transition:0.5s border;
+	border-bottom:solid 4px #CCEEFF ;
+	transition:0.4s border;
 	outline: none;
 }
 
