@@ -24,5 +24,18 @@ class transportistaDAO
     }
   }
 
+  public function eliminarTransportista($DNI){
+    try
+    {
+      $statement = $this->pdo->prepare("call up_eliminar_transportista(?)");
+      $statement->bindParam(1,$DNI);
+      $statement -> execute();
+
+    } catch (Exception $e)
+    {
+      die("eliminarTransportista function  ->".$e->getMessage());
+    }
+  }
+
 }
 ?>

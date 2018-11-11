@@ -51,5 +51,20 @@ class empresaDAO
 			die($e->getMessage());
 		}
 	}
+
+
+	public function eliminarEmpresa($RUC){
+		try
+		{
+			$statement = $this->pdo->prepare("call up_eliminar_empresa(?)");
+			$statement->bindParam(1,$RUC);
+			$statement -> execute();
+
+		} catch (Exception $e)
+		{
+			die("eliminarEmpresa function  ->".$e->getMessage());
+		}
+	}
+
 }
 ?>
