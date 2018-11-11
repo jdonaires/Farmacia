@@ -10,7 +10,7 @@
 
 <body  class="cajon">
 	<nav class="navegador" align="center">
-		<span>FamiSalud</span>
+		<span><h1>FarmiSalud</h1></span>
 	</nav>
 	<form class="formulario">
 		<table >
@@ -26,8 +26,14 @@
 				<td><input type="text" name="" placeholder="Clave"  required ></td>
 			</tr>
 			<tr>
+			 <select name="tipopersona" >
+                                    <option value="Empleado">Empleado</option>
+                                    <option value="Transportista">Transportista</option>
+                                </select>
+                            </tr>
+			<tr>
 
-				<td ><input type="submit" name="" value="INSERTAR" style="width:100%;"></td>
+				<td ><input type="submit" name="" value="INGRESAR" style="width:100%;"></td>
 
 			</tr>
 
