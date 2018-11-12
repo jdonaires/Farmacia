@@ -2,7 +2,7 @@
   class DBAccess
   {
 
-    /*Cualquier duda me informan.................. */
+    /*Cualquier duda me informan................... */
     
     private $conn;
 
