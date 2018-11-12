@@ -38,6 +38,17 @@
       die("insertarLaboratorio function  ->".$e->getMessage());
     }
   }
+    public function eliminarLaboratorio($RUC){
+    try
+    {
+      $statement = $this->pdo->prepare("call up_eliminar_laboratorio(?)");
+      $statement->bindValue(1,$RUC);
+      $statement -> execute();
 
+    } catch (Exception $e)
+    {
+      die("eliminarLaboratorio function  ->".$e->getMessage());
+    }
+  }
   }
 ?>
