@@ -39,5 +39,21 @@ class AlmacenDAO
 			}
 	}
 
+	public function listaralmacen(almacen $almacen)
+	{
+			try {
+					$statement = $this->pdo->prepare("call up_listar_almacen(?)");
+
+					$statement->bindValue(1, $almacen->__GET('coddtMedicamento'));
+					$statement->execute();
+
+					$result = (array)$statement->fetchAll(PDO::FETCH_CLASS, "almacen");
+					return $result;
+
+			} catch (Exception $e) {
+					die("listaralmacen function  ->" . $e->getMessage() . " - error message: > " . $e->getLine() . " - " . $e->getCode());
+			}
+	}
+
 }
 ?>
