@@ -27,7 +27,7 @@ class transportistaDAO
     try
     {
       $statement = $this->pdo->prepare("call up_eliminar_transportista(?)");
-      $statement->bindParam(1,$DNI);
+      $statement->bindValue(1,$DNI);
       $statement -> execute();
 
     } catch (Exception $e)
