@@ -23,22 +23,28 @@ if (isset($_POST['guardar']))
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
 	<title> Formulario Guia de Remision</title>
-	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+	<link rel="stylesheet" type="text/css" href="../estilo/fcomponentes.css">
+  <link rel="icon" type="img/jpg" href="../img/a.jpg">
 </head>
 <body>
   <div>
+  </br>
   	<h1> Registro de Guia Remision</h1>
+  </br>
     <form class="contact_form">
-      <ul>
-       <li><span for="NroGuia">NroGuia:</span><input type="text" style="width : 100 % ;"  placeholder=""></li>
-       <li><span for="PPartida">PuntoPartida:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
-       <li><span for="PLlegada">PuntoLlegada:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
-       <li><span for="FecEmision">FechaEmision:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
-       <li><span for="FecInicTraslado">FecInicTraslado:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
-       <li><span for="MotTraslado">MotivoTraslado:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
-       <li><span for="IdTransporte">IdTransporte:</span><input type="text" style="width:100 % ;"  placeholder=""></li>
-        <input type="submit" value="Guardar"  id="boton">
+    </br>
+      <input type="text" style="width : 100 % ;"  placeholder="NroGuia" required="">
+      <input type="text" style="width:100 % ;"  placeholder="PuntoPartida" required="">
+      <input type="text" style="width:100 % ;"  placeholder="PuntoLlegada" required="">
+      <h4>Fecha de Emision</h4>
+      <input type="date" style="width:100 % ;"  placeholder="FechaEmision" required="">
+      <h4>Fecha Inicio de Traslado</h4>
+      <input type="date" style="width:100 % ;"  placeholder="FecInicTraslado" required="">
+      <input type="text" style="width:100 % ;"  placeholder="MotivoTraslado" required="">
+      <input type="text" style="width:100 % ;"  placeholder="IdTransporte" required="">
+      <input type="submit" value="Guardar"  id="button">
       </ul>
     </form>
   </div>
