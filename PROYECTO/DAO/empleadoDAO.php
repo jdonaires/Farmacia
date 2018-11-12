@@ -9,22 +9,36 @@
         $dba = new DBAccess();
         $this->pdo = $dba->get_connection();
     }
-    public function empleado(empleado $empleado)
+    public function insertarEmpleado(empleado $empleado)
     {
       try
       {
         $statement = $this->pdo->prepare("CALL up_insertar_empleado(?,?,?,?,?)");
-        $statement->bindParam(1,$empleado->__GET('Turno'));
-        $statement->bindParam(2,$empleado->__GET('especialidad'));
-        $statement->bindParam(3,$empleado->__GET('usuario'));
-        $statement->bindParam(4,$empleado->__GET('clave'));
-        $statement->bindParam(5,$empleado->__GET('dni'));
+        $statement->bindValue(1,$empleado->__GET('Turno'));
+        $statement->bindValue(2,$empleado->__GET('especialidad'));
+        $statement->bindValue(3,$empleado->__GET('usuario'));
+        $statement->bindValue(4,$empleado->__GET('clave'));
+        $statement->bindValue(5,$empleado->__GET('dni'));
         $statement -> execute();
       } catch (Exception $e)
       {
-        die($e->getMessage());
+      die("insertarEmpleado function  ->".$e->getMessage());
       }
     }
+
+    public function listarEmpleado(empleado $empleado) {
+			try
+			{
+				$statement = $this->pdo->prepare("call up_listar_empleado(?)");
+				$statement->bindValue(1,$empleado->__GET('dni'));
+				$statement -> execute();
+                $result = (array)$statement->fetchAll(PDO::FETCH_CLASS,"Empleado");
+				return $result;
+			} catch (Exception $e)
+			{
+				die("listarEmpleado function  ->".$e->getMessage()." - error message: > ".$e->getLine()." - ".$e->getCode());
+			}
+		}
 
   }
 ?>
