@@ -289,5 +289,65 @@ BEGIN
 END ;
 DELIMITER ;
 
+DELIMITER ;;
+/*  INSERTAR COMPONENTES  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_componentes(
+  IN p_CodDtMed		    int(11),    
+	IN p_Nombre 	varchar(20),    
+	IN p_Tipo 	varchar(20),    
+	IN p_Cantidad int(11),
+	IN p_CodUniMedida int(11)
+)
+BEGIN
+	INSERT INTO Componentes(CodDtMed,Nombre,Tipo,Cantidad,CodUniMedida) 
+    VALUES (p_CodDtMed,p_Nombre,p_Tipo,p_Cantidad,p_CodUniMedida);
+END ;
+DELIMITER ;
+
+DELIMITER ;;
+/*  INSERTAR DETALLEGUIAMEDICAMENTO  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtguiamed(
+  IN p_NroGuiaRemision varchar(20),
+  IN p_CodMed varchar(20),
+  IN p_IdDt int(11),
+  IN p_Cantidad varchar(20),
+  IN p_PesoTotal decimal(6,2),
+  IN p_Lote varchar(20),
+  IN p_Descripcion varchar(20)
+)
+BEGIN
+	INSERT INTO dtguiamed(NroGuiaRemision,CodMed,IdDt,Cantidad,PesoTotal,Lote,Descripcion) 
+    VALUES (p_NroGuiaRemision,p_CodMed,p_IdDt,p_Cantidad,p_PesoTotal,p_Lote,p_Descripcion);
+END ;
+DELIMITER ;
+
+DELIMITER ;;
+/*  INSERTAR DETALLEMEDICALEMNTO  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtmed(
+  IN CodMed varchar(20),
+  IN CodPre int(11),
+  IN CodDtMed int(11),
+  IN Psicotrópico enum('Si','No'),
+  IN PesoUnitario decimal(6,2),
+  IN FecVenc date ,
+  IN Descripcion varchar(20)
+)
+BEGIN
+	INSERT INTO dtmed(CodMed,CodPre,CodDtMed,Psicotrópico,PesoUnitario,FecVenc,Descripcion) 
+    VALUES (p_CodMed,p_CodPre,P_CodDtMed,p_Psicotrópico,p_PesoUnitario,p_FecVenc,p_Descripcion);
+END ;
+DELIMITER ;
 
 
+DELIMITER ;;
+/*  INSERTAR TRANSPORTE  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_transporte(
+	IN	p_RUC varchar(20),
+	IN  p_IdTransporte int(11),
+    IN  p_Placa varchar(20)
+)
+BEGIN
+	INSERT INTO transporte(RUC,IdTransporte,Placa) 
+    VALUES (p_RUC,p_IdTransporte,p_Placa);
+END ;
+DELIMITER ;
