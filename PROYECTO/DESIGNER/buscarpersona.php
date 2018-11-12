@@ -10,27 +10,22 @@ $perDAO = new PersonaDAO();
 <head>
 
 	<title> Formulario para Buscar Persona</title>
+	<link rel="icon" type="img/jpg" href="../img/a.jpg">
+	<link rel="stylesheet" type="text/css" href="../estilo/fcomponentes.css">
 </head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
 <body>
-
+		</br>
+			<h1>Buscar Persona</h1>
+		</br>
 	 <form action="buscarpersona.php" method="post" class="formulario" >
 
-                    <table  border="0">
+	 </br>
+        <input type="text" name="dni" value=""  placeholder="Ingrese DNI"  required style="width:100%;" />
+                <!--Esta edicion se utiliza para que el usuario Ingrese datos al Campo y no lo deje vacio-->
+        <input type="submit" value="BUSCAR" name="buscar" id="button" class="pure-button pure-button-primary" style="width:100%">
 
-                        <tr>
-
-                            <td><input type="text" name="dni" value=""  placeholder="Ingrese DNI"  required style="width:100%;" />
-                             <!--Esta edicion se utiliza para que el usuario Ingrese datos al Campo y no lo deje vacio-->
-														</td>
-                        </tr>
-                        <tr>
-                            <td >
-
-                                <input type="submit" value="BUSCAR" name="buscar"class="pure-button pure-button-primary" style="width:100%">
-                            </td>
-                        </tr>
-                    </table>
-                </form>
+  </form>
         <!--ESTA CONDICION SIRVE PARA REALIZAR BUSQUEDA POR DNI-->
 
                 <?php
