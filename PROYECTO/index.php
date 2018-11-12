@@ -21,7 +21,7 @@
 			</tr>
 			<tr >
 
-				<td><input type="text" name="" placeholder="Clave"  required ></td>
+				<td><input type="password" name="" placeholder="Clave"  required ></td>
 			</tr>
 			<tr>
 			 <select name="tipopersona" >
