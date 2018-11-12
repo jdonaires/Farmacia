@@ -7,12 +7,10 @@ $empDAO=new EmpleadoDAO();
 
 if (isset($_POST['guardar'])) {
     $emp->__SET('dni', $_POST['dni']);
-    $emp->__SET('nombres',$_POST['nombres']);
-    $emp->__SET('apellidos',$_POST['apellidos']);
-    $emp->__SET('email', $_POST['email']);
-    $emp->__SET('telefono', $_POST['telefono']);
-    $emp->__SET('direccion', $_POST['direccion']);
-    $emp->__SET('estado', $_POST['estado']);
+    $emp->__SET('turno',$_POST['turno']);
+    $emp->__SET('especialidad',$_POST['especialidad']);
+    $emp->__SET('clave', $_POST['clave']);
+    $emp->__SET('usuario', $_POST['usuario']);
     $empDAO->listarEmpleado($per);
 
     header('Location: registrarEmpleado.php');
@@ -33,12 +31,10 @@ if (isset($_POST['guardar'])) {
   		</div>
   		<form class="form__reg" action="">
               <input class="input-50" type="text" placeholder="DNI" required autofocus>
-   			      <input class="input-100" type="text" placeholder="Nombres" required autofocus>
-              <input class="input-100" type="tex" placeholder="Apellidos" required autofocus>
-              <input class="input-50" type="email" placeholder="Email" required>
-              <input class="input-50" type="text" placeholder="Telefono" required>
-              <input class="input-100" type="text" placeholder="Dirección" required>
-              <input class="input-100" type="text" placeholder="Estado" required>
+   			      <input class="input-100" type="text" placeholder="Turno" required autofocus>
+              <input class="input-100" type="tex" placeholder="Especialidad" required autofocus>
+              <input class="input-50" type="password" placeholder="Clave" required>
+              <input class="input-50" type="text" placeholder="usuario" required>
               <div class="btn__form">
               	<input class="btn__submit" type="submit" value="REGISTRAR">
               	<input class="btn__reset" type="reset" value="LIMPIAR">
