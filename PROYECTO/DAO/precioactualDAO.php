@@ -13,10 +13,10 @@
     {
       try {
         $statement = $this->pdo->prepare("insert into precioactual values(?,?,?,?)");
-        $statement->bindParam(1,$precioactual->__GET('coddtmedicamento'));
-        $statement->bindParam(2,$precioactual->__GET('precio'));
-        $statement->bindParam(3,$precioactual->__GET('estado'));
-        $statement->bindParam(4,$precioactual->__GET('fecactualizacion'));
+        $statement->bindValue(1,$precioactual->__GET('coddtmedicamento'));
+        $statement->bindValue(2,$precioactual->__GET('precio'));
+        $statement->bindValue(3,$precioactual->__GET('estado'));
+        $statement->bindValue(4,$precioactual->__GET('fecactualizacion'));
         $statement -> execute();
       } catch (Exception $e)
       {
