@@ -59,7 +59,10 @@ $perDAO = new PersonaDAO();
                     }
                     else
                     {
-                        echo 'El Dni no se encuentra en la base de datos!';
+                        /*echo 'El Dni no se encuentra en la base de datos!';*/
+												echo "<script>
+	                alert('El Dni no se encuentra en la base de datos!');
+	    												</script>";
                     }
                     ?>
                     </table>
