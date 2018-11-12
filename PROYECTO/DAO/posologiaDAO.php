@@ -14,9 +14,9 @@
     {
       try {
         $statement = $this->pdo->prepare("insert into posologia values(?,?,?)");
-        $statement->bindParam(1,$posologia->__GET('coddtmedicamento'));
-        $statement->bindParam(2,$posologia->__GET('dosis'));
-        $statement->bindParam(3,$posologia->__GET('indicaciones'));
+        $statement->bindValue(1,$posologia->__GET('coddtmedicamento'));
+        $statement->bindValue(2,$posologia->__GET('dosis'));
+        $statement->bindValue(3,$posologia->__GET('indicaciones'));
         $statement -> execute();
       } catch (Exception $e)
       {
