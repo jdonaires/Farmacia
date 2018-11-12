@@ -321,4 +321,19 @@ BEGIN
 END ;
 DELIMITER ;
 
-
+DELIMITER ;;
+/*  INSERTAR DETALLEMEDICALEMNTO  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtmed(
+  IN CodMed varchar(20),
+  IN CodPre int(11),
+  IN CodDtMed int(11),
+  IN Psicotrópico enum('Si','No'),
+  IN PesoUnitario decimal(6,2),
+  IN FecVenc date ,
+  IN Descripcion varchar(20)
+)
+BEGIN
+	INSERT INTO dtmed(CodMed,CodPre,CodDtMed,Psicotrópico,PesoUnitario,FecVenc,Descripcion) 
+    VALUES (p_CodMed,p_CodPre,P_CodDtMed,p_Psicotrópico,p_PesoUnitario,p_FecVenc,p_Descripcion);
+END ;
+DELIMITER ;
