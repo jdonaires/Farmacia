@@ -9,20 +9,20 @@ class empresaDAO
 			$dba = new DBAccess();
 			$this->pdo = $dba->get_connection();
 	}
-	public function Registrar(empresa $empresa)
+	public function insertarEmpresa(empresa $empresa)
 	{
 		try
 		{
 			$statement = $this->pdo->prepare("CALL up_insertar_empresa(?,?,?,?,?)");
-			$statement->bindParam(1,$empresa->__GET('RUC'));
-			$statement->bindParam(2,$empresa->__GET('RazonSocial'));
-			$statement->bindParam(3,$empresa->__GET('Telefono'));
-			$statement->bindParam(4,$empresa->__GET('Direccion'));
-			$statement->bindParam(5,$empresa->__GET('TipoEmpresa'));
+			$statement->bindValue(1,$empresa->__GET('RUC'));
+			$statement->bindValue(2,$empresa->__GET('RazonSocial'));
+			$statement->bindValue(3,$empresa->__GET('Telefono'));
+			$statement->bindValue(4,$empresa->__GET('Direccion'));
+			$statement->bindValue(5,$empresa->__GET('TipoEmpresa'));
 			$statement -> execute();
 		} catch (Exception $e)
 		{
-			die($e->getMessage());
+			die("insertarEmpresa function  ->".$e->getMessage());
 		}
 	}
 
