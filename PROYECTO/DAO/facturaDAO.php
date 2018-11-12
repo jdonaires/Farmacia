@@ -15,10 +15,10 @@
       try {
         $statement = $this->pdo->prepare("insert into factura values(?,?,?,?,?)");
         $statement->bindValue(1,$factura->__GET('iddetallegm'));
-        $statement->bindValue(1,$factura->__GET('costounitario'));
-        $statement->bindValue(1,$factura->__GET('costototal'));
-        $statement->bindValue(1,$factura->__GET('igv'));
-        $statement->bindValue(1,$factura->__GET('subtotal'));
+        $statement->bindValue(2,$factura->__GET('costounitario'));
+        $statement->bindValue(3,$factura->__GET('costototal'));
+        $statement->bindValue(4,$factura->__GET('igv'));
+        $statement->bindValue(5,$factura->__GET('subtotal'));
         $statement -> execute();
       } catch (Exception $e)
       {
