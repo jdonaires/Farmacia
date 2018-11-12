@@ -14,9 +14,9 @@ class AlmacenDAO
 		try
 		{
 		$statement = $this->pdo->prepare("CALL insertar_almacen(?,?,?)");
-    	$statement->bindParam(1,$almacen->__GET('coddtMedicamento'));
-		$statement->bindParam(2,$almacen->__GET('stockactual'));
-		$statement->bindParam(3,$almacen->__GET('ubicacion'));
+    	$statement->bindValue(1,$almacen->__GET('coddtMedicamento'));
+		$statement->bindValue(2,$almacen->__GET('stockactual'));
+		$statement->bindValue(3,$almacen->__GET('ubicacion'));
     $statement -> execute();
 		} catch (Exception $e)
 		{
