@@ -351,3 +351,17 @@ BEGIN
     VALUES (p_RUC,p_IdTransporte,p_Placa);
 END ;
 DELIMITER ;
+
+DELIMITER ;;
+/*  INSERTAR FACTURA  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_factura(
+  IN p_IdDt int(11),
+  IN p_CostoUnitario decimal(6,2),
+  IN p_CostoTotal decimal(6,2),
+  IN p_IGV decimal(6,2),
+  IN p_SubTotal decimal(6,2)
+BEGIN
+	INSERT INTO factura(IdDt,CostoUnitario,CostoTotal,IGV,SubTotal) 
+    VALUES (p_IdDt,p_CostoUnitario,p_CostoTotal,p_IGV,p_SubTotal);
+END ;
+DELIMITER ;
