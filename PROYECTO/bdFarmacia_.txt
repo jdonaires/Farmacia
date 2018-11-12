@@ -377,3 +377,16 @@ BEGIN
     VALUES (p_RUC,p_IdLaboratorio,p_RegSanitario);
 END ;
 DELIMITER ;
+
+
+DELIMITER ;;
+/*  INSERTAR POSOLOGIA  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_posologia(
+  IN CodDtMed int(11),
+  IN Dosis varchar(20),
+  IN Indicaciones varchar(20)
+BEGIN
+	INSERT INTO posologia(CodDtMed,Dosis,Indicaciones) 
+    VALUES (p_CodDtMed,p_Dosis,p_Indicaciones);
+END ;
+DELIMITER ;
