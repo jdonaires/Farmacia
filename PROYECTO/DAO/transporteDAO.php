@@ -14,9 +14,9 @@ class transporteDAO
     try
     {
     $statement = $this->pdo->prepare("CALL insertar_transporte(?,?,?)");
-      $statement->bindParam(1,$transporte->__GET('RUC'));
-    $statement->bindParam(2,$transporte->__GET('idtransporte'));
-    $statement->bindParam(3,$transporte->__GET('placa'));
+      $statement->bindValue(1,$transporte->__GET('RUC'));
+    $statement->bindValue(2,$transporte->__GET('idtransporte'));
+    $statement->bindValue(3,$transporte->__GET('placa'));
     $statement -> execute();
     } catch (Exception $e)
     {
