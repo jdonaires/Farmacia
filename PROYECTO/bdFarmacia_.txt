@@ -390,3 +390,17 @@ BEGIN
     VALUES (p_CodDtMed,p_Dosis,p_Indicaciones);
 END ;
 DELIMITER ;
+
+
+DELIMITER ;;
+/*  INSERTAR PRECIOACTUAL  */
+CREATE DEFINER=meister@`%` PROCEDURE up_insertar_precioactual(
+  IN CodDtMed int(11),
+  IN Precio decimal(6,2),
+  IN Estado enum('True','False'),
+  IN FecAct date
+BEGIN
+	INSERT INTO posologia(CodDtMed,Precio,Estado,FecAct) 
+    VALUES (p_CodDtMed,p_Precio,p_Estado,p_FecAct);
+END ;
+DELIMITER ;
