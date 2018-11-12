@@ -31,8 +31,8 @@ if (isset($_POST['guardar'])) {
   		</div>
   		<form class="form__reg" action="">
               <input class="input-50" type="text" placeholder="DNI" required autofocus>
-   			      <input class="input-100" type="text" placeholder="Turno" required autofocus>
-              <input class="input-100" type="tex" placeholder="Especialidad" required autofocus>
+   			      <input class="input-100" type="text" placeholder="Turno" required>
+              <input class="input-100" type="tex" placeholder="Especialidad" required>
               <input class="input-50" type="password" placeholder="Clave" required>
               <input class="input-50" type="text" placeholder="usuario" required>
               <div class="btn__form">
