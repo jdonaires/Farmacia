@@ -9,19 +9,19 @@ class tipopresentacionDAO
 			$dba = new DBAccess();
 			$this->pdo = $dba->get_connection();
 	}
-	public function Registrar(tipopresentacion $tipopresentacion)
+	public function insertarTipopresentacion(tipopresentacion $tipopresentacion)
 	{
 		try
 		{
 		$statement = $this->pdo->prepare("CALL up_insertar_tipo_presentacion(?,?)");
-		$statement->bindParam(1,$tipopresentacion->__GET('Nombre'));
-		$statement->bindParam(1,$tipopresentacion->__GET('Descripcion'));
+		$statement->bindValue(1,$tipopresentacion->__GET('Nombre'));
+		$statement->bindValue(2,$tipopresentacion->__GET('Descripcion'));
 		$statement -> execute();
-		   
+
 		} catch (Exception $e)
 		{
-			die($e->getMessage());
+			die("insertarTipopresentacion function  ->".$e->getMessage());
 		}
 	}
 }
-?>	
+?>

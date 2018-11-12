@@ -4,11 +4,12 @@
 }
 
 body{
-	background: #5499C7;
+	background: url(../img/fondo.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
+
 
 }
 
@@ -54,4 +55,8 @@ input{
 	cursor: pointer;
 	background: #D7DBDD;
 	color: black;
+}
+
+div form h4{
+	color: #D7DBDD;
 }
