@@ -32,7 +32,7 @@ class empresaDAO
 		{
 			$result = array();
 			$statement = $this->pdo->prepare("call up_listar_empresa(?)");
-			$statement->bindParam(1,$empresa->__GET('RUC'));
+			$statement->bindValue(1,$empresa->__GET('RUC'));
 			$statement->execute();
 			foreach($statement->fetchAll(PDO::FETCH_OBJ) as $r)
 			{
