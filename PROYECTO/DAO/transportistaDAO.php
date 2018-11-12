@@ -9,18 +9,17 @@ class transportistaDAO
       $dba = new DBAccess();
       $this->pdo = $dba->get_connection();
   }
-  public function transportista(transportista $transportista)
+  public function insertarTransportista(transportista $transportista)
   {
     try
     {
-    $statement = $this->pdo->prepare("CALL insertar_transportista(?,?,?)");
-      $statement->bindParam(1,$transportista->__GET('DNI'));
-    $statement->bindParam(2,$transportista->__GET('idtransporte'));
-    $statement->bindParam(3,$transportista->__GET('nrolicencia'));
+    $statement = $this->pdo->prepare("CALL insertar_transportista(?,?)");
+    $statement->bindValue(1,$transportista->__GET('DNI'));
+    $statement->bindValue(2,$transportista->__GET('nrolicencia'));
     $statement -> execute();
     } catch (Exception $e)
     {
-      die($e->getMessage());
+      die("insertarTransportista function  ->".$e->getMessage());
     }
   }
 
