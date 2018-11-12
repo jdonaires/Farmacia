@@ -78,6 +78,8 @@ if(isset($_POST['guardar']))
                             <td >
                                 <input type="submit" value="GUARDAR" name="guardar" style="width:108%">
                             </td>
+                          </tr>
+                          <tr>
                             <td ><input type="submit" value="BUSCAR PERSONA" onclick=" location.href='http://localhost:8090/Farmacia/PROYECTO/DESIGNER/buscarpersona.php' ">
                       			</td>
                         </tr>
