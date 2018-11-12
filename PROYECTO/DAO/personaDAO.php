@@ -79,7 +79,7 @@
 			try
 			{
 				$statement = $this->pdo->prepare("call up_eliminar_persona(?)");
-				$statement->bindParam(1,$dni);
+				$statement->bindValue(1,$dni);
 				$statement -> execute();
 
 			} catch (Exception $e)
