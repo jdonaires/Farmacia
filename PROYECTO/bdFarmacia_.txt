@@ -337,3 +337,17 @@ BEGIN
     VALUES (p_CodMed,p_CodPre,P_CodDtMed,p_Psicotrópico,p_PesoUnitario,p_FecVenc,p_Descripcion);
 END ;
 DELIMITER ;
+
+
+DELIMITER ;;
+/*  INSERTAR TRANSPORTE  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_transporte(
+	IN	p_RUC varchar(20),
+	IN  p_IdTransporte int(11),
+    IN  p_Placa varchar(20)
+)
+BEGIN
+	INSERT INTO transporte(RUC,IdTransporte,Placa) 
+    VALUES (p_RUC,p_IdTransporte,p_Placa);
+END ;
+DELIMITER ;
