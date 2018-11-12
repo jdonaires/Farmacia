@@ -289,5 +289,18 @@ BEGIN
 END ;
 DELIMITER ;
 
-
+DELIMITER ;;
+/*  INSERTAR COMPONENTES  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_componentes(
+  IN p_CodDtMed		    int(11),    
+	IN p_Nombre 	varchar(20),    
+	IN p_Tipo 	varchar(20),    
+	IN p_Cantidad int(11),
+	IN p_CodUniMedida int(11)
+)
+BEGIN
+	INSERT INTO Componentes(CodDtMed,Nombre,Tipo,Cantidad,CodUniMedida) 
+    VALUES (p_CodDtMed,p_Nombre,p_Tipo,p_Cantidad,p_CodUniMedida);
+END ;
+DELIMITER ;
 
