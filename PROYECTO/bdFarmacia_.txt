@@ -304,3 +304,21 @@ BEGIN
 END ;
 DELIMITER ;
 
+DELIMITER ;;
+/*  INSERTAR DETALLEGUIAMEDICAMENTO  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtguiamed(
+  IN p_NroGuiaRemision varchar(20),
+  IN p_CodMed varchar(20),
+  IN p_IdDt int(11),
+  IN p_Cantidad varchar(20),
+  IN p_PesoTotal decimal(6,2),
+  IN p_Lote varchar(20),
+  IN p_Descripcion varchar(20)
+)
+BEGIN
+	INSERT INTO dtguiamed(NroGuiaRemision,CodMed,IdDt,Cantidad,PesoTotal,Lote,Descripcion) 
+    VALUES (p_NroGuiaRemision,p_CodMed,p_IdDt,p_Cantidad,p_PesoTotal,p_Lote,p_Descripcion);
+END ;
+DELIMITER ;
+
+
