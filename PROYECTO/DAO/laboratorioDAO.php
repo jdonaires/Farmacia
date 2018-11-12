@@ -23,5 +23,22 @@
       }
 
     }
+    
+    public function insertarLaboratorio(laboratorio $laboratorio)
+  {
+    try
+    {
+      $statement = $this->pdo->prepare("CALL up_insertar_laboratorio(?,?)");
+      $statement->bindValue(1,$empresa->__GET('RUC'));
+      $statement->bindValue(2,$empresa->__GET('RegSanitario'));
+
+      $statement -> execute();
+    } catch (Exception $e)
+    {
+      die("insertarLaboratorio function  ->".$e->getMessage());
+    }
+  }
+
+
   }
 ?>
