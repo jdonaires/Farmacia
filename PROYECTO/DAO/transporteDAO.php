@@ -31,7 +31,7 @@ class transporteDAO
 		{
 			$result = array();
 			$statement = $this->pdo->prepare("call listar_transporte(?)");
-			$statement->bindParam(1,$transporte->__GET('RUC'));
+			$statement->bindValue(1,$transporte->__GET('RUC'));
 			$statement->execute();
 			foreach($statement->fetchAll(PDO::FETCH_OBJ) as $r)
 			{
