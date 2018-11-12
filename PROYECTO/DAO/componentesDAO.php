@@ -13,7 +13,7 @@ class ComponentesDAO
 	{
 		try
 		{
-		$statement = $this->pdo->prepare("CALL insertar_componentes(?,?,?,?,?)");
+		$statement = $this->pdo->prepare("CALL up_insertar_componentes(?,?,?,?,?)");
     	$statement->bindParam(1,$componentes->__GET('coddtMedicamento'));
 		$statement->bindParam(2,$componentes->__GET('nombre'));
 		$statement->bindParam(3,$componentes->__GET('tipo'));
