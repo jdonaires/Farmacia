@@ -13,9 +13,9 @@
     {
       try {
         $statement = $this->pdo->persona("insert into laboratorio values(?,?,?)");
-        $statement->bindParam(1,$laboratorio->__GET('RUC'));
-        $statement->bindParam(2,$laboratorio->__GET('IdLaboratorio'));
-        $statement->bindParam(3,$laboratorio->__GET('RegSanitario'));
+        $statement->bindValue(1,$laboratorio->__GET('RUC'));
+        $statement->bindValue(2,$laboratorio->__GET('IdLaboratorio'));
+        $statement->bindValue(3,$laboratorio->__GET('RegSanitario'));
         $statement -> execute();
       } catch (Exception $e)
       {
