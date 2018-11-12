@@ -14,13 +14,13 @@ class GuiaRemisionDAO
 		try
 		{
 		$statement = $this->pdo->prepare("CALL up_insertar_guia_remision(?,?,?,?,?,?,?)");
-		$statement->bindParam(1,$guiaremision->__GET('nroguia'));
-    $statement->bindParam(2,$guiaremision->__GET('puntopartida'));
-		$statement->bindParam(3,$guiaremision->__GET('puntollegada'));
-		$statement->bindParam(4,$guiaremision->__GET('fecemision'));
-		$statement->bindParam(5,$guiaremision->__GET('fecinitraslado'));
-		$statement->bindParam(6,$guiaremision->__GET('mottraslado'));
-		$statement->bindParam(7,$guiaremision->__GET('idtransporte'));
+		$statement->bindValue(1,$guiaremision->__GET('nroguia'));
+    $statement->bindValue(2,$guiaremision->__GET('puntopartida'));
+		$statement->bindValue(3,$guiaremision->__GET('puntollegada'));
+		$statement->bindValue(4,$guiaremision->__GET('fecemision'));
+		$statement->bindValue(5,$guiaremision->__GET('fecinitraslado'));
+		$statement->bindValue(6,$guiaremision->__GET('mottraslado'));
+		$statement->bindValue(7,$guiaremision->__GET('idtransporte'));
 	  $statement -> execute();
 		} catch (Exception $e)
 		{
