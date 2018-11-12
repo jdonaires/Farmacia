@@ -9,7 +9,8 @@ if (isset($_POST['guardar'])) {
     $emp->__SET('dni', $_POST['dni']);
     $emp->__SET('nombres',$_POST['nombres']);
     $emp->__SET('apellidos',$_POST['apellidos']);
-    $emp->__SET('correo', $_POST['correo']);
+    $emp->__SET('email', $_POST['email']);
+    $emp->__SET('telefono', $_POST['telefono']);
     $emp->__SET('direccion', $_POST['direccion']);
     $emp->__SET('estado', $_POST['estado']);
     $empDAO->listarEmpleado($per);
