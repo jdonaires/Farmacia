@@ -57,7 +57,7 @@ class empresaDAO
 		try
 		{
 			$statement = $this->pdo->prepare("call up_eliminar_empresa(?)");
-			$statement->bindParam(1,$RUC);
+			$statement->bindValue(1,$RUC);
 			$statement -> execute();
 
 		} catch (Exception $e)
