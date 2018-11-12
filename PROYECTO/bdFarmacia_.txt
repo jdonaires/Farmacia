@@ -365,3 +365,15 @@ BEGIN
     VALUES (p_IdDt,p_CostoUnitario,p_CostoTotal,p_IGV,p_SubTotal);
 END ;
 DELIMITER ;
+
+DELIMITER ;;
+/*  INSERTAR LABORATORIO  */
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_laboratorio(
+  IN p_RUC varchar(20),
+  IN p_IdLaboratorio int(11),
+  IN p_RegSanitario varchar(20)
+BEGIN
+	INSERT INTO laboratorio(RUC,IdLaboratorio,RegSanitario) 
+    VALUES (p_RUC,p_IdLaboratorio,p_RegSanitario);
+END ;
+DELIMITER ;
