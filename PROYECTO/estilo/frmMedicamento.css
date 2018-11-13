@@ -1,25 +1,31 @@
+img {
+   width: 30%;
+   height: 30%;
+}
+
 #form2{
-	background: white;
+	background: #A4F3E9;
 	position: relative;
 	margin:0 auto;
-	padding:40px;
+	padding:70px;
 	width:350px;
 	height: 350px;
 	align-items: center;
 	border-radius:0px;
 }
+
 .cajon{
 	background-color:#F2F3F4;
 }
+
 #form2 table{
 	position: relative;
-	margin-top: 0%;
-	margin-left: 9%;
+	margin-top: 3%;
+	margin-left: 0%;
 	border:none;
 	size:30px;
 }
-}
-#form2 td{
 
-	padding-bottom: 0px;
+#form2 td{
+	padding-bottom: 3px;
 }
