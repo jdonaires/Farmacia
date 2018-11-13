@@ -757,6 +757,38 @@ END$$
 DELIMITER ;
 
 
+/***** ELIMINAR MEDICAMENTO ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_medicamento`(
+	IN p_codmed varchar(20)
+)
+BEGIN
+	DELETE FROM medicamento WHERE CodMed=p_codmed;
+END$$
+DELIMITER ;
+
+
+/***** ACTUALIZAR MEDICAMENTO ***********/
+
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_medicamento`(
+	IN p_codmed		    varchar(20),
+	IN p_Nombre 		VARCHAR(20),
+	IN p_NomLaboratorio 		VARCHAR(20),
+	IN p_IdLaboratorio 			int(11)
+)
+BEGIN
+			UPDATE medicamento SET CodMed=p_codmed, Nombre=p_Nombre, NomLaboratorio=p_NomLaboratorio,
+			IdLaboratorio=p_IdLaboratorio
+			where CodMed=p_codmed;
+END$$
+DELIMITER ;
+
+
 ====================================================================================
 /************** FUNCIONES *****************/
 ======================================================================================
