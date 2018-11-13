@@ -6,6 +6,26 @@
  	<title></title>
  	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
  	<link rel="stylesheet" type="text/css" href="../estilo/menu.css">
+ 	<Script Language="JavaScript">
+    function DameLaFechaHora() {
+      var hora = new Date()
+      var hrs = hora.getHours();
+      var min = hora.getMinutes();
+      var hoy = new Date();
+      var m = new Array();
+      var d = new Array()
+      var an= hoy.getYear();
+      m[0]="Enero";  m[1]="Febrero";  m[2]="Marzo";
+      m[3]="Abril";   m[4]="Mayo";  m[5]="Junio";
+      m[6]="Julio";    m[7]="Agosto";   m[8]="Septiembre";
+      m[9]="Octubre";   m[10]="Noviembre"; m[11]="Diciembre";
+      document.write(hrs+":"+min+" , ");
+      document.write(hoy.getDate());
+      document.write(" de ");
+      document.write(m[hoy.getMonth()]);
+      document.write(" ");
+    }
+  </Script>
  </head>
  <body>
  	<div class="title">
@@ -14,7 +34,9 @@
  	
  	<div class="infoUsuario">
  		<span>EMPLEADO: PERSONA A</span><br>
- 		<span>FECHA:<time>2015-07-26T23:44</time> </span>
+ 		<span>FECHA:<script>
+    DameLaFechaHora();
+  </script> </span>
  	</div>
  	<table>
  		<tr class="titlemenu" >
