@@ -10,7 +10,7 @@
 		    $lab->__SET('RUC', $_POST['RUC']);
 			$lab->__SET('IdLaboratorio', $_POST['IdLaboratorio']);
 			$lab->__SET('RegSanitario', $_POST['RegSanitario']);
-			
+
 			$labDAO->Registrar($lab);
 
 			header('Location: registrarLaboratorio.php');
@@ -21,7 +21,8 @@
 <head>
 <meta charset="utf-8">
 	<title>Formulario para Laboratorio</title>
-	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+	<link rel="icon" type="img/jpg" href="../img/a.jpg">
+	<link rel="stylesheet" type="text/css" href="../estilo/fcomponentes.css">
 </head>
 <body>
   <div>
@@ -31,7 +32,7 @@
     		<li><label for="IdLaboratorio">IdLaboratorio:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
     		<li><label for="RUC">IdLaboratorio:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
     		<li><label for="RegSanitario">RegSanitario:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
-        <input type="submit" value="Guardar"  id="boton">
+        <input type="submit" value="Guardar"  id="button">
     	</ul>
     </form>
   </div>
