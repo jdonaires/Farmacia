@@ -29,7 +29,7 @@
 	</br>
   	<h1>Registrar Laboratorio</h1>
     <form class="contact_form">
-
+		</br>
 		<input type="text" style="width : 100 % ;"  placeholder="IdLaboratorio" required="">
 
 		<input type="text" style="width : 100 % ;"  placeholder="IdLaboratorio" required="">
