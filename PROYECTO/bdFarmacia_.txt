@@ -412,7 +412,7 @@ DELIMITER ;
 ===============================================
 
 DELIMITER //
-CREATE PROCEDURE insertar_personaempleado(IN p_DNI		CHAR(8),
+CREATE PROCEDURE insertar_persona_empleado(IN p_DNI		CHAR(8),
 IN p_nombre 		VARCHAR(25),
 IN p_apellido 	VARCHAR(20),
 IN p_correo		VARCHAR(20),
@@ -435,3 +435,30 @@ BEGIN
 
 END;
 //
+=====================================================
+DELIMITER //
+CREATE PROCEDURE insertar_persona_transportista(
+IN p_DNI		CHAR(8),
+IN p_nombre 		VARCHAR(25),
+IN p_apellido 	VARCHAR(20),
+IN p_correo		VARCHAR(20),
+IN p_fecNac 		DATE,
+IN p_genero 		ENUM ('M','F'),
+IN p_direccion	VARCHAR(20),
+IN p_tipoPersona	ENUM ('Empleado','Transportista'),
+
+IN t_DNI 		VARCHAR(8),
+IN t_IdTransporte	INT,
+IN t_NroLicencia	VARCHAR(15))
+
+BEGIN
+ INSERT INTO PERSONA(DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona) VALUES (p_DNI,p_nombre,p_apellido,p_correo,p_fecNac,p_genero,p_direccion,p_tipoPersona);
+
+ INSERT INTO TRANSPORTISTA (DNI,IdTransporte,NroLicencia) VALUES (t_DNI,t_IdTransporte,t_NroLicencia);
+
+END;
+//
+
+
+
+ALter
