@@ -12,16 +12,6 @@ require_once("empleadoDAO.php");
 class empleadoDAOTest extends PHPUnit_Framework_TestCase
 {
 
-    public function testInsertarEmpleado()
-    {
-
-    }
-
-    public function testActualizarEmpleado()
-    {
-
-    }
-
     public function testListarEmpleado()
     {
         $dao = new EmpleadoDAO();

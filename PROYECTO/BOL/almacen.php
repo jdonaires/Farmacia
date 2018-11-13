@@ -1,6 +1,7 @@
 <?php
-class almacen
+class Almacen
 {
+    private $id;
 	private $coddtMedicamento;
 	private $stockactual;
 	private $ubicacion;
