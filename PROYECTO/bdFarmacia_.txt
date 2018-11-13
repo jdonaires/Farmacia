@@ -489,3 +489,13 @@ BEGIN
   INSERT INTO LABORATORIO  values (l_RUC,l_RegSanitario);
 END;
 //
+
+
+/************** FUNCIIONES *****************/
+DELIMITER ;;
+CREATE DEFINER=meister@`%` FUNCTION verificar_usuario_clave(p_usuario varchar(20), p_contraseña varchar(20)) RETURNS tinyint(1)
+    READS SQL DATA
+BEGIN
+	RETURN EXISTS (SELECT dni FROM empleado WHERE usuario = p_usuario AND clave = p_contraseña);
+END ;;
+DELIMITER ;
