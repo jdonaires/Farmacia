@@ -492,7 +492,186 @@ END;
 //
 
 
-/************** FUNCIIONES *****************/
+
+
+/***LISTAR ALMACEN**/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE PROCEDURE `up_listar_almacen`
+(
+	IN p_coddtmed int
+)
+BEGIN
+	select * from almacen where CodDtMed like concat(p_coddtmed,'%');
+END$$
+
+DELIMITER ;
+
+
+/**** LISTAR EMPLEADO ****/
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_empleado`(
+	IN p_dni CHAR(8)
+)
+BEGIN
+
+    select * from empleado where dni
+    like concat(p_dni,'%');
+
+END$$
+
+DELIMITER ;
+
+
+/***** LISTAR PERSONA ***/
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_persona`(
+	IN p_dni char(8)
+)
+BEGIN
+	select * from persona where dni
+    like CONCAT(p_dni,'%');
+END$$
+
+DELIMITER ;
+
+/***** ACTUALIZAR UNIDAD DE MEDIDA ****/
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_unidad_medida`(
+	IN p_id int,
+    IN p_descripcion varchar(10)
+)
+BEGIN
+	UPDATE UnidadMedida
+    SET descripcion=p_descripcion WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ACTUALIZAR TIPO DE PRESENTACION  ****/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_tipo_presentacion`(
+	IN p_id		INT,
+	IN p_nombre		VARCHAR(20),
+	IN p_descripcion	VARCHAR(30)
+)
+BEGIN
+	UPDATE TipoPresentacion
+    SET nombre=p_nombre,descripcion=p_descripcion WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ACTUALIZAR PERSONA  ****/
+
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_persona`(
+	IN p_dni		    CHAR(8),
+	IN p_nombre 		VARCHAR(25),
+	IN p_apellido 	VARCHAR(20),
+	IN p_fecnac 		DATE,
+	IN p_genero 		varchar(1),
+	IN p_direccion	VARCHAR(40),
+	IN p_tipo_persona	varchar(20),
+    IN p_correo 	VARCHAR(50)
+)
+BEGIN
+	UPDATE Persona SET nombre=p_nombre, apellido=p_apellido, fecnac=p_fecnac, genero=p_genero,
+			direccion=p_direccion, tipoPersona=p_tipo_persona, correo=p_correo where dni=p_dni;
+END$$
+
+DELIMITER ;
+
+
+/***** ACTUALIZAR EMPLEADO  ****/
+
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_empleado`(
+	in p_id int,
+    IN p_turno VARCHAR(20),
+    IN p_especialidad VARCHAR(40),
+    IN p_usuario VARCHAR(20),
+    IN p_clave VARCHAR(20),
+    IN p_dni CHAR(8)
+)
+BEGIN
+	UPDATE Empleado SET turno=p_turno, especialidad=p_especialidad,
+		usuario=p_usuario, clave=p_clave,dni=p_dni WHERE IdEmpleado=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ELIMINAR UNIDAD DE MEDIDA **********/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_unidad_medida`(
+	IN p_id int
+)
+BEGIN
+	DELETE FROM UnidadMedida
+    WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ELIMINAR TIPO DE PRESENTACION **********/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_tipo_presentacion`(
+	IN p_id int
+)
+BEGIN
+	DELETE FROM TipoPresentacion
+    WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ELIMINAR PERSONA **********/
+
+
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_persona`(
+	IN p_dni char(8)
+)
+BEGIN
+	DELETE FROM Persona
+    WHERE dni=p_dni;
+END$$
+
+DELIMITER ;
+
+
+
+
+
+
+
+
+
+====================================================================================
+/************** FUNCIONES *****************/
+======================================================================================
+
 DELIMITER ;;
 CREATE DEFINER=meister@`%` FUNCTION verificar_usuario_clave(p_usuario varchar(20), p_contraseña varchar(20)) RETURNS tinyint(1)
     READS SQL DATA
