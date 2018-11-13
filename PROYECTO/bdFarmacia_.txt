@@ -472,9 +472,20 @@ IN t_RUC 		VARCHAR(20),
 IN t_Placa 		VARCHAR(20),
 
 BEGIN
-	INSERT INTO EMPRESA(RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) values (e_RUC,e_RazonSocial,e_Telefono,e_Direccion,e_TipoEmpresa);
+	INSERT INTO EMPRESA values (e_RUC,e_RazonSocial,e_Telefono,e_Direccion,e_TipoEmpresa);
 
-	INSERT INTO TRANSPORTE(RUC,Placa) values (t_RUC,t_Placa);
+	INSERT INTO TRANSPORTE values (t_RUC,t_Placa);
 
+END;
+//
+
+===================================
+DELIMITER //
+CREATE PROCEDURE insertar_empresa_laboratorio(IN e_RUC 		VARCHAR(20),IN e_RazónSocial 	VARCHAR(40),IN e_Telefono 	VARCHAR(10),IN e_Dirección 	VARCHAR(20),IN e_TipoEmpresa	VARCHAR(30),IN l_RUC		VARCHAR(20),IN l_RegSanitario	VARCHAR(20))
+
+BEGIN
+  INSERT INTO EMPRESA values (e_RUC,e_RazonSocial,e_Telefono,e_Direccion,e_TipoEmpresa);
+
+  INSERT INTO LABORATORIO  values (l_RUC,l_RegSanitario);
 END;
 //
