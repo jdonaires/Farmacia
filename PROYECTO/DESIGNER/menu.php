@@ -33,7 +33,7 @@
  			</td>
  			<td><div class="caja"><a href=""><img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048610.svg" class="icon">
  			</a>CONSULTAR MEDICAMENTO</div></td>
- 			<td><div class="caja"><a href=""><img src="https://image.flaticon.com/icons/svg/1201/1201197.svg" class="icon">
+ 			<td><div class="caja"><a href=""><img src="https://image.flaticon.com/icons/svg/1048/1048576.svg" class="icon">
  			</a>LISTAR MEDICAMENTO</div></td>
  		</tr>
  		<tr class="titlemenu" >
@@ -46,21 +46,21 @@
  			<td class="col">
  				<div class="caja">
  					<a href="frmpersona.php">
- 						<img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048568.svg" class="icon">
+ 						<img src="https://image.flaticon.com/icons/svg/1201/1201194.svg" class="icon">
  					</a>AGREGAR EMPLEADO
  				</div>
  			</td>
  			<td class="col">
  				<div class="caja">
  					<a href="">
- 						<img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048568.svg" class="icon">
+ 						<img src="https://image.flaticon.com/icons/svg/1201/1201169.svg" class="icon">
  					</a>CONSULTAR EMPLEADO
  				</div>
  			</td>
  			<td class="col">
  				<div class="caja">
  					<a href="">
- 						<img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048568.svg" class="icon">
+ 						<img src="https://image.flaticon.com/icons/svg/1201/1201197.svg" class="icon">
  					</a>LISTAR EMPLEADO
  				</div>
  			</td>
@@ -76,21 +76,21 @@
  			<td class="col">
  				<div class="caja">
  					<a href="">
- 						<img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048568.svg" class="icon">
+ 						<img src="https://image.flaticon.com/icons/svg/129/129488.svg" class="icon">
  					</a>AGREGAR GUIA DE REMISIÓN
  				</div>
  			</td>
  			<td class="col">
  				<div class="caja">
  					<a href="">
- 						<img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048568.svg" class="icon">
+ 						<img src="https://image.flaticon.com/icons/svg/129/129491.svg" class="icon">
  					</a>CONSULTAR GUIA DE REMISIÓN
  				</div>
  			</td>
  			<td class="col">
  				<div class="caja">
  					<a href="">
- 						<img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048568.svg" class="icon">
+ 						<img src="https://image.flaticon.com/icons/svg/129/129473.svg" class="icon">
  					</a>LISTAR GUIA DE REMISIÓN
  				</div>
  			</td>
