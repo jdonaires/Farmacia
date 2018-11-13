@@ -708,6 +708,55 @@ END$$
 DELIMITER ;
 
 
+/***** ACTUALIZAR GUIA REMISION ***********/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_guiaremision`(
+	IN p_nroguia		    varchar(20),
+	IN p_puntopartida 		VARCHAR(20),
+	IN p_puntollegada 		VARCHAR(20),
+	IN p_fecemision 			DATE,
+	IN p_fecinictraslado 		DATE,
+	IN p_mottraslado		VARCHAR(20),
+	IN p_idtransporte	varchar(20)
+)
+BEGIN
+	UPDATE guiaremision SET NroGuia=p_nroguia, PuntoPartida=p_puntopartida, PuntoLLegada=p_puntollegada,
+			FecEmision=p_fecemision, FecInicTraslado=p_fecinictraslado, MotTraslado=p_mottraslado,
+			IdTransporte=p_idtransporte where NroGuia=p_nroguia;
+END$$
+DELIMITER ;
+
+
+
+/***** ELIMINAR GUIA REMISION ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_guiaremision`(
+	IN p_nroguia varchar(20)
+)
+BEGIN
+	DELETE FROM guiaremision WHERE NroGuia=p_nroguia;
+END$$
+DELIMITER ;
+
+
+
+/***** LISTAR GUIA REMISION ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_guiaremision`(
+	IN p_nroguia char(20)
+)
+BEGIN
+	select * from guiaremision where NroGuia like CONCAT(p_nroguia,'%');
+END$$
+DELIMITER ;
+
+
 ====================================================================================
 /************** FUNCIONES *****************/
 ======================================================================================

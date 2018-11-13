@@ -47,7 +47,7 @@ class GuiaRemisionDAO
 	public function actualizarGuiaremision(guiaremision $guiaremision){
 		try
 		{
-			$statement = $this->pdo->prepare("call up_actualizar_guiremision(?,?,?,?,?,?,?)");
+			$statement = $this->pdo->prepare("call up_actualizar_guiaremision(?,?,?,?,?,?,?)");
 			$statement->bindValue(1,$guiaremision->__GET('nroguia'));
 			$statement->bindValue(2,$guiaremision->__GET('puntopartida'));
 			$statement->bindValue(3,$guiaremision->__GET('puntollegada'));
