@@ -31,8 +31,7 @@
     <form class="contact_form">
 			</br>
 				<input type="text" style="width : 100 % ;"  placeholder="Codigo - Detalle Medidamento" required>
-
-        <input type="submit" value="Guardar"  id="boton">
+				<input type="submit" id="button" value="Guardar" />
 
     </form>
   </div>

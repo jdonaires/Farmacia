@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body{
-	background-color: #D4FEF9;
+	background: url(../img/fondo.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -32,8 +32,21 @@ form{
 input{
 	width: 100%;
 	margin-bottom: 20px;
-	padding: 7px;
+	padding: 8px;
 	box-sizing: border-box;
-	font-size: 17px;
+	font-size: 20px;
 	border: none;
+}
+
+#button{
+	background: #5D6D7E;
+	color: white;
+	padding: 15px;
+  font-size: 20px;
+}
+
+#button:hover{
+	cursor: pointer;
+	background: #DAE4F5;
+	color: black;
 }
