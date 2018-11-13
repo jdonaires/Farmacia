@@ -126,7 +126,7 @@ CREATE TABLE	Componentes(
 CREATE TABLE Almacen(
     Id INT PRIMARY KEY AUTO_INCREMENT,
 	CodDtMed	INT		,
-	StockActual	VARCHAR(20)	NOT NULL,
+	StockActual	SMALLINT	NOT NULL,
 	Ubicacion	VARCHAR(20)	NOT NULL,
 	FOREIGN KEY (CodDtMed) REFERENCES dtMED(CodDtMed)
 );
@@ -281,7 +281,7 @@ DELIMITER ;;
 /*  INSERTAR ALMACEN  */
 CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_almacen(
 	IN p_CodDtMed int(11),
-	IN	p_StockActual varchar(20),
+	IN	p_StockActual SMALLINT,
 	IN	p_Ubicacion varchar(20)
 )
 BEGIN
