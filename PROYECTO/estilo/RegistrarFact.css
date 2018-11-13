@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: url(../img/fondo.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+
+}
+
+h1{
+  color: #154360;
+	text-align: center;
+	margin: 0;
+	font-size: 30px
+	margin-bottom:20px;
+  font-family: "Homer Simpson", cursive;
+}

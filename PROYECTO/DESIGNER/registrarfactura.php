@@ -22,16 +22,18 @@
 <head>
 <meta charset="utf-8">
 	<title>Formulario para Factura</title>
-	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+	<link rel="stylesheet" type="text/css" href="../estilo/registrarfactura.css">
 </head>
 <body>
   <div>
+		<br>
   	<h1>Registrar Factura</h1>
     <form class="contact_form">
-    	<ul>
-    		<li><label for="IdDtGuiaMED">IdDetGuiaMedicamento:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
+			</br>
+				<input type="text" style="width : 100 % ;"  placeholder="Codigo - Detalle Medidamento" required>
+
         <input type="submit" value="Guardar"  id="boton">
-    	</ul>
+
     </form>
   </div>
 </body>

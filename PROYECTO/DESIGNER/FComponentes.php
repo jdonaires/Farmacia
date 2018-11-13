@@ -36,15 +36,15 @@
   	<h1>COMPONENTES DE MEDICAMENTOS</h1>
     <form class="contact_form">
 		</br>
-    	<input type="text" style="width : 100 % ;"  placeholder="CodDetMedida" required>
+    	<input type="text" style="width : 100 % ;"  placeholder="Codigo - Detalle Medidamento" required>
 
-      <input type="text" style="width : 100 % ;"  placeholder="Nombre" required>
+      <input type="text" style="width : 100 % ;"  placeholder="Nombre del Medicamento" required>
 
 			<input type="text" style="width : 100 % ;"  placeholder="Tipo" required >
 
 			<input type="text" style="width : 100 % ;"  placeholder="Cantidad"required >
 
-			<input type="text" style="width : 100 % ;"  placeholder="CodUniMedida" required>
+			<input type="text" style="width : 100 % ;"  placeholder="Unidad de Medida" required>
 
 			<input type="submit" id="button" value="Guardar" />
 
