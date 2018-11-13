@@ -284,7 +284,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_almacen(
 	IN	p_Ubicacion varchar(20)
 )
 BEGIN
-	INSERT INTO almacen(CodDtMed,StockActual,Ubicacion) 
+	INSERT INTO almacen(CodDtMed,StockActual,Ubicacion)
     VALUES (p_CodDtMed,p_Actual,p_Ubicacionidad);
 END ;;
 DELIMITER ;
@@ -292,14 +292,14 @@ DELIMITER ;
 DELIMITER ;;
 /*  INSERTAR COMPONENTES  */
 CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_componentes(
-  IN p_CodDtMed		    int(11),    
-	IN p_Nombre 	varchar(20),    
-	IN p_Tipo 	varchar(20),    
+  IN p_CodDtMed		    int(11),
+	IN p_Nombre 	varchar(20),
+	IN p_Tipo 	varchar(20),
 	IN p_Cantidad int(11),
 	IN p_CodUniMedida int(11)
 )
 BEGIN
-	INSERT INTO Componentes(CodDtMed,Nombre,Tipo,Cantidad,CodUniMedida) 
+	INSERT INTO Componentes(CodDtMed,Nombre,Tipo,Cantidad,CodUniMedida)
     VALUES (p_CodDtMed,p_Nombre,p_Tipo,p_Cantidad,p_CodUniMedida);
 END ;;
 DELIMITER ;
@@ -316,7 +316,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtguiamed(
   IN p_Descripcion varchar(20)
 )
 BEGIN
-	INSERT INTO dtguiamed(NroGuiaRemision,CodMed,IdDt,Cantidad,PesoTotal,Lote,Descripcion) 
+	INSERT INTO dtguiamed(NroGuiaRemision,CodMed,IdDt,Cantidad,PesoTotal,Lote,Descripcion)
     VALUES (p_NroGuiaRemision,p_CodMed,p_IdDt,p_Cantidad,p_PesoTotal,p_Lote,p_Descripcion);
 END ;;
 DELIMITER ;
@@ -333,7 +333,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtmed(
   IN Descripcion varchar(20)
 )
 BEGIN
-	INSERT INTO dtmed(CodMed,CodPre,CodDtMed,Psicotrópico,PesoUnitario,FecVenc,Descripcion) 
+	INSERT INTO dtmed(CodMed,CodPre,CodDtMed,Psicotrópico,PesoUnitario,FecVenc,Descripcion)
     VALUES (p_CodMed,p_CodPre,P_CodDtMed,p_Psicotrópico,p_PesoUnitario,p_FecVenc,p_Descripcion);
 END ;;
 DELIMITER ;
@@ -347,7 +347,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_transporte(
     IN  p_Placa varchar(20)
 )
 BEGIN
-	INSERT INTO transporte(RUC,IdTransporte,Placa) 
+	INSERT INTO transporte(RUC,IdTransporte,Placa)
     VALUES (p_RUC,p_IdTransporte,p_Placa);
 END ;;
 DELIMITER ;
@@ -362,7 +362,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_factura(
   IN p_SubTotal decimal(6,2)
   )
 BEGIN
-	INSERT INTO factura(IdDt,CostoUnitario,CostoTotal,IGV,SubTotal) 
+	INSERT INTO factura(IdDt,CostoUnitario,CostoTotal,IGV,SubTotal)
     VALUES (p_IdDt,p_CostoUnitario,p_CostoTotal,p_IGV,p_SubTotal);
 END ;;
 DELIMITER ;
@@ -375,7 +375,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_laboratorio(
   IN p_RegSanitario varchar(20)
   )
 BEGIN
-	INSERT INTO laboratorio(RUC,IdLaboratorio,RegSanitario) 
+	INSERT INTO laboratorio(RUC,IdLaboratorio,RegSanitario)
     VALUES (p_RUC,p_IdLaboratorio,p_RegSanitario);
 END ;;
 DELIMITER ;
@@ -389,7 +389,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_posologia(
   IN Indicaciones varchar(20)
   )
 BEGIN
-	INSERT INTO posologia(CodDtMed,Dosis,Indicaciones) 
+	INSERT INTO posologia(CodDtMed,Dosis,Indicaciones)
     VALUES (p_CodDtMed,p_Dosis,p_Indicaciones);
 END ;;
 DELIMITER ;
@@ -404,7 +404,34 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_precioactual(
   IN FecAct date
   )
 BEGIN
-	INSERT INTO precioactual(CodDtMed,Precio,Estado,FecAct) 
+	INSERT INTO precioactual(CodDtMed,Precio,Estado,FecAct)
     VALUES (p_CodDtMed,p_Precio,p_Estado,p_FecAct);
 END ;;
 DELIMITER ;
+
+===============================================
+
+DELIMITER //
+CREATE PROCEDURE insertar_personaempleado(IN p_DNI		CHAR(8),
+IN p_nombre 		VARCHAR(25),
+IN p_apellido 	VARCHAR(20),
+IN p_correo		VARCHAR(20),
+IN p_fecNac 		DATE,
+IN p_genero 		ENUM ('M','F'),
+IN p_direccion	VARCHAR(20),
+IN p_tipoPersona	ENUM ('Empleado','Transportista'),
+IN e_turno		VARCHAR(20),
+IN e_especialidad	VARCHAR(20),
+IN e_usuario		VARCHAR(20),
+IN e_clave		VARCHAR(20),
+IN e_DNI		VARCHAR(20))
+
+BEGIN
+ INSERT INTO PERSONA(DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+ VALUES (p_DNI,p_nombre,p_apellido,p_correo,p_fecNac,p_genero,p_direccion,p_tipoPersona);
+
+ INSERT INTO EMPLEADO (turno,especialidad,usuario,clave,DNI)
+ VALUES (e_turno,e_especialidad,e_usuario,e_clave,e_DNI);
+
+END;
+//
