@@ -694,7 +694,18 @@ DELIMITER ;
 
 
 
+/**** LISTAR UNIDAD DE MEDIDAD ****/
+DELIMITER $$
+USE `farmacia`$$
+CREATE PROCEDURE `up_listar_unidad_medida`
+(
+	IN p_descripcion varchar(10)
+)
+BEGIN
+	select * from UnidadMedida where descripcion like concat(p_descripcion,'%');
+END$$
 
+DELIMITER ;
 
 
 ====================================================================================
