@@ -1,5 +1,9 @@
 ﻿/*
 	--------CAMBIOS-------
+	12/11/2018
+    		*agregado id PK a la tabla almacen ¬.¬
+
+
 	11/11/2018
 		*Se corrigio errores en los procedimientos de insertarpersona,medicamento y guia de remision.
 		*Se agrego el campo correo a la tabla Persona
@@ -124,6 +128,7 @@ CREATE TABLE	Componentes(
 	FOREIGN KEY (CodDtMed) REFERENCES dtMED(CodDtMed)
 );
 CREATE TABLE Almacen(
+    Id INT 		PRIMARY KEY AUTO_INCREMENT,
 	CodDtMed	INT		,
 	StockActual	VARCHAR(20)	NOT NULL,
 	Ubicacion	VARCHAR(20)	NOT NULL,
