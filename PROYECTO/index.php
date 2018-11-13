@@ -31,7 +31,7 @@
       </tr>
 			<tr>
 
-				<td ><input type="submit" name="" value="INGRESAR" style="width:100%;"></td>
+				<td ><input type="submit" name="" value="INGRESAR" style="width:100%;"  onclick=" location.href='http://localhost:8090/Farmacia/PROYECTO/DESIGNER/menu.php' "></td>
 
 			</tr>
 
