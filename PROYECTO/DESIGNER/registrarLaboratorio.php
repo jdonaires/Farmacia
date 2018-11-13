@@ -10,7 +10,7 @@
 		    $lab->__SET('RUC', $_POST['RUC']);
 			$lab->__SET('IdLaboratorio', $_POST['IdLaboratorio']);
 			$lab->__SET('RegSanitario', $_POST['RegSanitario']);
-			
+
 			$labDAO->Registrar($lab);
 
 			header('Location: registrarLaboratorio.php');
@@ -21,22 +21,22 @@
 <head>
 <meta charset="utf-8">
 	<title>Formulario para Laboratorio</title>
-	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+		<link rel="stylesheet" type="text/css" href="../estilo/frmlaboratorio.css">
 </head>
 <body>
   <div>
-  	<h1>Registrar Laboratorio</h1>
+		<br>
+  	<h1>Registrar un Laboratorio</h1>
     <form class="contact_form">
-    	<ul>
-    		<li><label for="IdLaboratorio">IdLaboratorio:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
-    		<li><label for="RUC">IdLaboratorio:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
-    		<li><label for="RegSanitario">RegSanitario:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
-        <input type="submit" value="Guardar"  id="boton">
-    	</ul>
+		</br>
+				<input type="text" style="width : 100 % ;"  placeholder="Id Laboratorio" required>
+
+				<input type="text" style="width : 100 % ;"  placeholder="Id Laboratorio" required>
+
+				<input type="text" style="width : 100 % ;"  placeholder="Numero de Registro Sanitario" required >
+
+				<input type="submit" id="button" value="Guardar" />
     </form>
   </div>
-</body>
-</html>
-
 </body>
 </html>
