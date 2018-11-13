@@ -45,4 +45,16 @@ class empleadoDAOTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($result>0, 'Empleado no eliminado');
     }
+
+    public function testVerificarUsuarioContraseña()
+    {
+        $user='derogar';
+        $pass='debatir';
+
+        $dao = new EmpleadoDAO();
+
+        $result=$dao->verificarUsuarioContraseña($user,$pass);
+
+        $this->assertTrue($result, 'usuario incorrecto');
+    }
 }

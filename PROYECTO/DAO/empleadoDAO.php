@@ -91,6 +91,23 @@ class EmpleadoDAO
         }
     }
 
+    public function verificarUsuarioContraseña($usuario,$contraseña){
+        try {
+
+            $statement = $this->pdo->prepare("select verificar_usuario_clave(?,?)");
+
+            $statement->bindParam(1, $usuario);
+            $statement->bindParam(2, $contraseña);
+            $statement->execute();
+
+            $result = $statement->fetch();
+
+            return $result[0]==1;
+
+        } catch (Exception $e) {
+            die("verificarUsuarioContraseña function  ->" . $e->getMessage());
+        }
+    }
 
 }
 
