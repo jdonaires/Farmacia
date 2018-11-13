@@ -1,4 +1,4 @@
-<?php 
+<?php
  ?>
  <!DOCTYPE html>
  <html>
@@ -31,7 +31,7 @@
  	<div class="title">
  		<span > MENU PRINCIPAL</span>
  	</div>
- 	
+
  	<div class="infoUsuario">
  		<span>EMPLEADO: PERSONA A</span><br>
  		<span>FECHA:<script>
@@ -45,17 +45,19 @@
  			</td>
  		</tr>
  		<tr>
- 			
+
  			<td>
  				<div class="caja">
- 					<a href="">
+ 					<a href="registrarmedicamento.php">
  						<img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048568.svg" class="icon">
  					</a>AGREGAR MEDICAMENTO
  				</div>
  			</td>
- 			<td><div class="caja"><a href=""><img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048610.svg" class="icon">
+ 			<td><div class="caja"><a href="">
+        <img src="https://www.flaticon.es/premium-icon/icons/svg/1048/1048610.svg" class="icon">
  			</a>CONSULTAR MEDICAMENTO</div></td>
- 			<td><div class="caja"><a href=""><img src="https://image.flaticon.com/icons/svg/1048/1048576.svg" class="icon">
+ 			<td><div class="caja"><a href="">
+        <img src="https://image.flaticon.com/icons/svg/1048/1048576.svg" class="icon">
  			</a>LISTAR MEDICAMENTO</div></td>
  		</tr>
  		<tr class="titlemenu" >
@@ -64,17 +66,17 @@
  			</td>
  		</tr>
  		<tr>
- 			
+
  			<td class="col">
  				<div class="caja">
- 					<a href="frmpersona.php">
+ 					<a href="registrarPersona.php">
  						<img src="https://image.flaticon.com/icons/svg/1201/1201194.svg" class="icon">
  					</a>AGREGAR EMPLEADO
  				</div>
  			</td>
  			<td class="col">
  				<div class="caja">
- 					<a href="">
+ 					<a href="buscarpersona.php">
  						<img src="https://image.flaticon.com/icons/svg/1201/1201169.svg" class="icon">
  					</a>CONSULTAR EMPLEADO
  				</div>
@@ -86,18 +88,18 @@
  					</a>LISTAR EMPLEADO
  				</div>
  			</td>
- 			
+
  		</tr>
  		<tr class="titlemenu" >
  			<td colspan="3">
- 				GUIA DE REMISIÓN
+ 				GUIA DE REMISION
  			</td>
  		</tr>
  		<tr>
- 			
+
  			<td class="col">
  				<div class="caja">
- 					<a href="">
+ 					<a href="guiaremision.php">
  						<img src="https://image.flaticon.com/icons/svg/129/129488.svg" class="icon">
  					</a>AGREGAR GUIA DE REMISIÓN
  				</div>
@@ -116,11 +118,11 @@
  					</a>LISTAR GUIA DE REMISIÓN
  				</div>
  			</td>
- 			
+
  		</tr>
- 		
- 		
- 		
+
+
+
  	</table>
  </body>
  </html>

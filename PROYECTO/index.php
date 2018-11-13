@@ -25,15 +25,16 @@
 			</tr>
 			<tr>
 			 <select name="tipopersona" >
-                                    <option value="Empleado">Empleado</option>
-                                    <option value="Transportista">Transportista</option>
-                                </select>
-                            </tr>
+      			<option value="Empleado">Empleado</option>
+            <option value="Transportista">Transportista</option>
+       </select>
+      </tr>
 			<tr>
 
 				<td ><input type="submit" name="" value="INGRESAR" style="width:100%;"></td>
 
 			</tr>
+
 
 			<td ><input type="submit" value="REGISTRARSE" onclick=" location.href='http://localhost:8090/Farmacia/PROYECTO/DESIGNER/registrarPersona.php' ">
 			</td>  <!--ACCESO PARA ENTRAR A LA DIRECCION DEL REGITRO DE EMPLEADO CON ONCLICK-->
