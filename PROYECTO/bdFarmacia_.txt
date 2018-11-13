@@ -286,7 +286,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_almacen(
 )
 BEGIN
 	INSERT INTO almacen(CodDtMed,StockActual,Ubicacion)
-    VALUES (p_CodDtMed,p_Actual,p_Ubicacionidad);
+        VALUES (p_CodDtMed,p_StockActual,p_Ubicacion);
 END ;;
 DELIMITER ;
 
@@ -661,7 +661,36 @@ END$$
 DELIMITER ;
 
 
+/***    ELIMINAR ALMACEN        ***/
 
+DELIMITER $$
+USE `farmacia`$$
+CREATE PROCEDURE `up_eliminar_almacen`
+(
+	in p_id int
+)
+BEGIN
+	delete from almacen where id = p_id;
+END$$
+
+DELIMITER ;
+
+/***    ACTUALIZAR ALMACEN        ***/
+DELIMITER $$
+USE `farmacia`$$
+CREATE PROCEDURE `up_actualizar_almacen`
+(
+	in p_id int,
+    IN p_CodDtMed int(11),
+	IN	p_StockActual smallint,
+	IN	p_Ubicacion varchar(20)
+)
+BEGIN
+	update almacen set CodDtMed=p_CodDtMed, StockActual= p_StockActual, Ubicacion = p_Ubicacion
+        WHERE id=p_id;
+END$$
+
+DELIMITER ;
 
 
 
