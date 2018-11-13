@@ -1,6 +1,6 @@
 <?php
 require_once('../BOL/empleado.php');
-require_once('../DAO/empleadoDAO.php');
+require_once('../DAO/EmpleadoDAO.php');
 
 $emp=new Empleado();
 $empDAO=new EmpleadoDAO();

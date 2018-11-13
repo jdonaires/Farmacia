@@ -2,7 +2,7 @@
 require_once('../DAL/DBAccess.php');
 require_once('../BOL/empleado.php');
 
-class empleadoDAO
+class EmpleadoDAO
 {
     private $pdo;
 
@@ -24,6 +24,9 @@ class empleadoDAO
             $statement->bindValue(5, $empleado->__GET('dni'));
 
             $statement->execute();
+            $count = $statement->rowCount();
+
+            return $count;
 
         } catch (Exception $e) {
             die("insertarEmpleado function  ->" . $e->getMessage());
@@ -43,6 +46,9 @@ class empleadoDAO
             $statement->bindValue(6, $empleado->__GET('dni'));
 
             $statement->execute();
+            $count = $statement->rowCount();
+
+            return $count;
 
         } catch (Exception $e) {
             die("actualizarEmpleado function  ->" . $e->getMessage());
@@ -53,18 +59,38 @@ class empleadoDAO
     public function listarEmpleado(empleado $empleado)
     {
         try {
+
             $statement = $this->pdo->prepare("call up_listar_empleado(?)");
 
             $statement->bindValue(1, $empleado->__GET('dni'));
             $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_CLASS, "Empleado");
 
-            $result = (array)$statement->fetchAll(PDO::FETCH_CLASS, "Empleado");
             return $result;
 
         } catch (Exception $e) {
-            die("listarEmpleado function  ->" . $e->getMessage() . " - error message: > " . $e->getLine() . " - " . $e->getCode());
+            die("listarEmpleado function  ->" . $e->getMessage());
         }
     }
+
+    public function eliminarEmpleado($dni)
+    {
+
+        try {
+
+            $statement = $this->pdo->prepare("call up_eliminar_empleado(?)");
+
+            $statement->bindParam(1, $dni);
+            $statement->execute();
+            $count = $statement->rowCount();
+
+            return $count;
+
+        } catch (Exception $e) {
+            die("eliminarEmpleado function  ->" . $e->getMessage());
+        }
+    }
+
 
 }
 
