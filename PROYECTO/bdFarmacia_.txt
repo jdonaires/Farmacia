@@ -286,7 +286,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_almacen(
 BEGIN
 	INSERT INTO almacen(CodDtMed,StockActual,Ubicacion) 
     VALUES (p_CodDtMed,p_Actual,p_Ubicacionidad);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -301,7 +301,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_componentes(
 BEGIN
 	INSERT INTO Componentes(CodDtMed,Nombre,Tipo,Cantidad,CodUniMedida) 
     VALUES (p_CodDtMed,p_Nombre,p_Tipo,p_Cantidad,p_CodUniMedida);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -318,7 +318,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtguiamed(
 BEGIN
 	INSERT INTO dtguiamed(NroGuiaRemision,CodMed,IdDt,Cantidad,PesoTotal,Lote,Descripcion) 
     VALUES (p_NroGuiaRemision,p_CodMed,p_IdDt,p_Cantidad,p_PesoTotal,p_Lote,p_Descripcion);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -335,7 +335,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtmed(
 BEGIN
 	INSERT INTO dtmed(CodMed,CodPre,CodDtMed,Psicotrópico,PesoUnitario,FecVenc,Descripcion) 
     VALUES (p_CodMed,p_CodPre,P_CodDtMed,p_Psicotrópico,p_PesoUnitario,p_FecVenc,p_Descripcion);
-END ;
+END ;;
 DELIMITER ;
 
 
@@ -349,7 +349,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_transporte(
 BEGIN
 	INSERT INTO transporte(RUC,IdTransporte,Placa) 
     VALUES (p_RUC,p_IdTransporte,p_Placa);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -360,10 +360,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_factura(
   IN p_CostoTotal decimal(6,2),
   IN p_IGV decimal(6,2),
   IN p_SubTotal decimal(6,2)
+  )
 BEGIN
 	INSERT INTO factura(IdDt,CostoUnitario,CostoTotal,IGV,SubTotal) 
     VALUES (p_IdDt,p_CostoUnitario,p_CostoTotal,p_IGV,p_SubTotal);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -372,10 +373,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_laboratorio(
   IN p_RUC varchar(20),
   IN p_IdLaboratorio int(11),
   IN p_RegSanitario varchar(20)
+  )
 BEGIN
 	INSERT INTO laboratorio(RUC,IdLaboratorio,RegSanitario) 
     VALUES (p_RUC,p_IdLaboratorio,p_RegSanitario);
-END ;
+END ;;
 DELIMITER ;
 
 
@@ -385,10 +387,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_posologia(
   IN CodDtMed int(11),
   IN Dosis varchar(20),
   IN Indicaciones varchar(20)
+  )
 BEGIN
 	INSERT INTO posologia(CodDtMed,Dosis,Indicaciones) 
     VALUES (p_CodDtMed,p_Dosis,p_Indicaciones);
-END ;
+END ;;
 DELIMITER ;
 
 
@@ -399,8 +402,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_precioactual(
   IN Precio decimal(6,2),
   IN Estado enum('True','False'),
   IN FecAct date
+  )
 BEGIN
 	INSERT INTO precioactual(CodDtMed,Precio,Estado,FecAct) 
     VALUES (p_CodDtMed,p_Precio,p_Estado,p_FecAct);
-END ;
+END ;;
 DELIMITER ;
