@@ -26,14 +26,18 @@
 </head>
 <body>
   <div>
+	</br>
   	<h1>Registrar Laboratorio</h1>
     <form class="contact_form">
-    	<ul>
-    		<li><label for="IdLaboratorio">IdLaboratorio:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
-    		<li><label for="RUC">IdLaboratorio:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
-    		<li><label for="RegSanitario">RegSanitario:</label><input type="text" style="width : 100 % ;"  placeholder=""></li>
-        <input type="submit" value="Guardar"  id="button">
-    	</ul>
+
+		<input type="text" style="width : 100 % ;"  placeholder="IdLaboratorio" required="">
+
+		<input type="text" style="width : 100 % ;"  placeholder="IdLaboratorio" required="">
+
+		<input type="text" style="width : 100 % ;"  placeholder="RegSanitario" required="">
+
+		<input type="submit" value="Guardar"  id="button">
+	</br>
     </form>
   </div>
 </body>
