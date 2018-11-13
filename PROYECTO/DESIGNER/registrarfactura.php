@@ -22,7 +22,7 @@
 <head>
 <meta charset="utf-8">
 	<title>Formulario para Factura</title>
-	<link rel="stylesheet" type="text/css" href="../estilo/registrarfactura.css">
+	<link rel="stylesheet" type="text/css" href="../estilo/RegistrarFact.css">
 </head>
 <body>
   <div>
