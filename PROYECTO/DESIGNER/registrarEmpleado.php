@@ -1,6 +1,6 @@
 <?php
 require_once('../BOL/empleado.php');
-require_once('../DAO/empleadoDAO.php');
+require_once('../DAO/EmpleadoDAO.php');
 
 $emp=new Empleado();
 $empDAO=new EmpleadoDAO();
@@ -29,7 +29,7 @@ if (isset($_POST['guardar'])) {
   		<div class="form__top">
   			<h1>Formulario <span>Registro de Empleados</span></h1>
   		</div>
-  		<form class="form__reg" action="">
+  		<form class="form__reg" action="registrarempleado" method="post">
               <input class="input-50" type="text" placeholder="DNI" required autofocus>
    			      <input class="input-100" type="text" placeholder="Turno" required>
               <input class="input-100" type="tex" placeholder="Especialidad" required>

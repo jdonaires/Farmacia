@@ -26,13 +26,36 @@ class empresaDAO
 		}
 	}
 
+
+	public function actualizarEmpresa(empresa $empresa){
+		try
+		{
+			$statement = $this->pdo->prepare("call up_actualizar_empresa(?,?,?,?,?)");
+
+			$statement->bindValue(1,$empresa->__GET('RUC'));
+			$statement->bindValue(2,$empresa->__GET('RazonSocial'));
+			$statement->bindValue(3,$empresa->__GET('Telefono'));
+			$statement->bindValue(4,$empresa->__GET('Direccion'));
+			$statement->bindValue(5,$empresa->__GET('TipoEmpresa'));
+
+			$statement -> execute();
+		}
+		catch (Exception $e)
+		{
+			die("actualizarEmpresa function  ->".$e->getMessage()."\nLinea-->".$e->getLine());
+		}
+	}
+
+
+
+
 	public function listarEmpresa(empresa $empresa)
 	{
 		try
 		{
 			$result = array();
 			$statement = $this->pdo->prepare("call up_listar_empresa(?)");
-			$statement->bindParam(1,$empresa->__GET('RUC'));
+			$statement->bindValue(1,$empresa->__GET('RUC'));
 			$statement->execute();
 			foreach($statement->fetchAll(PDO::FETCH_OBJ) as $r)
 			{
@@ -57,7 +80,7 @@ class empresaDAO
 		try
 		{
 			$statement = $this->pdo->prepare("call up_eliminar_empresa(?)");
-			$statement->bindParam(1,$RUC);
+			$statement->bindValue(1,$RUC);
 			$statement -> execute();
 
 		} catch (Exception $e)

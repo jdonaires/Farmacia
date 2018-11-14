@@ -10,7 +10,7 @@ $perDAO = new PersonaDAO();
 <head>
 
 	<title> Formulario para Buscar Persona</title>
-	<link rel="icon" type="img/jpg" href="../img/a.jpg">
+
 	<link rel="stylesheet" type="text/css" href="../estilo/fcomponentes.css">
 </head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
@@ -21,7 +21,8 @@ $perDAO = new PersonaDAO();
 	 <form action="buscarpersona.php" method="post" class="formulario" >
 
 	 </br>
-        <input type="text" name="dni" value=""  placeholder="Ingrese DNI"  required style="width:100%;" />
+	 			// cambiar tipo de variable a numeros ya que no se necesita poner letras en este campo //
+        <input type="number" name="dni" value=""  placeholder="Ingrese DNI"  required style="width:100%;" />
                 <!--Esta edicion se utiliza para que el usuario Ingrese datos al Campo y no lo deje vacio-->
         <input type="submit" value="BUSCAR" name="buscar" id="button" class="pure-button pure-button-primary" style="width:100%">
 
@@ -40,7 +41,7 @@ $perDAO = new PersonaDAO();
                         <table class="pure-table pure-table-horizontal">
                                 <thead>
                                         <tr>
-                                                <th style="text-align:left;">ID</th>
+
                                                 <th style="text-align:left;">Nombres</th>
                                                 <th style="text-align:left;">Apellidos</th>
                                                 <th style="text-align:left;">DNI</th>
@@ -50,7 +51,7 @@ $perDAO = new PersonaDAO();
                         foreach( $resultado as $r): //RECORREMOS EL ARRAY RESULTADO A TRAVES DE SUS CAMPOS
                             ?>
                                 <tr>
-                                        <td><?php echo $r->__GET('id'); ?></td>
+
                                         <td><?php echo $r->__GET('Nombre'); ?></td>
                                         <td><?php echo $r->__GET('Apellido'); ?></td>
                                         <td><?php echo $r->__GET('DNI'); ?></td>
@@ -67,18 +68,6 @@ $perDAO = new PersonaDAO();
                     <?php
                 }
                 ?>
-<script>
-
-/*document.getElementById("namee").oncllick = function(){
-
-document.getElementById("namee").style.background="teal";
-
-}*/
-body.onmouseover = function() {
-     var a=document.getElementsById("namee");
-      a.style.backgroundColor="blue";
-
-  }
 
 
 </script>

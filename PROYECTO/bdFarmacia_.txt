@@ -18,20 +18,20 @@ USE farmacia;
 ________________________________________________________________
 -- CREACIÓN DE TABLAS
 CREATE TABLE Empresa(
-	RUC 		VARCHAR(20) 	PRIMARY KEY,
+	RUC 		VARCHAR(12) 	PRIMARY KEY,
 	RazónSocial 	VARCHAR(40) 	NOT NULL,
 	Telefono 	VARCHAR(10),
 	Dirección 	VARCHAR(20),
 	TipoEmpresa	VARCHAR(30)
 ) ;
 CREATE TABLE Laboratorio(
-	RUC		VARCHAR(20) 	,
+	RUC		VARCHAR(12) 	,
 	IdLaboratorio	INT  PRIMARY KEY AUTO_INCREMENT,
 	RegSanitario	VARCHAR(20) ,
 	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
 );
 CREATE TABLE Transporte(
-	RUC 		VARCHAR(20) 	,
+	RUC 		VARCHAR(12) 	,
 	IdTransporte 	INT 		PRIMARY KEY AUTO_INCREMENT,
 	Placa 		VARCHAR(20)	NOT NULL,
 	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
@@ -52,7 +52,7 @@ CREATE TABLE Empleado(
 	Especialidad	VARCHAR(20)	NOT NULL,
 	Usuario		VARCHAR(20)	UNIQUE	NOT NULL,
 	Clave		VARCHAR(20)	NOT NULL,
-	DNI		VARCHAR(20)		,
+	DNI		VARCHAR(8)		,
 	FOREIGN KEY (DNI)REFERENCES Persona(DNI)
 );
 CREATE TABLE Transportista(
@@ -124,8 +124,9 @@ CREATE TABLE	Componentes(
 	FOREIGN KEY (CodDtMed) REFERENCES dtMED(CodDtMed)
 );
 CREATE TABLE Almacen(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
 	CodDtMed	INT		,
-	StockActual	VARCHAR(20)	NOT NULL,
+	StockActual	SMALLINT	NOT NULL,
 	Ubicacion	VARCHAR(20)	NOT NULL,
 	FOREIGN KEY (CodDtMed) REFERENCES dtMED(CodDtMed)
 );
@@ -280,28 +281,28 @@ DELIMITER ;;
 /*  INSERTAR ALMACEN  */
 CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_almacen(
 	IN p_CodDtMed int(11),
-	IN	p_StockActual varchar(20),
+	IN	p_StockActual SMALLINT,
 	IN	p_Ubicacion varchar(20)
 )
 BEGIN
-	INSERT INTO almacen(CodDtMed,StockActual,Ubicacion) 
-    VALUES (p_CodDtMed,p_Actual,p_Ubicacionidad);
-END ;
+	INSERT INTO almacen(CodDtMed,StockActual,Ubicacion)
+        VALUES (p_CodDtMed,p_StockActual,p_Ubicacion);
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
 /*  INSERTAR COMPONENTES  */
 CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_componentes(
-  IN p_CodDtMed		    int(11),    
-	IN p_Nombre 	varchar(20),    
-	IN p_Tipo 	varchar(20),    
+  IN p_CodDtMed		    int(11),
+	IN p_Nombre 	varchar(20),
+	IN p_Tipo 	varchar(20),
 	IN p_Cantidad int(11),
 	IN p_CodUniMedida int(11)
 )
 BEGIN
-	INSERT INTO Componentes(CodDtMed,Nombre,Tipo,Cantidad,CodUniMedida) 
+	INSERT INTO Componentes(CodDtMed,Nombre,Tipo,Cantidad,CodUniMedida)
     VALUES (p_CodDtMed,p_Nombre,p_Tipo,p_Cantidad,p_CodUniMedida);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -316,9 +317,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtguiamed(
   IN p_Descripcion varchar(20)
 )
 BEGIN
-	INSERT INTO dtguiamed(NroGuiaRemision,CodMed,IdDt,Cantidad,PesoTotal,Lote,Descripcion) 
+	INSERT INTO dtguiamed(NroGuiaRemision,CodMed,IdDt,Cantidad,PesoTotal,Lote,Descripcion)
     VALUES (p_NroGuiaRemision,p_CodMed,p_IdDt,p_Cantidad,p_PesoTotal,p_Lote,p_Descripcion);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -333,9 +334,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_dtmed(
   IN Descripcion varchar(20)
 )
 BEGIN
-	INSERT INTO dtmed(CodMed,CodPre,CodDtMed,Psicotrópico,PesoUnitario,FecVenc,Descripcion) 
+	INSERT INTO dtmed(CodMed,CodPre,CodDtMed,Psicotrópico,PesoUnitario,FecVenc,Descripcion)
     VALUES (p_CodMed,p_CodPre,P_CodDtMed,p_Psicotrópico,p_PesoUnitario,p_FecVenc,p_Descripcion);
-END ;
+END ;;
 DELIMITER ;
 
 
@@ -347,9 +348,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_transporte(
     IN  p_Placa varchar(20)
 )
 BEGIN
-	INSERT INTO transporte(RUC,IdTransporte,Placa) 
+	INSERT INTO transporte(RUC,IdTransporte,Placa)
     VALUES (p_RUC,p_IdTransporte,p_Placa);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -360,10 +361,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_factura(
   IN p_CostoTotal decimal(6,2),
   IN p_IGV decimal(6,2),
   IN p_SubTotal decimal(6,2)
+  )
 BEGIN
-	INSERT INTO factura(IdDt,CostoUnitario,CostoTotal,IGV,SubTotal) 
+	INSERT INTO factura(IdDt,CostoUnitario,CostoTotal,IGV,SubTotal)
     VALUES (p_IdDt,p_CostoUnitario,p_CostoTotal,p_IGV,p_SubTotal);
-END ;
+END ;;
 DELIMITER ;
 
 DELIMITER ;;
@@ -372,10 +374,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_laboratorio(
   IN p_RUC varchar(20),
   IN p_IdLaboratorio int(11),
   IN p_RegSanitario varchar(20)
+  )
 BEGIN
-	INSERT INTO laboratorio(RUC,IdLaboratorio,RegSanitario) 
+	INSERT INTO laboratorio(RUC,IdLaboratorio,RegSanitario)
     VALUES (p_RUC,p_IdLaboratorio,p_RegSanitario);
-END ;
+END ;;
 DELIMITER ;
 
 
@@ -385,22 +388,462 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_posologia(
   IN CodDtMed int(11),
   IN Dosis varchar(20),
   IN Indicaciones varchar(20)
+  )
 BEGIN
-	INSERT INTO posologia(CodDtMed,Dosis,Indicaciones) 
+	INSERT INTO posologia(CodDtMed,Dosis,Indicaciones)
     VALUES (p_CodDtMed,p_Dosis,p_Indicaciones);
-END ;
+END ;;
 DELIMITER ;
 
 
 DELIMITER ;;
 /*  INSERTAR PRECIOACTUAL  */
-CREATE DEFINER=meister@`%` PROCEDURE up_insertar_precioactual(
+CREATE DEFINER=`root`@`localhost` PROCEDURE up_insertar_precioactual(
   IN CodDtMed int(11),
   IN Precio decimal(6,2),
   IN Estado enum('True','False'),
   IN FecAct date
+  )
 BEGIN
-	INSERT INTO posologia(CodDtMed,Precio,Estado,FecAct) 
+	INSERT INTO precioactual(CodDtMed,Precio,Estado,FecAct)
     VALUES (p_CodDtMed,p_Precio,p_Estado,p_FecAct);
-END ;
+END ;;
+DELIMITER ;
+
+===============================================
+
+DELIMITER //
+CREATE PROCEDURE insertar_persona_empleado(IN p_DNI		CHAR(8),
+IN p_nombre 		VARCHAR(25),
+IN p_apellido 	VARCHAR(20),
+IN p_correo		VARCHAR(20),
+IN p_fecNac 		DATE,
+IN p_genero 		ENUM ('M','F'),
+IN p_direccion	VARCHAR(20),
+IN p_tipoPersona	ENUM ('Empleado','Transportista'),
+IN e_turno		VARCHAR(20),
+IN e_especialidad	VARCHAR(20),
+IN e_usuario		VARCHAR(20),
+IN e_clave		VARCHAR(20),
+IN e_DNI		VARCHAR(20))
+
+BEGIN
+ INSERT INTO PERSONA(DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+ VALUES (p_DNI,p_nombre,p_apellido,p_correo,p_fecNac,p_genero,p_direccion,p_tipoPersona);
+
+ INSERT INTO EMPLEADO (turno,especialidad,usuario,clave,DNI)
+ VALUES (e_turno,e_especialidad,e_usuario,e_clave,e_DNI);
+
+END;
+//
+=====================================================
+DELIMITER //
+CREATE PROCEDURE insertar_persona_transportista(
+IN p_DNI		CHAR(8),
+IN p_nombre 		VARCHAR(25),
+IN p_apellido 	VARCHAR(20),
+IN p_correo		VARCHAR(20),
+IN p_fecNac 		DATE,
+IN p_genero 		ENUM ('M','F'),
+IN p_direccion	VARCHAR(20),
+IN p_tipoPersona	ENUM ('Empleado','Transportista'),
+
+IN t_DNI 		VARCHAR(8),
+IN t_IdTransporte	INT,
+IN t_NroLicencia	VARCHAR(15))
+
+BEGIN
+ INSERT INTO PERSONA(DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona) VALUES (p_DNI,p_nombre,p_apellido,p_correo,p_fecNac,p_genero,p_direccion,p_tipoPersona);
+ INSERT INTO TRANSPORTISTA (DNI,IdTransporte,NroLicencia) VALUES (t_DNI,t_IdTransporte,t_NroLicencia);
+END;
+//
+
+
+
+===========================================================
+DELIMITER //
+CREATE PROCEDURE insertar_empresa_transporte(
+IN e_RUC 		VARCHAR(20),
+IN e_RazónSocial 	VARCHAR(40),
+IN e_Telefono 	VARCHAR(10),
+IN e_Dirección 	VARCHAR(20),
+IN e_TipoEmpresa	VARCHAR(30))
+
+IN t_RUC 		VARCHAR(20),
+IN t_Placa 		VARCHAR(20),
+
+BEGIN
+	INSERT INTO EMPRESA values (e_RUC,e_RazonSocial,e_Telefono,e_Direccion,e_TipoEmpresa);
+
+	INSERT INTO TRANSPORTE values (t_RUC,t_Placa);
+
+END;
+//
+
+===================================
+DELIMITER //
+CREATE PROCEDURE insertar_empresa_laboratorio(IN e_RUC 		VARCHAR(20),IN e_RazónSocial 	VARCHAR(40),IN e_Telefono 	VARCHAR(10),IN e_Dirección 	VARCHAR(20),IN e_TipoEmpresa	VARCHAR(30),IN l_RUC		VARCHAR(20),IN l_RegSanitario	VARCHAR(20))
+
+BEGIN
+  INSERT INTO EMPRESA values (e_RUC,e_RazonSocial,e_Telefono,e_Direccion,e_TipoEmpresa);
+
+  INSERT INTO LABORATORIO  values (l_RUC,l_RegSanitario);
+END;
+//
+
+
+
+
+/***LISTAR ALMACEN**/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE PROCEDURE `up_listar_almacen`
+(
+	IN p_coddtmed int
+)
+BEGIN
+	select * from almacen where CodDtMed like concat(p_coddtmed,'%');
+END$$
+
+DELIMITER ;
+
+
+/**** LISTAR EMPLEADO ****/
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_empleado`(
+	IN p_dni CHAR(8)
+)
+BEGIN
+
+    select * from empleado where dni
+    like concat(p_dni,'%');
+
+END$$
+
+DELIMITER ;
+
+
+/***** LISTAR PERSONA ***/
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_persona`(
+	IN p_dni char(8)
+)
+BEGIN
+	select * from persona where dni
+    like CONCAT(p_dni,'%');
+END$$
+
+DELIMITER ;
+
+/***** ACTUALIZAR UNIDAD DE MEDIDA ****/
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_unidad_medida`(
+	IN p_id int,
+    IN p_descripcion varchar(10)
+)
+BEGIN
+	UPDATE UnidadMedida
+    SET descripcion=p_descripcion WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ACTUALIZAR TIPO DE PRESENTACION  ****/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_tipo_presentacion`(
+	IN p_id		INT,
+	IN p_nombre		VARCHAR(20),
+	IN p_descripcion	VARCHAR(30)
+)
+BEGIN
+	UPDATE TipoPresentacion
+    SET nombre=p_nombre,descripcion=p_descripcion WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ACTUALIZAR PERSONA  ****/
+
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_persona`(
+	IN p_dni		    CHAR(8),
+	IN p_nombre 		VARCHAR(25),
+	IN p_apellido 	VARCHAR(20),
+	IN p_fecnac 		DATE,
+	IN p_genero 		varchar(1),
+	IN p_direccion	VARCHAR(40),
+	IN p_tipo_persona	varchar(20),
+    IN p_correo 	VARCHAR(50)
+)
+BEGIN
+	UPDATE Persona SET nombre=p_nombre, apellido=p_apellido, fecnac=p_fecnac, genero=p_genero,
+			direccion=p_direccion, tipoPersona=p_tipo_persona, correo=p_correo where dni=p_dni;
+END$$
+
+DELIMITER ;
+
+
+/***** ACTUALIZAR EMPLEADO  ****/
+
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_empleado`(
+	in p_id int,
+    IN p_turno VARCHAR(20),
+    IN p_especialidad VARCHAR(40),
+    IN p_usuario VARCHAR(20),
+    IN p_clave VARCHAR(20),
+    IN p_dni CHAR(8)
+)
+BEGIN
+	UPDATE Empleado SET turno=p_turno, especialidad=p_especialidad,
+		usuario=p_usuario, clave=p_clave,dni=p_dni WHERE IdEmpleado=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ELIMINAR UNIDAD DE MEDIDA **********/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_unidad_medida`(
+	IN p_id int
+)
+BEGIN
+	DELETE FROM UnidadMedida
+    WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ELIMINAR TIPO DE PRESENTACION **********/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_tipo_presentacion`(
+	IN p_id int
+)
+BEGIN
+	DELETE FROM TipoPresentacion
+    WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+/***** ELIMINAR PERSONA **********/
+
+
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_persona`(
+	IN p_dni char(8)
+)
+BEGIN
+	DELETE FROM Persona
+    WHERE dni=p_dni;
+END$$
+
+DELIMITER ;
+
+
+/***    ELIMINAR ALMACEN        ***/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE PROCEDURE `up_eliminar_almacen`
+(
+	in p_id int
+)
+BEGIN
+	delete from almacen where id = p_id;
+END$$
+
+DELIMITER ;
+
+/***    ACTUALIZAR ALMACEN        ***/
+DELIMITER $$
+USE `farmacia`$$
+CREATE PROCEDURE `up_actualizar_almacen`
+(
+	in p_id int,
+    IN p_CodDtMed int(11),
+	IN	p_StockActual smallint,
+	IN	p_Ubicacion varchar(20)
+)
+BEGIN
+	update almacen set CodDtMed=p_CodDtMed, StockActual= p_StockActual, Ubicacion = p_Ubicacion
+        WHERE id=p_id;
+END$$
+
+DELIMITER ;
+
+
+
+/**** LISTAR UNIDAD DE MEDIDAD ****/
+DELIMITER $$
+USE `farmacia`$$
+CREATE PROCEDURE `up_listar_unidad_medida`
+(
+	IN p_descripcion varchar(10)
+)
+BEGIN
+	select * from UnidadMedida where descripcion like concat(p_descripcion,'%');
+END$$
+
+DELIMITER ;
+
+
+/***** ACTUALIZAR GUIA REMISION ***********/
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_guiaremision`(
+	IN p_nroguia		    varchar(20),
+	IN p_puntopartida 		VARCHAR(20),
+	IN p_puntollegada 		VARCHAR(20),
+	IN p_fecemision 			DATE,
+	IN p_fecinictraslado 		DATE,
+	IN p_mottraslado		VARCHAR(20),
+	IN p_idtransporte	varchar(20)
+)
+BEGIN
+	UPDATE guiaremision SET NroGuia=p_nroguia, PuntoPartida=p_puntopartida, PuntoLLegada=p_puntollegada,
+			FecEmision=p_fecemision, FecInicTraslado=p_fecinictraslado, MotTraslado=p_mottraslado,
+			IdTransporte=p_idtransporte where NroGuia=p_nroguia;
+END$$
+DELIMITER ;
+
+
+
+/***** ELIMINAR GUIA REMISION ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_guiaremision`(
+	IN p_nroguia varchar(20)
+)
+BEGIN
+	DELETE FROM guiaremision WHERE NroGuia=p_nroguia;
+END$$
+DELIMITER ;
+
+
+
+/***** LISTAR GUIA REMISION ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_guiaremision`(
+	IN p_nroguia char(20)
+)
+BEGIN
+	select * from guiaremision where NroGuia like CONCAT(p_nroguia,'%');
+END$$
+DELIMITER ;
+
+
+/***** ELIMINAR MEDICAMENTO ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_medicamento`(
+	IN p_codmed varchar(20)
+)
+BEGIN
+	DELETE FROM medicamento WHERE CodMed=p_codmed;
+END$$
+DELIMITER ;
+
+
+/***** ACTUALIZAR EMPRESA ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_empresa`(
+		IN p_RUC varchar(20),
+    IN p_RazonSocial VARCHAR(40),
+    IN p_Telefono VARCHAR(10),
+    IN p_Direccion VARCHAR(20),
+    IN p_TipoEmpresa VARCHAR(20)
+)
+BEGIN
+	UPDATE empresa SET RUC=p_RUC, RazónSocial=p_RazonSocial,
+		   Telefono=p_Telefono, Direccion=p_Direccion,TipoEmpresa=p_TipoEmpresa WHERE RUC=p_RUC;
+END$$
+DELIMITER ;
+
+/***** ELIMINAR POSOLOGIA ***********/
+
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_posologia`(
+	IN p_codDtMed VARCHAR(20)
+)
+BEGIN
+	DELETE FROM posologia WHERE CodDtMed = p_codDtMed;
+END$$
+DELIMITER ;
+
+/***** ACTUALIZAR POSOLOGIA ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_posologia`(
+
+	  IN p_codDtMed int(11),
+    IN p_Dosis VARCHAR(20),
+    IN p_Indicaciones VARCHAR(20)
+
+)
+BEGIN
+	UPDATE posologia SET  CodDtMed=p_codDtMed, Dosis=p_Dosis,
+			Indicaciones=p_Indicaciones WHERE CodDtMed=p_codDtMed;
+END$$
+DELIMITER ;
+
+/***** ACTUALIZAR MEDICAMENTO ***********/
+
+
+DELIMITER $$
+USE `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_medicamento`(
+	IN p_codmed		    varchar(20),
+	IN p_Nombre 		VARCHAR(20),
+	IN p_NomLaboratorio 		VARCHAR(20),
+	IN p_IdLaboratorio 			int(11)
+)
+BEGIN
+			UPDATE medicamento SET CodMed=p_codmed, Nombre=p_Nombre, NomLaboratorio=p_NomLaboratorio,
+			IdLaboratorio=p_IdLaboratorio
+			where CodMed=p_codmed;
+END$$
+DELIMITER ;
+
+
+====================================================================================
+/************** FUNCIONES *****************/
+======================================================================================
+
+DELIMITER ;;
+CREATE DEFINER=meister@`%` FUNCTION verificar_usuario_clave(p_usuario varchar(20), p_contraseña varchar(20)) RETURNS tinyint(1)
+    READS SQL DATA
+BEGIN
+	RETURN EXISTS (SELECT dni FROM empleado WHERE usuario = p_usuario AND clave = p_contraseña);
+END ;;
 DELIMITER ;

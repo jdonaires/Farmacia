@@ -52,8 +52,9 @@ img {
 	border-left:none;
 	border-right:none;
 	border-bottom:solid 4px #CCEEFF ;
-	transition:0.4s border;
+	transition:0.2s border;
 	outline: none;
+  padding:10px;
 }
 
 ::placeholder{

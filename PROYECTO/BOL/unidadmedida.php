@@ -1,5 +1,5 @@
 <?php
-class unidadmedida
+class UnidadMedida
 {
 	private $id;
 	private $descripcion;
