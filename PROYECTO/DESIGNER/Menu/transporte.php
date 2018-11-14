@@ -64,16 +64,7 @@ nav{
                  <button class="btn btn-primary btn-block">Eliminar</button>
        </div>
        </div>
-       <div class="form-group ">
-                <label  class="control-label col-md-2" for="">Empresa:</label>
-       <div class="col-md-5 has-success">
-
-              <select  class="form-control" name="empresa"  >
-                    <option value="M">Empresa 1</option>
-                    <option value="F">Empresa 2</option>
-              </select>
-
-       </div>
+    
        <div  class="col-md-4 ">
                 <button class="btn btn-primary btn-block">Modificar</button>
        </div>
