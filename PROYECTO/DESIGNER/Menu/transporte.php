@@ -49,7 +49,7 @@ nav{
        <div class="form-group 	">
                  <label class="control-label col-md-2">RUC:</label>
        <div class="col-md-5 has-success">
-                 <input  class =" form-control " type="text" name="dni" placeholder="DNI" required >
+                 <input  class =" form-control " type="text" name="RUC" placeholder="DNI" required >
        </div>
        <div  class="col-md-4 ">
                  <button class="btn btn-primary btn-block">Agregar</button>
@@ -58,7 +58,7 @@ nav{
        <div class="form-group ">
                  <label class="control-label col-md-2" >Placa:</label>
        <div class="col-md-5 has-success">
-                 <input type="text" name="nombre" class="form-control" placeholder="Nombres" required>
+                 <input type="text" name="nombre" class="form-control" placeholder="PLACA" required>
        </div>
        <div  class="col-md-4 ">
                  <button class="btn btn-primary btn-block">Eliminar</button>
