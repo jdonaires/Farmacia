@@ -27,7 +27,22 @@
     }
   }
 
+  public function listarlaboratorio(Laboratorio $laboratorio) {
+    try
+    {
+      $statement = $this->pdo->prepare("select * from laboratorio where RUC = ?");
 
+      $statement->bindValue(1,$persona->__GET('RUC'));
+      $statement -> execute();
+              $result = (array)$statement->fetchAll(PDO::FETCH_CLASS,"Persona");
+
+      return $result;
+
+    } catch (Exception $e)
+    {
+      die("listarlaboratorio function  ->".$e->getMessage()." - error message: > ".$e->getLine()." - ".$e->getCode());
+    }
+  }
 
 
     public function eliminarLaboratorio($RUC){
