@@ -49,7 +49,7 @@ nav{
        <div class="form-group 	">
                  <label class="control-label col-md-2">RUC:</label>
        <div class="col-md-5 has-success">
-                 <input  class =" form-control " type="text" name="dni" placeholder="DNI" required >
+                 <input  class =" form-control " type="text" name="RUC" placeholder="RUC" required >
        </div>
        <div  class="col-md-4 ">
                  <button class="btn btn-primary btn-block">Agregar</button>
@@ -58,22 +58,13 @@ nav{
        <div class="form-group ">
                  <label class="control-label col-md-2" >Placa:</label>
        <div class="col-md-5 has-success">
-                 <input type="text" name="nombre" class="form-control" placeholder="Nombres" required>
+                 <input type="text" name="nombre" class="form-control" placeholder="PLACA" required>
        </div>
        <div  class="col-md-4 ">
                  <button class="btn btn-primary btn-block">Eliminar</button>
        </div>
        </div>
-       <div class="form-group ">
-                <label  class="control-label col-md-2" for="">Empresa:</label>
-       <div class="col-md-5 has-success">
 
-              <select  class="form-control" name="empresa"  >
-                    <option value="M">Empresa 1</option>
-                    <option value="F">Empresa 2</option>
-              </select>
-
-       </div>
        <div  class="col-md-4 ">
                 <button class="btn btn-primary btn-block">Modificar</button>
        </div>
@@ -93,7 +84,7 @@ nav{
   <div class="form-group 	">
             <label class="control-label col-md-2">RUC:</label>
   <div class="col-md-5 has-success">
-            <input  class =" form-control " type="text" name="dni" placeholder="RUC" required >
+            <input  class =" form-control " type="text" name="RUC" placeholder="RUC" required >
   </div>
   <div  class="col-md-4 ">
              <button class="btn btn-primary btn-block">Buscar</button>
