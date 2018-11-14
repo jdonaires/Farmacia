@@ -64,20 +64,6 @@ class transportistaDAO
   }
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   public function eliminarTransportista($DNI){
     try
     {

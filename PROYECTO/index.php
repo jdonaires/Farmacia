@@ -24,10 +24,7 @@
 				<td><input type="password" name="" placeholder="Clave"  required ></td>
 			</tr>
 			<tr>
-			 <select name="tipopersona" >
-      			<option value="Empleado">Empleado</option>
-            <option value="Transportista">Transportista</option>
-       </select>
+			 
       </tr>
 			<tr>
 
