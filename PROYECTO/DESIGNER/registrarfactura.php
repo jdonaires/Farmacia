@@ -63,7 +63,7 @@ $_POST [ $variable ] = str_replace ( "Ñ" , "&Ntilde;" , $_POST [ $variable ]);
   	<h1>Registrar Factura</h1>
     <form class="contact_form">
 			</br>
-				<input type="text" style="width : 100 % ;"  placeholder="Codigo - Detalle Medidamento" required="">
+				<input type="text" style="width : 100 % ;"  placeholder="Codigo Factura" required="">
         <input type="submit" value="Guardar"  id="button">
 
     </form>
