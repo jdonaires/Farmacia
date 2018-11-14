@@ -24,7 +24,7 @@
 				<td><input type="password" name="" placeholder="Clave"  required ></td>
 			</tr>
 			<tr>
-			 
+
       </tr>
 			<tr>
 
