@@ -1,14 +1,14 @@
 <?php
-require_once('BOL/persona.php');
-require_once('DAO/personaDAO.php');
+require_once('../BOL/persona.php');
+require_once('../DAO/personaDAO.php');
 
  ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>FarmiSalud</title>
-	<link rel="stylesheet" type="text/css" href="estilo/estilo.css">
-  <link rel="icon" type="img/jpg" href="img/a.jpg"> <!-- ESTA EDICION SIRVE PARA AGREGAR ICONO AL EMCABEZADO DE LA PAGINA.-->
+	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+  <link rel="icon" type="img/jpg" href="../img/a.jpg"> <!-- ESTA EDICION SIRVE PARA AGREGAR ICONO AL EMCABEZADO DE LA PAGINA.-->
 </head>
 
 <body  class="cajon">
@@ -18,7 +18,7 @@ require_once('DAO/personaDAO.php');
 	<form action="buscarpersona.php" method="post" class="formulario" >
 		<table >
 			<center>
-			<img src="img/login.png" >  <!--posicion de Imagen login-->
+			<img src="../img/login.png" >  <!--posicion de Imagen login-->
 		   </center>
 			<tr >
 
@@ -71,11 +71,15 @@ require_once('DAO/personaDAO.php');
 									</tr>
 					<?php endforeach;
 			}
+<<<<<<< HEAD
+			
+=======
       else
       {
           /*echo 'Bienvenido A FarmiSalud!';*/
           echo "<script> alert('Bienvenido A FarmiSalud!'); </script>";
       }
+>>>>>>> 241b248786118e0fafe2ed4b8dd61a954d3f7af5
 			?>
 			</table>
 			<?php

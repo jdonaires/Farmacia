@@ -9,19 +9,20 @@
       $dba = new DBAccess();
       $this->pdgo = $dba->get_connection();
     }
-    public function insertarLaboratorio(Laboratorio $laboratorio)
-    {
-      try {
-        $statement = $this->pdo->prepare("CALL up_insertar_laboratorio(?,?)");
-        $statement->bindValue(1,$laboratorio->__GET('RUC'));
-        $statement->bindValue(2,$laboratorio->__GET('RegSanitario'));
-        $statement -> execute();
-      } catch (Exception $e)
-      {
-          die($e->getMessage());
-      }
 
+      public function insertarLaboratorio(Laboratorio $laboratorio)
+  {
+    try
+    {
+      $statement = $this->pdo->prepare("CALL up_insertar_laboratorio(?,?)");
+      $statement->bindValue(1,$laboratorio->__GET('RUC'));
+      $statement->bindValue(2,$laboratorio->__GET('RegSanitario'));
+      $statement -> execute();
+    } catch (Exception $e)
+    {
+      die("insertarLaboratorio function  ->".$e->getMessage());
     }
+  }
 
 
     public function eliminarLaboratorio($RUC){
@@ -36,5 +37,6 @@
       die("eliminarLaboratorio function  ->".$e->getMessage());
     }
   }
+
   }
 ?>
