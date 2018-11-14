@@ -32,9 +32,9 @@ if (isset($_POST['guardar'])) {
   		<form class="form__reg" action="registrarempleado" method="post">
    			      <input class="input-100" type="text" placeholder="Turno" required>
               <input class="input-100" type="tex" placeholder="Especialidad" required>
-              <input class="input-50" type="text" placeholder="usuario" required>
-              <input class="input-50" type="password" placeholder="Clave" required>
-              <input class="input-50" type="text" placeholder="DNI" required autofocus>
+              <input class="input-100" type="text" placeholder="usuario" required>
+              <input class="input-100" type="password" placeholder="Clave" required>
+              <input class="input-100" type="text" placeholder="DNI" required autofocus>
               <input class="input-100" type="text" placeholder="Nombre" required>
               <input class="input-100" type="text" placeholder="Apellido" required>
               <input class="input-100" type="email" placeholder="Correo" required>
