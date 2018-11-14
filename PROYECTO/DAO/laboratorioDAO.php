@@ -32,9 +32,9 @@
     {
       $statement = $this->pdo->prepare("select * from laboratorio where RUC = ?");
 
-      $statement->bindValue(1,$persona->__GET('RUC'));
+      $statement->bindValue(1,$laboratorio->__GET('RUC'));
       $statement -> execute();
-              $result = (array)$statement->fetchAll(PDO::FETCH_CLASS,"Persona");
+              $result = (array)$statement->fetchAll(PDO::FETCH_CLASS,"Laboratorio");
 
       return $result;
 
