@@ -64,7 +64,7 @@ nav{
                  <button class="btn btn-primary btn-block">Eliminar</button>
        </div>
        </div>
-      
+
        <div  class="col-md-4 ">
                 <button class="btn btn-primary btn-block">Modificar</button>
        </div>
@@ -84,7 +84,7 @@ nav{
   <div class="form-group 	">
             <label class="control-label col-md-2">RUC:</label>
   <div class="col-md-5 has-success">
-            <input  class =" form-control " type="text" name="dni" placeholder="RUC" required >
+            <input  class =" form-control " type="text" name="RUC" placeholder="RUC" required >
   </div>
   <div  class="col-md-4 ">
              <button class="btn btn-primary btn-block">Buscar</button>

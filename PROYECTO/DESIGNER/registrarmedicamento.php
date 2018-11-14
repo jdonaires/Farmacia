@@ -22,14 +22,14 @@
 <head>
 <meta charset="utf-8">
 	<title>Formulario para Medicamento</title>
-	        <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+	        <link rel="stylesheet" type="text/css" href="../estilo/frmMedicamento.css">
 </head>
 <body style="padding:15px;" class="cajon">
-  <div id="contenedor-inputs">
+  <div>
 
-    <form action="registrarmedicamento.php" method="post" class="formulario" name="form"> Registrar Medicamento</font>
-
-      <table border="0" class="cajon" name="table">
+    <form action="registrarmedicamento.php" method="post" class="formulario" id="form2" name="form">
+      <font face="Comic Sans MS,arial,verdana" size=6> Registrar Medicamento</font>
+      <table border="0">
         <tr>
           <td><input type="text" name="codMedicamento" style="width:30%" placeholder="Codigo" required></td>
         </tr>
@@ -38,22 +38,17 @@
         </tr>
         <tr>
           <td>
-            <input type="text" name="NomLaboratorio"  placeholder="Laboratorio"required>
+            <input type="text" name="NomLaboratorio"  placeholder="Laboratorio" required>
             <input type="text" name="IDLaboratorio" placeholder="ID" required>
           </td>
         </tr>
         <tr>
             <td>
-              <input type="submit" value="Guardar" class="btn-Guardar" align="center" required>
+              <input type="submit" value="Guardar">
             </td>
         </tr>
       </table>
-
-
-
     </form>
-
-</form>
   </div>
 </body>
 </html>
