@@ -1,12 +1,12 @@
 <?php
 
 require_once('../BOL/persona.php');
-require_once('../BOL/Transportista.php');
-require_once('../DAO/TransportistaDAO.php');
+require_once('../BOL/transportista.php');
+require_once('../DAO/transportistaDAO.php');
 
 $per=new Persona();
-$tra=new Transportista();
-$traDAO=new TransportistaDAO();
+$tra=new transportista();
+$traDAO=new transportistaDAO();
 
 
 if (isset($_POST['guardar'])) {
@@ -21,7 +21,7 @@ if (isset($_POST['guardar'])) {
     $per->__SET('genero',$_POST['genero']);
     $per->__SET('direccion',$_POST['direccion']);
     $per->__SET('tipopersona',"Empleado");
-    $traDAO->insertarEmpleado($emp,$per);
+    $traDAO->insertarTransportista($emp,$per);
 
     header('Location: transportista.php');
 }
@@ -60,14 +60,6 @@ nav{
     <nav class="navbar navbar-fixed-top ">
 <div class="container">
   <h3><span class="glyphicon glyphicon-fire"> </span >  Registrar Transportista</h3>
-
-<ul class="nav nav-pills">
-  <li role="presentation"><a href="index.html">Inicio</a></li>
-  <li role="presentation"><a href="gustos.html">Gustos</a></li>
-  <li role="presentation"><a href="pensamiento.html">Pensamientos</a></li>
-  <li role="presentation"><a href="">Escritos</a></li>
- <li role="presentation"> <a href="">Mas+ </a></li>
-</ul>
 </div>
     </nav>
 
