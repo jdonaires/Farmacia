@@ -7,8 +7,7 @@
 
 	if (isset($_POST['guardar']))
 	{
-		    $lab->__SET('RUC', $_POST['RUC']);
-			$lab->__SET('IdLaboratorio', $_POST['IdLaboratorio']);
+		   $lab->__SET('RUC', $_POST['RUC']);
 			$lab->__SET('RegSanitario', $_POST['RegSanitario']);
 
 			$labDAO->Registrar($lab);
@@ -30,9 +29,8 @@
   	<h1>Registrar un Laboratorio</h1>
     <form class="contact_form">
 		</br>
-				<input type="text" style="width : 100 % ;"  placeholder="Id Laboratorio" required>
 
-				<input type="text" style="width : 100 % ;"  placeholder="Id Laboratorio" required>
+				<input type="text" style="width : 100 % ;"  placeholder="RUC" required>
 
 				<input type="text" style="width : 100 % ;"  placeholder="Numero de Registro Sanitario" required >
 
