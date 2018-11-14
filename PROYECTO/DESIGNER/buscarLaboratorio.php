@@ -33,7 +33,7 @@ $labDAO = new laboratorioDAO();
                 {
                     $resultado = array();//VARIABLE TIPO RESULTADO
                     $lab->__SET('RUC',$_POST['RUC']);//ESTABLECEMOS EL VALOR DEL DNI
-                    $resultado = $labDAO->listarPersona($lab); //CARGAMOS LOS REGISTRO EN EL ARRAY RESULTADO
+                    $resultado = $labDAO->listarlaboratorio($lab); //CARGAMOS LOS REGISTRO EN EL ARRAY RESULTADO
                     if(!empty($resultado)) //PREGUNTAMOS SI NO ESTA VACIO EL ARRAY
                     {
                         ?>
