@@ -21,7 +21,7 @@ $perDAO = new PersonaDAO();
 	 <form action="buscarpersona.php" method="post" class="formulario" >
 
 	 </br>
-	 			// cambiar tipo de variable a numeros ya que no se necesita poner letras en este campo //
+	 			<!--cambiar tipo de variable a numeros ya que no se necesita poner letras en este campo-->
         <input type="number" name="dni" value=""  placeholder="Ingrese DNI"  required style="width:100%;" />
                 <!--Esta edicion se utiliza para que el usuario Ingrese datos al Campo y no lo deje vacio-->
         <input type="submit" value="BUSCAR" name="buscar" id="button" class="pure-button pure-button-primary" style="width:100%">
