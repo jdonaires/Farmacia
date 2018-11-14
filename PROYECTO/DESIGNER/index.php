@@ -71,11 +71,11 @@ require_once('DAO/personaDAO.php');
 									</tr>
 					<?php endforeach;
 			}
-			else
-			{
-					/*echo 'El Dni no se encuentra en la base de datos!';*/
-					echo "<script> alert('El Dni no se encuentra en la base de datos!'); </script>";
-			}
+      else
+      {
+          /*echo 'Bienvenido A FarmiSalud!';*/
+          echo "<script> alert('Bienvenido A FarmiSalud!'); </script>";
+      }
 			?>
 			</table>
 			<?php
