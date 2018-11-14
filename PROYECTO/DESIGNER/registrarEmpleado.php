@@ -30,11 +30,18 @@ if (isset($_POST['guardar'])) {
   			<h1>Formulario <span>Registro de Empleados</span></h1>
   		</div>
   		<form class="form__reg" action="registrarempleado" method="post">
-              <input class="input-50" type="text" placeholder="DNI" required autofocus>
    			      <input class="input-100" type="text" placeholder="Turno" required>
               <input class="input-100" type="tex" placeholder="Especialidad" required>
-              <input class="input-50" type="password" placeholder="Clave" required>
               <input class="input-50" type="text" placeholder="usuario" required>
+              <input class="input-50" type="password" placeholder="Clave" required>
+              <input class="input-50" type="text" placeholder="DNI" required autofocus>
+              <input class="input-100" type="text" placeholder="Nombre" required>
+              <input class="input-100" type="text" placeholder="Apellido" required>
+              <input class="input-100" type="email" placeholder="Correo" required>
+              <input class="input-100" type="text" placeholder="Fecha Nacimiento" required>
+              <input class="input-100" type="text" placeholder="Genero" required>
+              <input class="input-100" type="text" placeholder="Direccion" required>
+              <input class="input-100" type="text" placeholder="Tipo Persona" required>
               <div class="btn__form">
               	<input class="btn__submit" type="submit" value="REGISTRAR">
               	<input class="btn__reset" type="reset" value="LIMPIAR">

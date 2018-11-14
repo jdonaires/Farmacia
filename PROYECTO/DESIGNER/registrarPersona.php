@@ -20,7 +20,11 @@ if(isset($_POST['guardar']))
     header('Location: registrarpersona.php');
 }
 /**<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>**/
-
+else
+{
+    /*echo 'El Dni no se encuentra en la base de datos!';*/
+    echo "<script> alert('Bienvenido A FarmiSalud!'); </script>";
+}
 
 ?>
 <!DOCTYPE html>
