@@ -15,7 +15,7 @@
 		public function listarPersona(Persona $persona) {
 			try
 			{
-				$statement = $this->pdo->prepare("call up_listar_persona(?)");
+				$statement = $this->pdo->prepare("select * from persona where dni = ?");
 
 				$statement->bindValue(1,$persona->__GET('dni'));
 				$statement -> execute();
