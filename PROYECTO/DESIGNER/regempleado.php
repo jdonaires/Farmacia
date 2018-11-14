@@ -2,7 +2,7 @@
 
 require_once('../BOL/persona.php');
 require_once('../BOL/empleado.php');
-require_once('../DAO/EmpleadoDAO.php');
+require_once('../DAO/empleadoDAO.php');
 
 $per=new Persona();
 $emp=new Empleado();
@@ -62,13 +62,7 @@ nav{
 <div class="container">
   <h3><span class="glyphicon glyphicon-fire"> </span > Registrar Empleado</h3>
 
-<ul class="nav nav-pills">
-  <li role="presentation"><a href="index.html">Inicio</a></li>
-  <li role="presentation"><a href="gustos.html">Gustos</a></li>
-  <li role="presentation"><a href="pensamiento.html">Pensamientos</a></li>
-  <li role="presentation"><a href="">Escritos</a></li>
- <li role="presentation"> <a href="">Mas+ </a></li>
-</ul>
+
 </div>
     </nav>
 
