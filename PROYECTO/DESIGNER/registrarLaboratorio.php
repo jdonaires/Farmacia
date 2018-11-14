@@ -26,14 +26,14 @@
   <div>
 		<br>
   	<h1>Registrar un Laboratorio</h1>
-    <form class="contact_form">
+    <form class="contact_form" action="registrarLaboratorio.php" method="post">
 		</br>
 
-			<input type="text" style="width : 100 % ;"  placeholder="RUC" required >
+			<input type="text" style="width : 100 % ;" name="RUC" placeholder="RUC" required >
 
-				<input type="text" style="width : 100 % ;"  placeholder="Numero de Registro Sanitario" required >
+				<input type="text" style="width : 100 % ;"  name="RegSanitario" placeholder="Numero de Registro Sanitario" required >
 
-				<input type="submit" id="button" value="Guardar" />
+				<input type="submit" id="button" name="guardar" value="Guardar" />
 
     </form>
   </div>
