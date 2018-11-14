@@ -62,7 +62,7 @@ class transportistaDAO
       die($e->getMessage());
     }
   }
-  }
+
 
   public function eliminarTransportista($DNI){
     try
