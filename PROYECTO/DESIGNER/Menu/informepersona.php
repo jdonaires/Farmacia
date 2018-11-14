@@ -51,8 +51,8 @@ nav{
    <label class="control-label col-md-3" >Tipo Persona:</label>
    <div class="col-md-5 has-success">
      <select  class="form-control" name="tipopersona"  >
-               <option value="1"> Persona 1</option>
-               <option value="2"> Persona 2</option>
+               <option value="1">Natural</option>
+               <option value="2">Juridica</option>
     </select>
    </div>
  </div>
