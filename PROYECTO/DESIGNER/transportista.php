@@ -1,3 +1,35 @@
+<?php
+
+require_once('../BOL/persona.php');
+require_once('../BOL/Transportista.php');
+require_once('../DAO/TransportistaDAO.php');
+
+$per=new Persona();
+$tra=new Transportista();
+$traDAO=new TransportistaDAO();
+
+
+if (isset($_POST['guardar'])) {
+    $tra->__SET('dni', $_POST['dni']);
+    $tra->__SET('turno',$_POST['nrolicencia']);
+
+    $per->__SET('dni',$_POST['dni']);
+    $per->__SET('nombre',$_POST['nombre']);
+    $per->__SET('apellido',$_POST['apellido']);
+    $per->__SET('correo',$_POST['correo']);
+    $per->__SET('fecnac',$_POST['fecnac']);
+    $per->__SET('genero',$_POST['genero']);
+    $per->__SET('direccion',$_POST['direccion']);
+    $per->__SET('tipopersona',"Empleado");
+    $traDAO->insertarEmpleado($emp,$per);
+
+    header('Location: transportista.php');
+}
+
+
+
+
+ ?>
    <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -107,7 +139,10 @@ nav{
          <div class="form-group has-success">
           <label  class="control-label col-md-2" >Transporte:</label>
           <div class="col-md-7">
-            <input class="form-control" type="text" name="usuario" placeholder="Usuario" required>
+            <select  class="form-control" name="genero"  >
+                      <option value="M">Masculino</option>
+                      <option value="F">Femenino</option>
+              </select>
            </div>
          </div>
          <div class="form-group has-primary">
