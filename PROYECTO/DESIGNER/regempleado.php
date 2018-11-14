@@ -1,3 +1,33 @@
+<?php
+
+require_once('../BOL/persona.php');
+require_once('../BOL/empleado.php');
+require_once('../DAO/EmpleadoDAO.php');
+
+$per=new Persona();
+$emp=new Empleado();
+$empDAO=new EmpleadoDAO();
+
+
+if (isset($_POST['guardar'])) {
+    $emp->__SET('dni', $_POST['dni']);
+    $emp->__SET('turno',$_POST['turno']);
+    $emp->__SET('especialidad',$_POST['especialidad']);
+    $emp->__SET('clave', $_POST['clave']);
+    $emp->__SET('usuario', $_POST['usuario']);
+    $per->__SET('dni',$_POST['dni']);
+    $per->__SET('nombre',$_POST['nombre']);
+    $per->__SET('apellido',$_POST['apellido']);
+    $per->__SET('correo',$_POST['correo']);
+    $per->__SET('fecnac',$_POST['fecnac']);
+    $per->__SET('genero',$_POST['genero']);
+    $per->__SET('direccion',$_POST['direccion']);
+    $per->__SET('tipopersona',"Empleado");
+    $empDAO->insertarEmpleado($emp,$per);
+
+    header('Location: regEmpleado.php');
+}
+ ?>
 
 
 <!DOCTYPE html>
@@ -49,7 +79,7 @@ nav{
 <div class="panel panel-primary">
 <div class="panel-heading"><h3>Empleado</h3></div>
 <div class="panel-body">
-<form class="form-horizontal" action="empleado.php" method="post">
+<form class="form-horizontal" action="regempleado.php" method="post">
   <div class="row container">
    <div class="col-md-6">
      <div class="form-group has-success	">
@@ -79,7 +109,7 @@ nav{
 <div class="form-group has-success">
      <label  class="control-label col-md-2" for="">Fecha de Nacimiento:</label>
      <div class="col-md-7">
-      <input class="form-control" type="text" name="fecnac" placeholder="apellido" required>
+      <input class="form-control" type="date" name="fecnac" placeholder="apellido" required>
      </div>
 </div>
     <div class="form-group has-success">
@@ -125,17 +155,15 @@ nav{
          <div class="form-group has-success">
           <label  class="control-label col-md-2" >Password:</label>
           <div class="col-md-7">
-            <input class="form-control" type="text" name="clave" placeholder="Direccion" required>
+            <input class="form-control" type="text" name="clave" placeholder="Password" required>
            </div>
          </div>
 
    </div>
   </div>
-
-
         <div class="form-group">
          <div  class="col-md-7 col-md-offset-2">
-           <button class="btn btn-success btn-block" name="guardar">Guardar</button>
+           <button class="btn btn-success btn-block" name="guardar" value="guardar">Guardar</button>
          </div>
         </div>
 

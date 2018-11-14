@@ -3,8 +3,8 @@
 class Persona
     {
         private $dni;
-        private $nombres;
-        private $apellidos;
+        private $nombre;
+        private $apellido;
         private $correo;
         private $fecnac;
         private $genero;
