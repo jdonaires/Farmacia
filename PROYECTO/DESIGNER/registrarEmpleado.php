@@ -33,8 +33,8 @@ if (isset($_POST['guardar'])) {
               <input class="input-50" type="text" placeholder="DNI" required autofocus>
    			      <input class="input-100" type="text" placeholder="Turno" required>
               <input class="input-100" type="tex" placeholder="Especialidad" required>
-              <input class="input-50" type="password" placeholder="Clave" required>
               <input class="input-50" type="text" placeholder="usuario" required>
+              <input class="input-50" type="password" placeholder="Clave" required>
               <div class="btn__form">
               	<input class="btn__submit" type="submit" value="REGISTRAR">
               	<input class="btn__reset" type="reset" value="LIMPIAR">
