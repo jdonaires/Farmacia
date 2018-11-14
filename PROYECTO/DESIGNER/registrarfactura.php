@@ -16,6 +16,12 @@
 
 			header('Location: registrarfactura.php');
 	}
+	else
+	{
+			/*echo 'PROCESO AL REGISTRO DE FACTURA!';*/
+			echo "<script> alert('PROCESO AL REGISTRO DE FACTURA!'); </script>";
+	}
+
 
 // Estas condicionales son para las palabras con tildes y la letra ñ //
 
