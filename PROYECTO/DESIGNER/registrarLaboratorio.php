@@ -7,10 +7,9 @@
 
 	if (isset($_POST['guardar']))
 	{
-		   $lab->__SET('RUC', $_POST['RUC']);
+		  $lab->__SET('RUC', $_POST['RUC']);
 			$lab->__SET('RegSanitario', $_POST['RegSanitario']);
-
-			$labDAO->Registrar($lab);
+      $labDAO->insertarLaboratorio($lab);
 
 			header('Location: registrarLaboratorio.php');
 	}
@@ -30,7 +29,7 @@
     <form class="contact_form">
 		</br>
 
-				<input type="text" style="width : 100 % ;"  placeholder="RUC" required>
+			<input type="text" style="width : 100 % ;"  placeholder="RUC" required >
 
 				<input type="text" style="width : 100 % ;"  placeholder="Numero de Registro Sanitario" required >
 
