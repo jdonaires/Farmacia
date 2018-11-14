@@ -23,12 +23,7 @@
 
 				<td><input type="password" name="" placeholder="Clave"  required ></td>
 			</tr>
-			<tr>
-			 <select name="tipopersona" >
-      			<option value="Empleado">Empleado</option>
-            <option value="Transportista">Transportista</option>
-       </select>
-      </tr>
+
 			<tr>
 
 				<td ><input type="submit" name="" value="INGRESAR" style="width:100%;"  onclick=" location.href='http://localhost:8090/Farmacia/PROYECTO/DESIGNER/menu.php' "></td>
