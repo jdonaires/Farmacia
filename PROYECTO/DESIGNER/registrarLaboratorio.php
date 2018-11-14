@@ -9,11 +9,14 @@
 	{
 		  $lab->__SET('RUC', $_POST['RUC']);
 			$lab->__SET('RegSanitario', $_POST['RegSanitario']);
-      $labDAO->insertarLaboratorio($lab);
+			$labDAO->insertarLaboratorio($lab);
 
 			header('Location: registrarLaboratorio.php');
 	}
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

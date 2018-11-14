@@ -31,7 +31,6 @@
 
 		public function insertarPersona(Persona $persona)
 		{
-
 			try
 			{
 				$statement = $this->pdo->prepare("call up_insertar_persona(?,?,?,?,?,?,?,?)");
