@@ -71,15 +71,15 @@ require_once('../DAO/personaDAO.php');
 									</tr>
 					<?php endforeach;
 			}
-<<<<<<< HEAD
-			
-=======
+
+
+
       else
       {
           /*echo 'Bienvenido A FarmiSalud!';*/
           echo "<script> alert('Bienvenido A FarmiSalud!'); </script>";
       }
->>>>>>> 241b248786118e0fafe2ed4b8dd61a954d3f7af5
+
 			?>
 			</table>
 			<?php
