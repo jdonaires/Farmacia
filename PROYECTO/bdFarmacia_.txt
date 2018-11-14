@@ -770,6 +770,53 @@ END$$
 DELIMITER ;
 
 
+/***** ACTUALIZAR EMPRESA ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_empresa`(
+		IN p_RUC varchar(20),
+    IN p_RazonSocial VARCHAR(40),
+    IN p_Telefono VARCHAR(10),
+    IN p_Direccion VARCHAR(20),
+    IN p_TipoEmpresa VARCHAR(20)
+)
+BEGIN
+	UPDATE empresa SET RUC=p_RUC, RazónSocial=p_RazonSocial,
+		   Telefono=p_Telefono, Direccion=p_Direccion,TipoEmpresa=p_TipoEmpresa WHERE RUC=p_RUC;
+END$$
+DELIMITER ;
+
+/***** ELIMINAR POSOLOGIA ***********/
+
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_posologia`(
+	IN p_codDtMed VARCHAR(20)
+)
+BEGIN
+	DELETE FROM posologia WHERE CodDtMed = p_codDtMed;
+END$$
+DELIMITER ;
+
+/***** ACTUALIZAR POSOLOGIA ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_posologia`(
+
+	  IN p_codDtMed int(11),
+    IN p_Dosis VARCHAR(20),
+    IN p_Indicaciones VARCHAR(20)
+
+)
+BEGIN
+	UPDATE posologia SET  CodDtMed=p_codDtMed, Dosis=p_Dosis,
+			Indicaciones=p_Indicaciones WHERE CodDtMed=p_codDtMed;
+END$$
+DELIMITER ;
+
 /***** ACTUALIZAR MEDICAMENTO ***********/
 
 
