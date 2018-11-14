@@ -155,6 +155,19 @@ CREATE TABLE Factura(
 
 ________________________________________________________________
 
+--PERSONA
+INSERT INTO persona (Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+	      VALUES('Jorge' ,'RAMOS QUISPE','jorgeramos@hotmail.com',to_date('15/08/1979','DD/MM/RR'),'M','Calle Grau 530','Empleado');
+INSERT INTO persona (Nombre,Apellido ,Correo,FecNac,Genero,Direccion,TipoPersona)
+	      VALUES('Ivan' ,'ALIAGA VIDAL','ivanaliaga@hotmail.com',to_date('25/03/1980','DD/MM/RR'),'M','AV. LA PAZ 659','Empleado');
+INSERT INTO persona (Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+	      VALUES('Humberto','VELASQUEZ ORTIZ','humbertovalzquez@hotmail.com',to_date('15/06/1979','DD/MM/RR'),'M','AV. BOLIVAR 1789','Empleado');
+INSERT INTO persona (Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+	      VALUES('Luca' ,'Ramos Quispe','jorgeramos@hotmail.com',to_date('05/03/1979','DD/MM/RR'),'M','AV. SAENZ PEÑA 52','Empleado');
+INSERT INTO persona (Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+VALUES('Antony' ,'Ramos Quispe','jorgeramos@hotmail.com',to_date('13/09/1979','DD/MM/RR'),'M,PANAMERICANA NORTE KM. 17.5','Empleado');
+	      
+_________________________________________________________________
 --Creacion de procedimientos almacenados
 
 
