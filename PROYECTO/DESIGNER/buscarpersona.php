@@ -67,18 +67,6 @@ $perDAO = new PersonaDAO();
                     <?php
                 }
                 ?>
-<script>
-
-/*document.getElementById("namee").oncllick = function(){
-
-document.getElementById("namee").style.background="teal";
-
-}*/
-body.onmouseover = function() {
-     var a=document.getElementsById("namee");
-      a.style.backgroundColor="blue";
-
-  }
 
 
 </script>
