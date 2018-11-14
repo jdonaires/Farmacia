@@ -18,20 +18,20 @@ USE farmacia;
 ________________________________________________________________
 -- CREACIÓN DE TABLAS
 CREATE TABLE Empresa(
-	RUC 		VARCHAR(20) 	PRIMARY KEY,
+	RUC 		VARCHAR(12) 	PRIMARY KEY,
 	RazónSocial 	VARCHAR(40) 	NOT NULL,
 	Telefono 	VARCHAR(10),
 	Dirección 	VARCHAR(20),
 	TipoEmpresa	VARCHAR(30)
 ) ;
 CREATE TABLE Laboratorio(
-	RUC		VARCHAR(20) 	,
+	RUC		VARCHAR(12) 	,
 	IdLaboratorio	INT  PRIMARY KEY AUTO_INCREMENT,
 	RegSanitario	VARCHAR(20) ,
 	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
 );
 CREATE TABLE Transporte(
-	RUC 		VARCHAR(20) 	,
+	RUC 		VARCHAR(12) 	,
 	IdTransporte 	INT 		PRIMARY KEY AUTO_INCREMENT,
 	Placa 		VARCHAR(20)	NOT NULL,
 	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
@@ -52,7 +52,7 @@ CREATE TABLE Empleado(
 	Especialidad	VARCHAR(20)	NOT NULL,
 	Usuario		VARCHAR(20)	UNIQUE	NOT NULL,
 	Clave		VARCHAR(20)	NOT NULL,
-	DNI		VARCHAR(20)		,
+	DNI		VARCHAR(8)		,
 	FOREIGN KEY (DNI)REFERENCES Persona(DNI)
 );
 CREATE TABLE Transportista(
