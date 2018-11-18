@@ -18,20 +18,20 @@ USE farmacia;
 ________________________________________________________________
 -- CREACIÓN DE TABLAS
 CREATE TABLE Empresa(
-	RUC 		VARCHAR(20) 	PRIMARY KEY,
+	RUC 		VARCHAR(12) 	PRIMARY KEY,
 	RazónSocial 	VARCHAR(40) 	NOT NULL,
 	Telefono 	VARCHAR(10),
 	Dirección 	VARCHAR(20),
 	TipoEmpresa	VARCHAR(30)
 ) ;
 CREATE TABLE Laboratorio(
-	RUC		VARCHAR(20) 	,
+	RUC		VARCHAR(12) 	,
 	IdLaboratorio	INT  PRIMARY KEY AUTO_INCREMENT,
 	RegSanitario	VARCHAR(20) ,
 	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
 );
 CREATE TABLE Transporte(
-	RUC 		VARCHAR(20) 	,
+	RUC 		VARCHAR(12) 	,
 	IdTransporte 	INT 		PRIMARY KEY AUTO_INCREMENT,
 	Placa 		VARCHAR(20)	NOT NULL,
 	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
@@ -52,7 +52,7 @@ CREATE TABLE Empleado(
 	Especialidad	VARCHAR(20)	NOT NULL,
 	Usuario		VARCHAR(20)	UNIQUE	NOT NULL,
 	Clave		VARCHAR(20)	NOT NULL,
-	DNI		VARCHAR(20)		,
+	DNI		VARCHAR(8)		,
 	FOREIGN KEY (DNI)REFERENCES Persona(DNI)
 );
 CREATE TABLE Transportista(
@@ -155,6 +155,19 @@ CREATE TABLE Factura(
 
 ________________________________________________________________
 
+--PERSONA
+INSERT INTO persona (Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+	      VALUES('Jorge' ,'RAMOS QUISPE','jorgeramos@hotmail.com',to_date('15/08/1979','DD/MM/RR'),'M','Calle Grau 530','Empleado');
+INSERT INTO persona (Nombre,Apellido ,Correo,FecNac,Genero,Direccion,TipoPersona)
+	      VALUES('Ivan' ,'ALIAGA VIDAL','ivanaliaga@hotmail.com',to_date('25/03/1980','DD/MM/RR'),'M','AV. LA PAZ 659','Empleado');
+INSERT INTO persona (Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+	      VALUES('Humberto','VELASQUEZ ORTIZ','humbertovalzquez@hotmail.com',to_date('15/06/1979','DD/MM/RR'),'M','AV. BOLIVAR 1789','Empleado');
+INSERT INTO persona (Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+	      VALUES('Luca' ,'Ramos Quispe','jorgeramos@hotmail.com',to_date('05/03/1979','DD/MM/RR'),'M','AV. SAENZ PEÑA 52','Empleado');
+INSERT INTO persona (Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
+VALUES('Antony' ,'Ramos Quispe','jorgeramos@hotmail.com',to_date('13/09/1979','DD/MM/RR'),'M,PANAMERICANA NORTE KM. 17.5','Empleado');
+	      
+_________________________________________________________________
 --Creacion de procedimientos almacenados
 
 
@@ -769,6 +782,53 @@ BEGIN
 END$$
 DELIMITER ;
 
+
+/***** ACTUALIZAR EMPRESA ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_empresa`(
+		IN p_RUC varchar(20),
+    IN p_RazonSocial VARCHAR(40),
+    IN p_Telefono VARCHAR(10),
+    IN p_Direccion VARCHAR(20),
+    IN p_TipoEmpresa VARCHAR(20)
+)
+BEGIN
+	UPDATE empresa SET RUC=p_RUC, RazónSocial=p_RazonSocial,
+		   Telefono=p_Telefono, Direccion=p_Direccion,TipoEmpresa=p_TipoEmpresa WHERE RUC=p_RUC;
+END$$
+DELIMITER ;
+
+/***** ELIMINAR POSOLOGIA ***********/
+
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_posologia`(
+	IN p_codDtMed VARCHAR(20)
+)
+BEGIN
+	DELETE FROM posologia WHERE CodDtMed = p_codDtMed;
+END$$
+DELIMITER ;
+
+/***** ACTUALIZAR POSOLOGIA ***********/
+
+DELIMITER $$
+use `farmacia`$$
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_posologia`(
+
+	  IN p_codDtMed int(11),
+    IN p_Dosis VARCHAR(20),
+    IN p_Indicaciones VARCHAR(20)
+
+)
+BEGIN
+	UPDATE posologia SET  CodDtMed=p_codDtMed, Dosis=p_Dosis,
+			Indicaciones=p_Indicaciones WHERE CodDtMed=p_codDtMed;
+END$$
+DELIMITER ;
 
 /***** ACTUALIZAR MEDICAMENTO ***********/
 
