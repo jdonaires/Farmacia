@@ -218,7 +218,10 @@ INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
 	      VALUES('009','Mañana','Bioquímico','LucianaCACEREZ','45689','45896320');	      
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
-	      VALUES('0010','Tarde','Químico','AnaLUQUE','84562','56320125');	      
+	      VALUES('0010','Tarde','Químico','AnaLUQUE','84562','56320125');	
+--------REGISTRO DE EMPRESA
+INSERT INTO Empresa (RUC,RazónSocial,Telefono,Dirección,TipoEmpresa)
+	      VALUES('65123879','inventario','934863659','UniversidadSJB-Chincha','Natural');
 	      
 _________________________________________________________________
 --Creacion de procedimientos almacenados
