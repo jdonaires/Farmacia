@@ -198,6 +198,28 @@ INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
 	      VALUES('98745632','04' ,'32145684');
 INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
 	      VALUES('56321478','05' ,'32145332');
+--------REGISTRO DE EMPLEADO 
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('001','Mañana','Químico','JorgeRAMOS','1234','21394873');
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('002','Tarde','Bioquímico','IvanALIAGA','5678','30498632');
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('003','Mañana','Bioquímico','HumbertoVELASQUEZ','5620','36527809');	      
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('004','Mañana','Químico','LucaRAMOS','1232','3100928');
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('005','Mañana','Bioquímico','AntonyRAMOS','5965','27091256');
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('006','Tarde','Químico','JulianQUIJAITE','8458','65289140');	      
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('007','Mañana','Bioquímico','JulianaCARRILO','5621','58963245');	      
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('008','Tarde','Químico','LuisaORTIZ','45632','80456321');	      
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('009','Mañana','Bioquímico','LucianaCACEREZ','45689','45896320');	      
+INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
+	      VALUES('0010','Tarde','Químico','AnaLUQUE','84562','56320125');	      
+	      
 _________________________________________________________________
 --Creacion de procedimientos almacenados
 
