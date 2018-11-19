@@ -1,15 +1,18 @@
 <?php
 	require_once('../BOL/laboratorio.php');
 	require_once('../DAO/laboratorioDAO.php');
-
+	require_once('../BOL/empresa.php');
+	require_once('../DAO/empresaDAO.php');
+  $emp = new empresa();
+	$empDAO = new empresaDAO();
 	$lab = new laboratorio();
 	$labDAO = new laboratorioDAO();
 
 	if (isset($_POST['guardar']))
 	{
+		    $emp->__SET('', $_POST['RUC']);
 		    $lab->__SET('RUC', $_POST['RUC']);
-			$lab->__SET('IdLaboratorio', $_POST['IdLaboratorio']);
-			$lab->__SET('RegSanitario', $_POST['RegSanitario']);
+				$lab->__SET('RegSanitario', $_POST['RegSanitario']);
 
 			$labDAO->Registrar($lab);
 
@@ -30,13 +33,18 @@
   	<h1>Registrar un Laboratorio</h1>
     <form class="contact_form">
 		</br>
-				<input type="text" style="width : 100 % ;"  placeholder="Id Laboratorio" required>
 
-				<input type="text" style="width : 100 % ;"  placeholder="Id Laboratorio" required>
+			<input type="text" style="width : 100 % ;"  placeholder="RUC"  name="ruc" required>
 
-				<input type="text" style="width : 100 % ;"  placeholder="Numero de Registro Sanitario" required >
+			<input type="text" style="width : 100 % ;"  placeholder="Razon Social"  name="razonsocial" required>
 
-				<input type="submit" id="button" value="Guardar" />
+			<input type="text" style="width : 100 % ;"  placeholder="Telefono"  name="telefono" required>
+
+			<input type="text" style="width : 100 % ;"  placeholder="direccion"  name="direccion" required>
+
+			<input type="text" style="width : 100 % ;"  placeholder="Numero de Registro Sanitario" name="RegSanitario"  required >
+
+				<input type="submit" id="button" value="Guardar" name="guardar" />
 
     </form>
   </div>
