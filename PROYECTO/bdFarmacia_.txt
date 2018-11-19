@@ -155,7 +155,7 @@ CREATE TABLE Factura(
 
 ________________________________________________________________
 
---REGISTRO DE PERSONA 
+--------REGISTRO DE PERSONA 
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
 	      VALUES('21394873','Jorge' ,'RAMOS QUISPE','jorgeramos@hotmail.com',to_date('15/08/1979','DD/MM/RR'),'M','Calle Grau 530','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido ,Correo,FecNac,Genero,Direccion,TipoPersona)
@@ -185,8 +185,19 @@ INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPers
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
 	      VALUES('98745632','Orlando' ,'RAMOS VERGARA','orlandoramos@hotmail.com',to_date('14/09/1999','DD/MM/RR'),'M,'PANAMERICANA SUR KM. 175','Transportista');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('56321478','Julian' ,'ARIAS PEÑA','julianarias@hotmail.com',to_date('06/08/1977','DD/MM/RR'),'M','Calle Ramirez 50','Transportista');	
+	      VALUES('56321478','Julian' ,'ARIAS PEÑA','julianarias@hotmail.com',to_date('06/08/1977','DD/MM/RR'),'M','Calle Ramirez 50','Transportista');
 	      
+--------REGISTRO DE TRASNPORTISTA 
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('32014569','01' ,'84526574');	
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('98632140','02' ,'54215896');
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('56321458','03' ,'52012649');
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('98745632','04' ,'32145684');
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('56321478','05' ,'32145332');
 _________________________________________________________________
 --Creacion de procedimientos almacenados
 
