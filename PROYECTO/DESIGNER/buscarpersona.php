@@ -40,7 +40,7 @@ $perDAO = new PersonaDAO();
                         <table class="pure-table pure-table-horizontal">
                                 <thead>
                                         <tr>
-                                                <th style="text-align:left;">ID</th>
+
                                                 <th style="text-align:left;">Nombres</th>
                                                 <th style="text-align:left;">Apellidos</th>
                                                 <th style="text-align:left;">DNI</th>
@@ -50,7 +50,7 @@ $perDAO = new PersonaDAO();
                         foreach( $resultado as $r): //RECORREMOS EL ARRAY RESULTADO A TRAVES DE SUS CAMPOS
                             ?>
                                 <tr>
-                                        <td><?php echo $r->__GET('id'); ?></td>
+                                      
                                         <td><?php echo $r->__GET('Nombre'); ?></td>
                                         <td><?php echo $r->__GET('Apellido'); ?></td>
                                         <td><?php echo $r->__GET('DNI'); ?></td>
