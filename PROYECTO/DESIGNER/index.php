@@ -10,7 +10,7 @@ require_once('../DAO/personaDAO.php');
 	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
   <link rel="icon" type="img/jpg" href="../img/a.jpg"> <!-- ESTA EDICION SIRVE PARA AGREGAR ICONO AL EMCABEZADO DE LA PAGINA.-->
 </head>
-
+y
 <body  class="cajon">
 	<nav class="navegador" align="center">
 		<span><h1>FarmiSalud</h1></span>
