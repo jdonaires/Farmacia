@@ -27,7 +27,6 @@ $perDAO = new PersonaDAO();
 
   </form>
         <!--ESTA CONDICION SIRVE PARA REALIZAR BUSQUEDA POR DNI-->
-
                 <?php
                 if(isset($_POST['buscar']))
                 {
@@ -50,7 +49,7 @@ $perDAO = new PersonaDAO();
                         foreach( $resultado as $r): //RECORREMOS EL ARRAY RESULTADO A TRAVES DE SUS CAMPOS
                             ?>
                                 <tr>
-                                      
+
                                         <td><?php echo $r->__GET('Nombre'); ?></td>
                                         <td><?php echo $r->__GET('Apellido'); ?></td>
                                         <td><?php echo $r->__GET('DNI'); ?></td>
