@@ -89,12 +89,12 @@ nav{
 </div>
 <div class="form-group has-success">
 						 <label  class="control-label col-md-2" >PrecioActual:</label>
-						<br> <div class="form-group has-success">
+						<div class="form-group has-success">
 						<label  class="control-label col-md-2" >Precio</label>
 							<div class="col-md-7">
 								<input class="form-control" type="text" name="precio" placeholder="Precio" required>
 							 </div>
-						 </div><br/>
+						 </div>
 						 <div class="form-group has-success">
 							<label  class="control-label col-md-2" >Estado:</label>
 							<div class="col-md-7">
@@ -124,6 +124,22 @@ nav{
 			 <div class="col-md-7">
 				 <input class="form-control" type="text" name="indicaciones" placeholder="Indicaciones" required>
 				</div>
+				<div class="form-group has-success">
+				 <label  class="control-label col-md-2" >Almacen:</label>
+				 <div class="form-group has-success">
+					<label  class="control-label col-md-2" >StockActual</label>
+					<div class="col-md-7">
+						<input class="form-control" type="text" name="stockactual" placeholder="StockActual" required>
+					 </div>
+				 </div>
+				 <div class="form-group has-success">
+					<label  class="control-label col-md-2" >Ubicacion:</label>
+					<div class="col-md-7">
+						<input class="form-control" type="text" name="ubicacion" placeholder="Ubicacion" required>
+					 </div>
+				 </div>
+				</div>
+
    </div>
 		 </div>
 					 <div class="form-group">
