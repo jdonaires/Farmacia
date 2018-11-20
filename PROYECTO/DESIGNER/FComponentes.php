@@ -103,23 +103,7 @@ nav{
 				 <input class="form-control" type="text" name="indicaciones" placeholder="Indicaciones" required>
 				</div>
    </div>
-	 <div class="col-md-6">
-				 <div class="form-group has-success">
-					<label  class="control-label col-md-2" >Posologia</label>
-				 </div>
-				 <div class="form-group has-success">
-					<label  class="control-label col-md-2" >Dosis</label>
-					<div class="col-md-7">
-						<input class="form-control" type="text" name="dosis" placeholder="Dosis" required>
-					 </div>
-				 </div>
-				 <div class="form-group has-success">
-					<label  class="control-label col-md-2" >Indicaciones:</label>
-					<div class="col-md-7">
-						<input class="form-control" type="text" name="indicaciones" placeholder="Indicaciones" required>
-					 </div>
-			</div>
-						</div>
+	 <br>
 						<div class="form-group has-success">
 						 <label  class="control-label col-md-2" >PrecioActual:</label>
 						 <div class="form-group has-success">
@@ -140,7 +124,8 @@ nav{
 								<input class="form-control" type="date" name="fechaactualizacion" placeholder="FechaActualizacion" required>
 							 </div>
 						 </div>
-						</div>
+					 </div><br/>
+
 
 			</div>
 		 </div>
