@@ -13,7 +13,7 @@ class empresaDAO
 	{
 		try
 		{
-			$statement = $this->pdo->prepare("CALL up_insertar_empresa(?,?,?,?,?)");
+			$statement = $this->pdo->prepare("insert into empresa values(?,?,?,?,?)");
 			$statement->bindValue(1,$empresa->__GET('RUC'));
 			$statement->bindValue(2,$empresa->__GET('RazonSocial'));
 			$statement->bindValue(3,$empresa->__GET('Telefono'));

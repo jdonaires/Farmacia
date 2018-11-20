@@ -10,14 +10,14 @@
 
 	if (isset($_POST['guardar']))
 	{
-		    $emp->__SET('RUC', $_POST['RUC']);
+		    $emp->__SET('RUC', $_POST['ruc']);
 				$emp->__SET('RazonSocial', $_POST['razonsocial']);
 				$emp->__SET('Telefono',$_POST['telefono']);
 				$emp->__SET('Direccion',$_POST['direccion']);
 				$emp->__SET('TipoEmpresa','Laboratorio');
 
 
-		    $lab->__SET('RUC', $_POST['RUC']);
+		    $lab->__SET('RUC', $_POST['ruc']);
 				$lab->__SET('RegSanitario', $_POST['RegSanitario']);
 
      $empDAO->insertarEmpresa($emp);
@@ -38,7 +38,7 @@
   <div>
 		<br>
   	<h1>Registrar un Laboratorio</h1>
-    <form class="contact_form">
+    <form action="registrarLaboratorio.php" method="post"  class="contact_form">
 		</br>
 
 			<input type="text" style="width : 100 % ;"  placeholder="RUC"  name="ruc" required>
