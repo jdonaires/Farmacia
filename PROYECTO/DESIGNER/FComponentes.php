@@ -87,67 +87,7 @@ nav{
     <input class="form-control" type="text" name="cantidad" placeholder="Cantidad" required>
     </div>
 </div>
-<div class="col-md-6">
-			<div class="form-group has-success">
-			 <label  class="control-label col-md-2" >Posologia</label>
-			</div>
-			<div class="form-group has-success">
-			 <label  class="control-label col-md-2" >Dosis</label>
-			 <div class="col-md-7">
-				 <input class="form-control" type="text" name="dosis" placeholder="Dosis" required>
-				</div>
-			</div>
-			<div class="form-group has-success">
-			 <label  class="control-label col-md-2" >Indicaciones:</label>
-			 <div class="col-md-7">
-				 <input class="form-control" type="text" name="indicaciones" placeholder="Indicaciones" required>
-				</div>
-   </div>
-         </div>
-         <div class="form-group has-success">
-          <label  class="control-label col-md-2" >PrecioActual:</label>
-					<div class="form-group has-success">
-					 <label  class="control-label col-md-2" >Precio</label>
-					 <div class="col-md-7">
-						 <input class="form-control" type="text" name="precio" placeholder="Precio" required>
-						</div>
-					</div>
-					<div class="form-group has-success">
-					 <label  class="control-label col-md-2" >Estado:</label>
-					 <div class="col-md-7">
-						 <input class="form-control" type="text" name="estado" placeholder="Estado" required>
-						</div>
-					</div>
-					<div class="form-group has-success">
-					 <label  class="control-label col-md-2" >FechaActualizacion:</label>
-					 <div class="col-md-7">
-						 <input class="form-control" type="date" name="fechaactualizacion" placeholder="FechaActualizacion" required>
-						</div>
-					</div>
-         </div>
-				 <div class="form-group has-success">
-          <label  class="control-label col-md-2" >Almacen:</label>
-					<div class="form-group has-success">
-					 <label  class="control-label col-md-2" >StockActual</label>
-					 <div class="col-md-7">
-						 <input class="form-control" type="text" name="stockactual" placeholder="StockActual" required>
-						</div>
-					</div>
-					<div class="form-group has-success">
-					 <label  class="control-label col-md-2" >Ubicacion:</label>
-					 <div class="col-md-7">
-						 <input class="form-control" type="text" name="ubicacion" placeholder="Ubicacion" required>
-						</div>
-					</div>
-         </div>
 
-   </div>
-  </div>
-        <div class="form-group">
-         <div  class="col-md-7 col-md-offset-2">
-           <button class="btn btn-success btn-block" name="guardar" value="guardar">Guardar</button>
-         </div>
-        </div>
 
 </form>
 
