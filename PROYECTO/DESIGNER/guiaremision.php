@@ -41,6 +41,15 @@ margin-top:110px;
 <form class="form-horizontal" action="empleado.php" method="post">
 <div class="row container">
 <div class="col-md-6">
+
+  <div class="form-group has-success	">
+   <label class="control-label col-md-4">Numero de Guia de Remision:</label>
+   <div class="col-md-4">
+    <input  class =" form-control" type="text" name="NroGuiaRemision"  required >
+  </div>
+  </div>
+
+
   <div class="form-group has-success	">
    <label class="control-label col-md-4">Punto Partida:</label>
    <div class="col-md-4">
@@ -94,15 +103,12 @@ margin-top:110px;
        </div>
       </div>
   </div>
-       <div class="form-group">
-        <div  class="col-md-7 col-md-offset-2">
-          <button class="btn btn-success btn-block">Guardar</button>
-        </div>
-       </div>
 </div>
 </div>
 </form>
 </div>
+
+
 <form class="form-horizontal" action="guiaremision.php" method="post">
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -131,7 +137,54 @@ margin-top:110px;
      </div>
          </div>
     </div>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><h3>Registrar Factura</h3></div>
+<div class="panel-body">
+  <!--<form class="form-horizontal" action="FFactura.php" method="post"> -->
+
+  <div class="row container">
+   <div class="col-md-9">
+
+     <div class="form-group has-success	">
+      <label class="control-label col-md-2">Detalle Factura: </label>
+     </div>
+
+    <div class="form-group has-success">
+     <label class="control-label col-md-2" >Nombre Medicamento: </label>
+     <div class="col-md-7">
+     	<input type="text" name="nombre" class="form-control" placeholder="Nombre del medicamento" required>
+     </div>
+   </div>
+
+   <div class="form-group has-success">
+	    <label  class="control-label col-md-2" for="">Nombre Laboratorio: </label>
+	    <div class="col-md-7">
+	      <input class="form-control" type="text" name="NomLaboratorio" placeholder="Nombre Laboratorio" required>
+	     </div>
+   </div>
+
+	 <div class="form-group has-success">
+	  	<label  class="control-label col-md-2" for="">Cantidad:</label>
+	    <div class="col-md-7">
+	    	<input class="form-control" type="text" name="cantidad" placeholder="Cantidad" required>
+	    </div>
+	</div>
+</div>
+
 </form>
+
+</div>
+</section>
+
+<div class="form-group">
+ <div  class="col-md-7 col-md-offset-2">
+   <button class="btn btn-success btn-block" name="Registrar" value="Registrar">Registrar</button>
+ </div>
+ <br><br>
+
+</div>
+
 </section>
 </div>
 </body>
