@@ -33,11 +33,8 @@ nav{
   <h3><span class="glyphicon glyphicon-fire"> </span > Registrar Transporte</h3>
 
 <ul class="nav nav-pills">
-  <li role="presentation"><a href="index.html">Inicio</a></li>
-  <li role="presentation"><a href="gustos.html">Gustos</a></li>
-  <li role="presentation"><a href="pensamiento.html">Pensamientos</a></li>
-  <li role="presentation"><a href="">Escritos</a></li>
- <li role="presentation"> <a href="">Mas+ </a></li>
+  <li role="presentation"><a href="menu.html">Inicio</a></li>
+
 </ul>
 </div>
     </nav>
