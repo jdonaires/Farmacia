@@ -1,11 +1,11 @@
 <?php
 class Empresa
 {
-	private $RUC;
-	private $RazonSocial;
-	private $Telefono;
-	private $Direccion;
-	private $TipoEmpresa;
+	private $ruc;
+	private $razonSocial;
+	private $telefono;
+	private $direccion;
+	private $tipoEmpresa;
 	
 
 	public function __GET($x)
