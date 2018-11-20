@@ -33,6 +33,9 @@
 	<title>Formulario para Laboratorio</title>
 		<link rel="icon" type="img/jpg" href="../img/a.jpg">
 		<link rel="stylesheet" type="text/css" href="../estilo/frmlaboratorio.css">
+		<ul class="nav nav-pills">
+      <li role="presentation"><a href="menu/menu.html">Inicio</a></li>
+     </ul>
 </head>
 <body>
   <div>

@@ -61,61 +61,84 @@ nav{
  <section class="main">
    <BR>
 <div class="panel panel-primary">
-<div class="panel-heading"><h3>Componentes</h3></div>
+<div class="panel-heading"><h3>Registros</h3></div>
 <div class="panel-body">
 <form class="form-horizontal" action="FComponentes.php" method="post">
   <div class="row container">
    <div class="col-md-6">
      <div class="form-group has-success	">
       <label class="control-label col-md-2">Componentes:</label>
-      <div class="col-md-7">
-       <input  class =" form-control" type="text" name="componentes" placeholder="Componentes" required >
-     </div>
      </div>
     <div class="form-group has-success">
-     <label class="control-label col-md-2" >Precio Actual</label>
+     <label class="control-label col-md-2" >Nombre</label>
      <div class="col-md-7">
-     <input type="text" name="Precio Actual" class="form-control" placeholder="Precio Actual" required>
+     <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
      </div>
    </div>
    <div class="form-group has-success">
-    <label  class="control-label col-md-2" for="">Almacen</label>
+    <label  class="control-label col-md-2" for="">Tipo</label>
     <div class="col-md-7">
-      <input class="form-control" type="text" name="Almacen" placeholder="Almacen" required>
+      <input class="form-control" type="text" name="tipo" placeholder="Tipo" required>
      </div>
    </div>
 <div class="form-group has-success">
-  <label  class="control-label col-md-2" for="">Tipo Presentacion</label>
+  <label  class="control-label col-md-2" for="">Cantidad:</label>
     <div class="col-md-7">
-    <input class="form-control" type="text" name="Tipo Presentacion" placeholder="Tipo Presentacion" required>
+    <input class="form-control" type="text" name="cantidad" placeholder="Cantidad" required>
     </div>
 </div>
    </div>
    <div class="col-md-6">
-
          <div class="form-group has-success">
           <label  class="control-label col-md-2" >Posologia</label>
+         </div>
+         <div class="form-group has-success">
+          <label  class="control-label col-md-2" >Dosis</label>
           <div class="col-md-7">
-            <input class="form-control" type="text" name="Posologia" placeholder="Posologia" required>
+            <input class="form-control" type="text" name="dosis" placeholder="Dosis" required>
            </div>
          </div>
          <div class="form-group has-success">
-          <label  class="control-label col-md-2" >Nombre</label>
+          <label  class="control-label col-md-2" >Indicaciones:</label>
           <div class="col-md-7">
-            <input class="form-control" type="text" name="nombre" placeholder="Nombre" required>
+            <input class="form-control" type="text" name="indicaciones" placeholder="Indicaciones" required>
            </div>
          </div>
          <div class="form-group has-success">
-          <label  class="control-label col-md-2" >Tipo: </label>
-          <div class="col-md-7">
-            <input class="form-control" type="text" name="Tipo" placeholder="Tipo" required>
-           </div>
+          <label  class="control-label col-md-2" >PrecioActual:</label>
+					<div class="form-group has-success">
+					 <label  class="control-label col-md-2" >Precio</label>
+					 <div class="col-md-7">
+						 <input class="form-control" type="text" name="precio" placeholder="Precio" required>
+						</div>
+					</div>
+					<div class="form-group has-success">
+					 <label  class="control-label col-md-2" >Estado:</label>
+					 <div class="col-md-7">
+						 <input class="form-control" type="text" name="estado" placeholder="Estado" required>
+						</div>
+					</div>
+					<div class="form-group has-success">
+					 <label  class="control-label col-md-2" >FechaActualizacion:</label>
+					 <div class="col-md-7">
+						 <input class="form-control" type="date" name="fechaactualizacion" placeholder="FechaActualizacion" required>
+						</div>
+					</div>
          </div>
-         <div class="form-group has-success">
-          <label  class="control-label col-md-2" >Cantidad</label>
-          <div class="col-md-7">
-            <input class="form-control" type="text" name="cantidad" placeholder="Cantidad" required>
-           </div>
+				 <div class="form-group has-success">
+          <label  class="control-label col-md-2" >Almacen:</label>
+					<div class="form-group has-success">
+					 <label  class="control-label col-md-2" >StockActual</label>
+					 <div class="col-md-7">
+						 <input class="form-control" type="text" name="stockactual" placeholder="StockActual" required>
+						</div>
+					</div>
+					<div class="form-group has-success">
+					 <label  class="control-label col-md-2" >Ubicacion:</label>
+					 <div class="col-md-7">
+						 <input class="form-control" type="text" name="ubicacion" placeholder="Ubicacion" required>
+						</div>
+					</div>
          </div>
 
    </div>
