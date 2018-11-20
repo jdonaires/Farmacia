@@ -124,7 +124,7 @@ nav{
 			 <div class="col-md-7">
 				 <input class="form-control" type="text" name="indicaciones" placeholder="Indicaciones" required>
 				</div>
-				<div class="form-group has-success">
+			<br><div class="form-group has-success"><br/>
 				<br><label  class="control-label col-md-2" >Almacen:</label><br/>
 				 <div class="form-group has-success">
 					<label  class="control-label col-md-2" >StockActual</label>
