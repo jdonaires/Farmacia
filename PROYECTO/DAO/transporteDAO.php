@@ -40,12 +40,14 @@ class transporteDAO
     {
         try {
             $result = array();
-            $statement = $this->pdo->prepare("CALL up_listar_transporte(?)");
-            $statement->bindValue(1, $transporte->__GET('RUC'));
+            $statement = $this->pdo->prepare("call up_listar_transporte_empresa(?)");
+
+            $statement->bindValue(1, $transporte->__GET('ruc'));
             $statement->execute();
+
             foreach ($statement->fetchAll(PDO::FETCH_OBJ) as $r) {
                 $transpor = new Transporte();
-                $transpor->__SET('RUC', $r->RUC);
+                $transpor->__SET('ruc', $r->RUC);
                 $transpor->__SET('idtransporte', $r->idtransporte);
                 $transpor->__SET('placa', $r->placa);
                 $result[] = $transpor;
