@@ -90,11 +90,11 @@ nav{
 <div class="form-group has-success">
 						 <label  class="control-label col-md-2" >PrecioActual:</label>
 						 <div class="form-group has-success">
-						<br>	<label  class="control-label col-md-2" >Precio</label><br/>
+						<br>	<label  class="control-label col-md-2" >Precio</label>
 							<div class="col-md-7">
 								<input class="form-control" type="text" name="precio" placeholder="Precio" required>
 							 </div>
-						 </div>
+						 </div><br/>
 						 <div class="form-group has-success">
 							<label  class="control-label col-md-2" >Estado:</label>
 							<div class="col-md-7">
@@ -102,7 +102,7 @@ nav{
 							 </div>
 						 </div>
 						 <div class="form-group has-success">
-							<label  class="control-label col-md-2" >FechaActualizacion:</label>
+							<label  class="control-label col-md-2" >FechaActua:</label>
 							<div class="col-md-7">
 								<input class="form-control" type="date" name="fechaactualizacion" placeholder="FechaActualizacion" required>
 							 </div>
