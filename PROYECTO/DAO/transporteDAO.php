@@ -17,7 +17,7 @@ class transporteDAO
     {
         try {
 
-            $statement = $this->pdo->prepare("call insertar_transporte_empresa(?,?,?,?,?,?,?);");
+            $statement = $this->pdo->prepare("call up_insertar_transporte_empresa(?,?,?,?,?,?,?);");
             $statement->bindValue(1, $transporte->__GET('ruc'));
             $statement->bindValue(2, $transporte->__GET('placa'));
             $statement->bindValue(3, $empresa->__GET('ruc'));
