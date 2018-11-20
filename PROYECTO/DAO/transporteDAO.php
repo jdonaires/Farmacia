@@ -13,10 +13,9 @@ class transporteDAO
   {
     try
     {
-    $statement = $this->pdo->prepare("CALL up_insertar_transporte(?,?,?)");
+    $statement = $this->pdo->prepare("insert into transporte  (RUC,Placa) values(?,?)");
       $statement->bindValue(1,$transporte->__GET('RUC'));
-    $statement->bindValue(2,$transporte->__GET('idtransporte'));
-    $statement->bindValue(3,$transporte->__GET('placa'));
+    $statement->bindValue(2,$transporte->__GET('Placa'));
     $statement -> execute();
     } catch (Exception $e)
     {

@@ -1,12 +1,12 @@
 <?php
-	require_once('../BOL/laboratorio.php');
-	require_once('../DAO/laboratorioDAO.php');
+	require_once('../BOL/transporte.php');
+	require_once('../DAO/transporteDAO.php');
 	require_once('../BOL/empresa.php');
 	require_once('../DAO/empresaDAO.php');
   $emp = new empresa();
 	$empDAO = new empresaDAO();
-	$lab = new laboratorio();
-	$labDAO = new laboratorioDAO();
+	$tra = new transporte();
+	$traDAO = new transporteDAO();
 
 	if (isset($_POST['guardar']))
 	{
@@ -17,13 +17,13 @@
 				$emp->__SET('TipoEmpresa','Laboratorio');
 
 
-		    $lab->__SET('RUC', $_POST['ruc']);
-				$lab->__SET('RegSanitario', $_POST['RegSanitario']);
+		    $tra->__SET('RUC', $_POST['ruc']);
+				$tra->__SET('Placa', $_POST['placa']);
 
-     $empDAO->insertarEmpresa($emp);
-			$labDAO->Registrar($lab);
+      $empDAO->insertarEmpresa($emp);
+			$traDAO->transporte($tra);
 
-			header('Location: registrarLaboratorio.php');
+			header('Location: registrarTransporte.php');
 	}
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
   <div>
 		<br>
   	<h1>Registrar un Laboratorio</h1>
-    <form action="registrarLaboratorio.php" method="post"  class="contact_form">
+    <form action="registrarTransporte.php" method="post"  class="contact_form">
 		</br>
 
 			<input type="text" style="width : 100 % ;"  placeholder="RUC"  name="ruc" required>
@@ -49,7 +49,7 @@
 
 			<input type="text" style="width : 100 % ;"  placeholder="direccion"  name="direccion" required>
 
-			<input type="text" style="width : 100 % ;"  placeholder="Numero de Registro Sanitario" name="RegSanitario"  required >
+			<input type="text" style="width : 100 % ;"  placeholder="Placa" name="placa"  required >
 
 				<input type="submit" id="button" value="Guardar" name="guardar" />
 
