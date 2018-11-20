@@ -89,8 +89,8 @@ nav{
 </div>
 <div class="form-group has-success">
 						 <label  class="control-label col-md-2" >PrecioActual:</label>
-						 <div class="form-group has-success">
-						<br><label  class="control-label col-md-2" >Precio</label>
+						<br> <div class="form-group has-success">
+						<label  class="control-label col-md-2" >Precio</label>
 							<div class="col-md-7">
 								<input class="form-control" type="text" name="precio" placeholder="Precio" required>
 							 </div>
