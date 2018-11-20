@@ -29,7 +29,7 @@ if (isset($_POST['guardar'])) {
 }
  ?>
 
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +63,7 @@ nav{
   <h3><span class="glyphicon glyphicon-fire"> </span > Registrar Empleado</h3>
 
 <ul class="nav nav-pills">
-  <li role="presentation"><a href="menu/menu.html">Inicio</a></li>
+  <li role="presentation"><a href="menu.html">Inicio</a></li>
 </ul>
 </div>
     </nav>

@@ -27,6 +27,9 @@ margin-top:110px;
  <nav class="navbar navbar-fixed-top ">
 <div class="container">
 <h3><span class="glyphicon glyphicon-fire"> </span >  Registrar Medicamento</h3>
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="menu.html">Inicio</a></li>
+</ul>
 </div>
  </nav>
 </header>

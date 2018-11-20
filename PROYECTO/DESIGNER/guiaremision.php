@@ -27,6 +27,9 @@ margin-top:110px;
  <nav class="navbar navbar-fixed-top ">
 <div class="container">
 <h2><span class="glyphicon glyphicon-fire"> </span >Registrar Guia Remision</h2>
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="menu.html">Inicio</a></li>
+</ul>
 </div>
  </nav>
 </header>
