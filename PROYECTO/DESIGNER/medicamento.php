@@ -27,6 +27,9 @@ margin-top:110px;
  <nav class="navbar navbar-fixed-top ">
 <div class="container">
 <h3><span class="glyphicon glyphicon-fire"> </span >  Registrar Medicamento</h3>
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="menu.html">Inicio</a></li>
+</ul>
 </div>
  </nav>
 </header>
@@ -34,187 +37,161 @@ margin-top:110px;
 <section class="main">
 
 <form class="form-horizontal" action="empleado.php" method="post">
-<div class="panel panel-primary">
-<div class="panel-heading"><h3>Medicamento</h3></div>
-<div class="panel-body">
-<div class="row container">
-<div class="col-md-6">
-  <div class="form-group has-success	">
-   <label class="control-label col-md-2">Nombre General:</label>
-   <div class="col-md-7">
-    <input  class =" form-control" type="text" name="dni" placeholder="DNI" required >
-  </div>
-  </div>
- <div class="form-group has-success">
-  <label class="control-label col-md-2" >Nombre Laboratorio:</label>
-  <div class="col-md-7">
-  <input type="text" name="nombre" class="form-control" placeholder="Nombres" required>
-  </div>
-</div>
-<div class="form-group has-success">
- <label  class="control-label col-md-2" >Laboratorio:</label>
- <div class="col-md-7">
-     <select  class="form-control" name="idlaboratorio"  >
-               <option value="M">Laboratorio 1</option>
-               <option value="F">Laboratorio 2</option>
-       </select>
-  </div>
-</div>
-<div class="form-group has-success">
- <label  class="control-label col-md-2" for="">Precio:</label>
- <div class="col-md-7">
-     <select  class="form-control" name="idlaboratorio"  >
-               <option value="M">Precio 1</option>
-               <option value="F">Precio 1</option>
-       </select>
-  </div>
-  </div>
-  <div class="form-group has-primary">
-   <div  class="col-md-7 col-md-offset-2">
-     <div><a href="#ventana1" class="btn btn-danger btn-block "data-toggle="modal">Añadir Precio</a></div>
-     <div class="modal fade" id="ventana1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body">
-              <form class="form-horizontal" action="empleado.php" method="post">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                     <h3>Registrar Nuevo Precio</h3>
-                   </div>
-                  <div class="panel-body">
-                    <div class="form-group has-success">
-                     <label  class="control-label col-md-2" >Precio:</label>
-                     <div class="col-md-7">
-                       <input class="form-control" type="text" name="ruc" placeholder="Usuario" required>
-                      </div>
-                    </div>
-                    <div class="form-group has-success">
-                     <label  class="control-label col-md-2" >Estado:</label>
-                     <div class="col-md-7">
-                       <select  class="form-control" name="idlaboratorio"  >
-                                 <option value="false">Falso</option>
-                                 <option value="true">Verdadero</option>
-                         </select>
-                      </div>
-                    </div>
-                    <div class="form-group has-success">
-                     <label  class="control-label col-md-2" >Fecha Actualizada:</label>
-                     <div class="col-md-7">
-                       <input class="form-control" type="date" name="ruc" required>
+          <div class="panel panel-primary">
+                <div class="panel-heading"> <h3>Medicamento</h3></div>
+                    <div class="panel-body">
+                          <div class="row container">
+                                <div class="col-md-6">
+                                    <div class="form-group has-success	">
+                                     <label class="control-label col-md-4">Nombre General:</label>
+                                     <div class="col-md-7">
+                                      <input  class =" form-control" type="text" name="nombre" placeholder="Nombre General" required >
+                                    </div>
+                                    </div>
 
-                      </div>
-                    </div>
-                    <div class="form-group">
-                     <div  class="col-md-3 col-md-offset-2">
-                       <button name="guardar" class="btn btn-success btn-block">Guardar</button>
-                     </div>
-                     <div  class="col-md-3 ">
-                       <button  name="modificar" class="btn btn-success btn-block">Modificar</button>
-                     </div>
-                     <div  class="col-md-3">
-                       <button  name="eliminar" class="btn btn-success btn-block">Eliminar</button>
-                     </div>
+                                  </div>
+                                      <div class="col-md-6">
+                                        <div class="form-group has-success">
+                                         <label  class="control-label col-md-4">Nombre de Laboratorio:</label>
+                                         <div class="col-md-6">
+                                               <input  class =" form-control" type="text" name="nomlaboratorio" placeholder="Nombre  de Laboratorio" required >
+                                          </div>
+                                        </div>
 
+                                        </div>
+                          </div>
                     </div>
-                  </div>
-
-                  </div>
-              </form>
             </div>
-          </div>
-        </div>
-      </div>
-   </div>
-  </div>
+            <div class="panel panel-primary">
+                  <div class="panel-heading"> <h3>Tipo presentation</h3></div>
+                      <div class="panel-body">
+                            <div class="row container">
+                                  <div class="col-md-6">
+                                      <div class="form-group has-success	">
+                                       <label class="control-label col-md-4">Nombre de Presentacion:</label>
+                                       <div class="col-md-7">
+                                         <select  class="form-control" name="nombre"  >
+                                                   <option value="solida">solida</option>
+                                                   <option value="semisolida">semisolida</option>
+                                                    <option value="liquida">liquida</option>
+                                                     <option value="Gaseosa">Gaseosa</option>
+
+                                           </select>
+                                      </div>
+                                      </div>
+
+                                    </div>
+                                        <div class="col-md-6">
+                                          <div class="form-group has-success	">
+                                           <label class="control-label col-md-4">Descripcion:</label>
+                                           <div class="col-md-7">
+                                             <select  class="form-control" name="descripcion"  >
+                                                       <option value="Tableta">Tableta</option>
+                                                       <option value="Jarabe">Jarabe</option>
+                                                        <option value="Unguento">Unguento</option>
+                                                         <option value="Inyeccion">Inyeccion</option>
+                                                        <option value="Pomo en gotas">Pomo en gotas</option>
+                                                        <option value="Crema">Crema</option>
+
+                                               </select>
+                                          </div>
+                                          </div>
 
 
-</div>
-<div class="col-md-6">
-  <div class="form-group has-success">
-   <label  class="control-label col-md-2" for="">Peso Unitario:</label>
+                                          </div>
+                            </div>
+                      </div>
+              </div>
+              <div class="panel panel-primary">
+                    <div class="panel-heading"> <h3>Detalle Medicamento</h3></div>
+                        <div class="panel-body">
+                              <div class="row container">
+                                    <div class="col-md-6">
+                                        <div class="form-group has-success	">
+                                         <label class="control-label col-md-4">Psicotropico:</label>
+                                         <div class="col-md-7">
+                                           <select  class="form-control" name="idlaboratorio"  >
+                                                     <option value="Si">Si</option>
+                                                     <option value="No">No</option>
+                                         </select>
+                                        </div>
+                                        </div>
+                                        <div class="form-group has-success	">
+                                         <label class="control-label col-md-4">Peso Unitario:</label>
+                                         <div class="col-md-7">
+                                           <input  class =" form-control" type="text" name="pesounitario" placeholder="Peso" required >
+                                        </div>
+                                        </div>
 
-     <div class="col-md-7">
-     <input class="form-control" type="text" name="correo" placeholder="Peso Unitario" required>
-     </div>
-  </div>
-  <div class="form-group has-success">
-   <label  class="control-label col-md-2" for="">Psicotropico:</label>
-   <div class="col-md-7">
-       <select  class="form-control" name="psicotropico"  >
-                 <option value="true">Verdadero</option>
-                 <option value="false">falso</option>
-         </select>
-    </div>
-  </div>
-  <div class="form-group has-success">
-  <label  class="control-label col-md-2" for="">Fecha de Vencimiento:</label>
-   <div class="col-md-7">
-   <input class="form-control" type="date" name="fecvenc"  required>
-   </div>
-  </div>
-  <div class="form-group has-success">
-    <label  class="control-label col-md-2" for="">Descripcion:</label>
-    <div class="col-md-7">
-     <input class="form-control" type="text" name="descripcion" placeholder="apellido" required>
-    </div>
-  </div>
-   <div class="form-group has-success">
-     <label  class="control-label col-md-2" for="">Dosis:</label>
-     <div class="col-md-7">
-        <input class="form-control" type="text" name="dosis" placeholder="Dosis" required>
-      </div>
-  </div>
-  <div class="form-group has-success">
-    <label  class="control-label col-md-2" for="">Indicaciones:</label>
-    <div class="col-md-7">
-       <input class="form-control" type="text" name="indicaciones" placeholder="Indicaciones" required>
-     </div>
-  </div>
+                                            </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group has-success	">
+                                             <label class="control-label col-md-4">Fecha Vencimiento:</label>
+                                             <div class="col-md-7">
+                                               <input  class =" form-control" type="date" name="fecvenc"   >
+                                            </div>
+                                            </div>
+                                            <div class="form-group has-success	">
+                                             <label class="control-label col-md-4">Descripcion:</label>
+                                             <div class="col-md-7">
+                                               <input  class =" form-control" type="text" placeholder="Descripcion" name="descripcion"   >
+                                            </div>
+                                            </div>
+                                            </div>
+                              </div>
+                        </div>
+                </div>
+                <div class="panel panel-primary">
+                      <div class="panel-heading"> <h3>Posologia</h3></div>
+                          <div class="panel-body">
+                                <div class="row container">
+                                      <div class="col-md-6">
+                                          <div class="form-group has-success	">
+                                           <label class="control-label col-md-4">Dosis:</label>
+                                           <div class="col-md-7">
+                                            <textarea name="dosis" rows="5" cols="45"></textarea>
+                                          </div>
+                                          </div>
+                                        </div>
+                                            <div class="col-md-6">
 
-</div>
-</div>
+                                              <div class="form-group has-success	">
+                                               <label class="control-label col-md-4">Indicaciones:</label>
+                                               <div class="col-md-7">
+                                               <textarea name="Indicaciones" rows="5" cols="45"></textarea>
+                                              </div>
+                                              </div>
+                                              </div>
+                                </div>
+                          </div>
+                  </div>
+                  <div class="panel panel-primary">
+                        <div class="panel-heading"> <h3>Almacen</h3></div>
+                            <div class="panel-body">
+                                  <div class="row container">
+                                        <div class="col-md-6">
+                                            <div class="form-group has-success	">
+                                             <label class="control-label col-md-4">Ubicacion</label>
+                                             <div class="col-md-7">
+                                               <select  class="form-control" name="ubicacion"  >
+                                                         <option value="Ubicacion 1">Ubicacion 1</option>
+                                                         <option value="Ubicacion 2">Ubicacion 2</option>
+                                                         <option value="Ubicacion 3">Ubicacion 3</option>
+                                                         <option value="Ubicacion 4">Ubicacion 4</option>
+                                             </select>
+                                            </div>
+                                            </div>
+                                        </div>
 
+                                  </div>
+                            </div>
+                    </div>
 
-     <div class="form-group">
-      <div  class="col-md-3 col-md-offset-2">
-        <button name="guardar" class="btn btn-success btn-block">Guardar</button>
-      </div>
-      <div  class="col-md-3 ">
-        <button  name="modificar" class="btn btn-success btn-block">Modificar</button>
-      </div>
-      <div  class="col-md-3">
-        <button  name="eliminar" class="btn btn-success btn-block">Eliminar</button>
-      </div>
-
-     </div>
-
-
-
-</div>
-</div>
-
-<div class="panel panel-primary">
-  <div class="panel-heading">
-     <h3>Buscar Medicamento</h3>
-   </div>
-  <div class="panel-body">
-    <div class="form-group has-success">
-      <label  class="control-label col-md-2" >Nombre General:</label>
-      <div class="col-md-5">
-         <input class="form-control" type="text" name="indicaciones" placeholder="Nombre General" required>
-       </div>
-       <div  class="col-md-3 ">
-         <button name="buscar" class="btn btn-success btn-block">Buscar</button>
-       </div>
-    </div>
-
-
-
-
-
-  </div>
-
-  </div>
+                       <div class="form-group">
+                        <div  class="col-md-3 col-md-offset-2">
+                          <button name="guardar" class="btn btn-success btn-block">Guardar</button>
+                        </div>
+                     </div>
 </form>
 
 

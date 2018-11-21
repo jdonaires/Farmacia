@@ -12,6 +12,34 @@
 				$this->pdo = $dba->get_connection();
 		}
 
+			public function registrarse(Login $login)
+			{
+				try
+				{
+					$result = array();
+
+					$statement = $this->pdo->prepare("call up_registrarse(?,?)");
+					$statement->bindParam(1,$login->__GET('usuario'));
+					$statement->bindParam(2,$login->__GET('contrasenia'));
+					$statement->execute();
+
+					foreach($statement->fetchAll(PDO::FETCH_OBJ) as $r)
+					{
+						$per = new Persona();
+
+						$per->__SET('dni', $r->dni);
+						$per->__SET('nombres', $r->apellidos_nombres);
+
+						$result[] = $per;
+					}
+
+					return $result;
+				}
+				catch(Exception $e)
+				{
+					die($e->getMessage());
+				}
+			}
 		public function listarPersona(Persona $persona) {
 			try
 			{
