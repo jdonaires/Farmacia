@@ -23,9 +23,9 @@ ________________________________________________________________
 -- CREACIÓN DE TABLAS
 CREATE TABLE Empresa(
 	RUC 		VARCHAR(12) 	PRIMARY KEY,
-	RazónSocial 	VARCHAR(40) 	NOT NULL,
+	RazonSocial 	VARCHAR(40) 	NOT NULL,
 	Telefono 	VARCHAR(10),
-	Dirección 	VARCHAR(20),
+	Direccion 	VARCHAR(20),
 	TipoEmpresa	VARCHAR(30)
 ) ;
 CREATE TABLE Laboratorio(
@@ -37,7 +37,7 @@ CREATE TABLE Laboratorio(
 CREATE TABLE Transporte(
 	RUC 		VARCHAR(12) 	,
 	IdTransporte 	INT 		PRIMARY KEY AUTO_INCREMENT,
-	Placa 		VARCHAR(20)	NOT NULL,
+	Placa 		VARCHAR(7)	NOT NULL,
 	FOREIGN KEY (RUC)REFERENCES Empresa(RUC)
 );
 CREATE TABLE Persona(
@@ -62,7 +62,7 @@ CREATE TABLE Empleado(
 CREATE TABLE Transportista(
 	DNI 		VARCHAR(8)	,
 	IdTransporte	INT,
-	NroLicencia	VARCHAR(15)	NOT NULL,
+	NroLicencia	VARCHAR(9)	NOT NULL,
 	FOREIGN KEY (DNI)REFERENCES Persona(DNI),
 	FOREIGN KEY (IdTransporte) REFERENCES Transporte(IdTransporte)
 );
@@ -330,7 +330,7 @@ DELIMITER ;
 /*------------------------------ PROCEDIMIENTOS ALMACENADOS -------------------------*/
 ========================================================================================================================
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE insertar_empresa_laboratorio(IN e_RUC VARCHAR(20),IN e_Raz�nSocial VARCHAR(40),IN e_Telefono VARCHAR(10),IN e_Direcci�n VARCHAR(20),IN e_TipoEmpresa VARCHAR(30),IN l_RUC VARCHAR(20),IN l_RegSanitario VARCHAR(20))
+CREATE DEFINER=`root`@`localhost` PROCEDURE insertar_empresa_laboratorio(IN e_RUC VARCHAR(20),IN e_RazonSocial VARCHAR(40),IN e_Telefono VARCHAR(10),IN e_Direccion VARCHAR(20),IN e_TipoEmpresa VARCHAR(30),IN l_RUC VARCHAR(20),IN l_RegSanitario VARCHAR(20))
 begin
 INSERT INTO EMPRESA values (e_RUC,e_RazonSocial,e_Telefono,e_Direccion,e_TipoEmpresa);
 INSERT INTO LABORATORIO(RUC,RegSanitario) values (l_RUC,l_RegSanitario);
