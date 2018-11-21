@@ -164,7 +164,7 @@ INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPers
 	      VALUES('21394873','Jorge' ,'RAMOS QUISPE','jorgeramos@hotmail.com','15/08/1979','M','Calle Grau 530','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido ,Correo,FecNac,Genero,Direccion,TipoPersona)
 	      VALUES('30498632','Ivan' ,'ALIAGA VIDAL','ivanaliaga@hotmail.com','25/03/1980','M','AV. LA PAZ 659','Empleado');
-INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona) 
+INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
 	      VALUES('36527809','Humberto','VELASQUEZ ORTIZ','humbertovalzquez@hotmail.com','15/06/1979','M','AV. BOLIVAR 1789','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
 	      VALUES('3100928','Luca' ,'RAMOS QUISPE','jorgeramos@hotmail.com','05/03/1979','M','AV. SAENZ PEÑA 52','Empleado');
@@ -243,7 +243,7 @@ INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("55
 INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("095396072303","Empresa","056-424358","807-6819 Dictum","Transporte");
 INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("362992650719","Empresa","056-838206","Apdo.:708-2339 Et Calle","Laboratorio");
 INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("326837590167","Empresa","056-682821","561-4062 Sagittis ","Transporte");
---------REGISTRO DE GUIAREMISION	      
+--------REGISTRO DE GUIAREMISION
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
 	      VALUES('1','Calle-huanuco' ,'laboratorio','01/08/2018','01/08/2018','Medicamento','01');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
@@ -253,7 +253,7 @@ INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTr
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
 	      VALUES('4','Calle-huanuco' ,'laboratorio','04/08/2018','04/08/2018','Medicamento','04');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('5','Calle-huanuco' ,'laboratorio','05/08/2018','05/08/2018','Medicamento','05');	
+	      VALUES('5','Calle-huanuco' ,'laboratorio','05/08/2018','05/08/2018','Medicamento','05');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
 	      VALUES('6','Calle-huanuco' ,'laboratorio','06/08/2018','06/08/2018','Medicamento','06');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
@@ -263,51 +263,51 @@ INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTr
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
 	      VALUES('9','Calle-huanuco' ,'laboratorio','09/08/2018','09/08/2018','Medicamento','09');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('10','Calle-huanuco' ,'laboratorio','10/08/2018','10/08/2018','Medicamento','010');	            	      
-	      
+	      VALUES('10','Calle-huanuco' ,'laboratorio','10/08/2018','10/08/2018','Medicamento','010');
+
 ----------REGISTRO UNIDADMEDIDA
 INSERT INTO UnidadMedida (ID,Descripcion)
-	      VALUES('01','gramos');	
+	      VALUES('01','gramos');
 INSERT INTO UnidadMedida (ID,Descripcion)
-	      VALUES('02','mililitros');	
+	      VALUES('02','mililitros');
 INSERT INTO UnidadMedida (ID,Descripcion)
-	      VALUES('03','unidad');	
+	      VALUES('03','unidad');
 INSERT INTO UnidadMedida (ID,Descripcion)
 	      VALUES('04','gramos');
 INSERT INTO UnidadMedida (ID,Descripcion)
-	      VALUES('05','militros');	
+	      VALUES('05','militros');
 INSERT INTO UnidadMedida (ID,Descripcion)
-	      VALUES('06','kilogramos');	
+	      VALUES('06','kilogramos');
 INSERT INTO UnidadMedida (ID,Descripcion)
-	      VALUES('07','kilogramos');	
+	      VALUES('07','kilogramos');
 INSERT INTO UnidadMedida (ID,Descripcion)
-	      VALUES('08','gramos');	
+	      VALUES('08','gramos');
 INSERT INTO UnidadMedida (ID,Descripcion)
 	      VALUES('09','mililitros');
 INSERT INTO UnidadMedida (ID,Descripcion)
 	      VALUES('010','unidad');
 ----------REGISTRO TIPO PRESENTACION
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('01','AMOXI','pastilla');	      
+	      VALUES('01','AMOXI','pastilla');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('02','DOLOBIG','pastilla');	 
+	      VALUES('02','DOLOBIG','pastilla');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('03','NEUROBION','pastilla');	 
+	      VALUES('03','NEUROBION','pastilla');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('04','TRAMAL','inyeccion');	 
+	      VALUES('04','TRAMAL','inyeccion');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('05','PLENITUD','pañal');	 
+	      VALUES('05','PLENITUD','pañal');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('06','ADRIL','jarabe');	      
+	      VALUES('06','ADRIL','jarabe');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('07','NASTIFLU','JARABE');	 
+	      VALUES('07','NASTIFLU','JARABE');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('08','AMOLFA','jarabe');	 
+	      VALUES('08','AMOLFA','jarabe');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('08','DOLMUS','jarabe');	 
+	      VALUES('08','DOLMUS','jarabe');
 INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
-	      VALUES('010','PARECETALAN','jarabe');	 
- 	      
+	      VALUES('010','PARECETALAN','jarabe');
+
 
 
 ========================================================================================================================
@@ -832,5 +832,3 @@ BEGIN
 	select * from UnidadMedida where descripcion like concat(p_descripcion,'%');
 END ;;
 DELIMITER ;
-
-
