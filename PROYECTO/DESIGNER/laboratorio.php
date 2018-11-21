@@ -32,7 +32,7 @@ nav{
 <div class="container">
   <h2><span class="glyphicon glyphicon-fire"> </span > Registrar Laboratorio</h2>
 <ul class="nav nav-pills">
-  <li role="presentation"><a href="menu.html">Inicio</a></li>
+  <li role="presentation"><a href="inicio.php">Inicio</a></li>
 </ul>
 
 </div>
