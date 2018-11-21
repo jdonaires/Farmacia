@@ -31,7 +31,9 @@ nav{
     <nav class="navbar navbar-fixed-top ">
 <div class="container">
   <h2><span class="glyphicon glyphicon-fire"> </span > Informe Almacen</h2>
-
+  <ul class="nav nav-pills">
+  <li role="presentation"><a href="menu.html">Inicio</a></li>
+</ul>
 
 </div>
     </nav>
