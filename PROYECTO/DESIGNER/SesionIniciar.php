@@ -1,47 +1,47 @@
 <?php
 require_once('../BOL/persona.php');
-require_once('../BOL/login.php');
+require_once('../BOL/empleado.php');
 require_once('../DAO/personaDAO.php');
 
 $per = new Persona();
 $perDAO = new PersonaDAO();
-$log = new login();
+$log = new empleado();
 
 ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
 		<title>CRUD</title>
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
 	</head>
-    <body style="padding:15px;">
+    <body class="cajon">
+			<nav class="navegador" align="center">
+				<span><h1>FarmiSalud</h1></span>
+			</nav>
 
-        <div class="pure-g">
-            <div class="pure-u-1-12">
+                <form action="sesioniniciar.php" method="post" class="formulario" >
 
-                <form action="sesioniniciar.php" method="post" class="pure-form pure-form-stacked" style="margin-bottom:30px;">
-
-                    <table style="width:500px;" border="0">
+                    <table >
+											<center>
+											<img src="../img/login.png" >  <!--posicion de Imagen login-->
+										   </center>
                         <tr>
-                            <th style="text-align:left;">USUARIO</th>
-                            <td><input type="text" name="usuario" value="" style="width:100%;" /></td>
+
+                            <td><input type="text" name="usuario" value=""  placeholder="Usuario"/></td>
                         </tr>
                         <tr>
-                            <th style="text-align:left;">CONTRASE&NtildeA</th>
-                            <td><input type="text" name="contrasenia" value="" style="width:100%;" /></td>
+
+                            <td><input type="text" name="contrasenia" value=""  placeholder="Clave"/></td>
                         </tr>
                         <tr>
                             <td colspan="2">
-																<!--input type="submit" value="GUARDAR" name="guardar"class="pure-button pure-button-primary"-->
-																<input type="submit" value="INICIAR SESION" name="ingresar"class="pure-button pure-button-primary">
+
+																<input type="submit" value="INICIAR SESION" name="ingresar" >
                             </td>
                         </tr>
                     </table>
                 </form>
 
-
-            </div>
-        </div>
 
 				<!--ESTA CONDICION SIRVE PARA REALIZAR BUSQUEDA POR DNI-->
 
@@ -68,14 +68,14 @@ $log = new login();
 							?>
 								<tr>
 										<td><?php echo $r->__GET('dni'); ?></td>
-										<td><?php echo $r->__GET('nombres'); ?></td>
+										<td><?php echo $r->__GET('nombre'); ?></td>
 								</tr>
 								<?php $_SESSION['dni']= $r->__GET('dni'); ?>
-								<?php $_SESSION['apellidos_y_nombres']= $r->__GET('nombres'); ?>
+								<?php $_SESSION['apellidos_y_nombres']= $r->__GET('nombre'); ?>
 						<?php endforeach;
 
 						$_SESSION['ultimo_ingreso']= date("Y-n-j H:i:s");
-						header('location:Inicio.php');
+						header('location:../designer/Inicio.php');
 					}
 					else
 					{

@@ -1,7 +1,7 @@
 <?php
 	require_once("../BOL/persona.php");
 	require_once("../DAL/DBAccess.php");
-	require_once('../BOL/login.php');
+	require_once('../BOL/empleado.php');
 	class PersonaDAO
 	{
 		private $pdo;
@@ -12,15 +12,15 @@
 				$this->pdo = $dba->get_connection();
 		}
 
-			public function registrarse(login $login)
+			public function registrarse(empleado $login)
 			{
 				try
 				{
 					$result = array();
 
-					$statement = $this->pdo->prepare("call up_registrarse2(?,?)");
+					$statement = $this->pdo->prepare("call up_registrarse(?,?)");
 					$statement->bindParam(1,$login->__GET('usuario'));
-					$statement->bindParam(2,$login->__GET('contrasenia'));
+					$statement->bindParam(2,$login->__GET('clave'));
 					$statement->execute();
 
 					foreach($statement->fetchAll(PDO::FETCH_OBJ) as $r)
