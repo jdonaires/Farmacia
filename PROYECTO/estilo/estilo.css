@@ -8,7 +8,7 @@ img {
 	margin:0px;
 }
 .cajon{
-	background-color:#F2F3F4;
+  background: #ECF0F1;
 
 }
 
@@ -35,23 +35,23 @@ img {
 
 
 .formulario table{
-	text-align: center;
+
 	margin-top: 10%;
 	margin-left: 22%;
 
 }
 .formulario td{
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 
 }
 
 .formulario input[type=text],input[type=password]{
 	background: rgba(233,233,233,0);
-	text-align: center;
+
 	border-top:none;
 	border-left:none;
 	border-right:none;
-	border-bottom:solid 1px #CCEEFF ;
+	border-bottom:solid 1px #ECF0F1 ;
 	transition:0.4s border;
 	outline: none;
   padding:10px;
@@ -77,7 +77,7 @@ img {
 	background-color:#4DBDDB;
 	border: none;
 	color:white;
-  width:100%;
+  width:110%;
 	position:relative;
 	padding:15px;
 	transition:0.2s ;

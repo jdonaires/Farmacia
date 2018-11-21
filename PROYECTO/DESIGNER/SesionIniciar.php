@@ -79,7 +79,7 @@ $log = new empleado();
 					}
 					else
 					{
-						echo 'no se encuentra en la base de datos!';
+						echo '<center>USUARIO NO REGISTRADO';
 					}
 					?>
 					</table>
