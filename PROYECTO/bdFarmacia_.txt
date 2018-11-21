@@ -286,7 +286,28 @@ INSERT INTO UnidadMedida (ID,Descripcion)
 	      VALUES('09','mililitros');
 INSERT INTO UnidadMedida (ID,Descripcion)
 	      VALUES('010','unidad');
-
+----------REGISTRO TIPO PRESENTACION
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('01','AMOXI','pastilla');	      
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('02','DOLOBIG','pastilla');	 
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('03','NEUROBION','pastilla');	 
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('04','TRAMAL','inyeccion');	 
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('05','PLENITUD','pañal');	 
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('06','ADRIL','jarabe');	      
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('07','NASTIFLU','JARABE');	 
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('08','AMOLFA','jarabe');	 
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('08','DOLMUS','jarabe');	 
+INSERT INTO TipoPresentacion (ID,Nombre,Descripcion)
+	      VALUES('010','PARECETALAN','jarabe');	 
+ 	      
 
 
 ========================================================================================================================
