@@ -2,7 +2,7 @@
 	require_once('../BOL/componentes.php');
 	require_once('../DAO/componentesDAO.php');
 
-	$compo = new componentes();
+	$compo = new Componentes();
 	$compoDAO = new componentesDAO();
 
 	if (isset($_POST['guardar']))

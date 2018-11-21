@@ -1,5 +1,6 @@
 <?php
-class tipopresentacion
+
+class TipoPresentacion
 {
 	private $id;
 	private $nombre;
