@@ -157,35 +157,35 @@ ________________________________________________________________
 
 --------REGISTRO DE PERSONA
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('21394873','Jorge' ,'RAMOS QUISPE','jorgeramos@hotmail.com',to_date('15/08/1979','DD/MM/RR'),'M','Calle Grau 530','Empleado');
+	      VALUES('21394873','Jorge' ,'RAMOS QUISPE','jorgeramos@hotmail.com','15/08/1979','M','Calle Grau 530','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido ,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('30498632','Ivan' ,'ALIAGA VIDAL','ivanaliaga@hotmail.com',to_date('25/03/1980','DD/MM/RR'),'M','AV. LA PAZ 659','Empleado');
+	      VALUES('30498632','Ivan' ,'ALIAGA VIDAL','ivanaliaga@hotmail.com','25/03/1980','M','AV. LA PAZ 659','Empleado');
+INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona) 
+	      VALUES('36527809','Humberto','VELASQUEZ ORTIZ','humbertovalzquez@hotmail.com','15/06/1979','M','AV. BOLIVAR 1789','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('36527809','Humberto','VELASQUEZ ORTIZ','humbertovalzquez@hotmail.com',to_date('15/06/1979','DD/MM/RR'),'M','AV. BOLIVAR 1789','Empleado');
+	      VALUES('3100928','Luca' ,'RAMOS QUISPE','jorgeramos@hotmail.com','05/03/1979','M','AV. SAENZ PEÑA 52','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('3100928','Luca' ,'RAMOS QUISPE','jorgeramos@hotmail.com',to_date('05/03/1979','DD/MM/RR'),'M','AV. SAENZ PEÑA 52','Empleado');
+	      VALUES('27091256','Antony' ,'RAMOS ORTEGA','jorgeramos@hotmail.com','13/09/1979','M,'PANAMERICANA NORTE KM. 17.5','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('27091256','Antony' ,'RAMOS ORTEGA','jorgeramos@hotmail.com',to_date('13/09/1979','DD/MM/RR'),'M,'PANAMERICANA NORTE KM. 17.5','Empleado');
-INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('65289140','Julian' ,'QUIJAITE MORENO','julianquijaite@hotmail.com',to_date('15/08/1977','DD/MM/RR'),'M','Calle Libertad 50','Empleado');
+	      VALUES('65289140','Julian' ,'QUIJAITE MORENO','julianquijaite@hotmail.com','15/08/1977','M','Calle Libertad 50','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido ,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('58963245','Juliana' ,'CARRILO MARTINEZ','julianacarrilo@hotmail.com',to_date('25/05/1980','DD/MM/RR'),'F','AV. Loreto 69','Empleado');
+	      VALUES('58963245','Juliana' ,'CARRILO MARTINEZ','julianacarrilo@hotmail.com','25/05/1980','F','AV. Loreto 69','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('80456321','Luisa','ORTIZ VASQUEZ','luisaortiz@hotmail.com',to_date('15/10/1979','DD/MM/RR'),'F','AV. BOLIVAR 89','Empleado');
+	      VALUES('80456321','Luisa','ORTIZ VASQUEZ','luisaortiz@hotmail.com',15/10/1979','F','AV. BOLIVAR 89','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('45896320','Luciana' ,'CACEREZ MUÑANTE','lucianacacerez@hotmail.com',to_date('02/03/1989','DD/MM/RR'),'F','AV. Crusada 503','Empleado');
+	      VALUES('45896320','Luciana' ,'CACEREZ MUÑANTE','lucianacacerez@hotmail.com','02/03/1989','F','AV. Crusada 503','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('56320125','Ana' ,'LUQUE VERA','analuque@hotmail.com',to_date('23/05/1979','DD/MM/RR'),'F','NORTE KM. 17.5','Empleado');
+	      VALUES('56320125','Ana' ,'LUQUE VERA','analuque@hotmail.com','23/05/1979','F','NORTE KM. 17.5','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido ,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('32014569','Gregoriano' ,'ALVAN PEDREGAL','gregoriaalvan@hotmail.com',to_date('05/03/1990','DD/MM/RR'),'M','AV. Lurin 659','Transportista');
+	      VALUES('32014569','Gregoriano' ,'ALVAN PEDREGAL','gregoriaalvan@hotmail.com','05/03/1990','M','AV. Lurin 659','Transportista');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('98632140','Humberto','QUINTANA CHIWAN','humbertoquintana@hotmail.com',to_date('11/06/1979','DD/MM/RR'),'M','AV. BOLIVAR 19','Transportista');
+	      VALUES('98632140','Humberto','QUINTANA CHIWAN','humbertoquintana@hotmail.com','11/06/1979','M','AV. BOLIVAR 19','Transportista');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('56321458','Javier' ,'MONTES RAMOS','javiermontes@hotmail.com',to_date('25/06/1979','DD/MM/RR'),'M','AV. Sergioa Peña 75','Transportista');
+	      VALUES('56321458','Javier' ,'MONTES RAMOS','javiermontes@hotmail.com','25/06/1979','M','AV. Sergioa Peña 75','Transportista');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('98745632','Orlando' ,'RAMOS VERGARA','orlandoramos@hotmail.com',to_date('14/09/1999','DD/MM/RR'),'M,'PANAMERICANA SUR KM. 175','Transportista');
+	      VALUES('98745632','Orlando' ,'RAMOS VERGARA','orlandoramos@hotmail.com','14/09/1999','M,'PANAMERICANA SUR KM. 175','Transportista');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
-	      VALUES('56321478','Julian' ,'ARIAS PEÑA','julianarias@hotmail.com',to_date('06/08/1977','DD/MM/RR'),'M','Calle Ramirez 50','Transportista');
+	      VALUES('56321478','Julian' ,'ARIAS PEÑA','julianarias@hotmail.com','06/08/1977','M','Calle Ramirez 50','Transportista');
 
 --------REGISTRO DE TRASNPORTISTA
 INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)

@@ -28,7 +28,10 @@ nav{
   <header>
     <nav class="navbar navbar-fixed-top ">
 <div class="container">
-  <h2><span class="glyphicon glyphicon-fire"> </span > Informe Medicamento</h2>
+  <h2><span class="glyphicon glyphicon-fire"> </span > Informe GuiaRemision</h2>
+  <ul class="nav nav-pills">
+  <li role="presentation"><a href="menu.html">Inicio</a></li>
+</ul>
 </div>
     </nav>
   </header>
