@@ -243,7 +243,17 @@ INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("55
 INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("095396072303","Empresa","056-424358","807-6819 Dictum","Transporte");
 INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("362992650719","Empresa","056-838206","Apdo.:708-2339 Et Calle","Laboratorio");
 INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("326837590167","Empresa","056-682821","561-4062 Sagittis ","Transporte");
-
+--------REGISTRO DE TRASNPORTISTA 
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('32014569','01' ,'84526574');	
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('98632140','02' ,'54215896');
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('56321458','03' ,'52012649');
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('98745632','04' ,'32145684');
+INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
+	      VALUES('56321478','05' ,'32145332');
 
 
 
