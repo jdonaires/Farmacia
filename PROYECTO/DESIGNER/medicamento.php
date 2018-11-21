@@ -82,102 +82,9 @@ margin-top:110px;
                                            </select>
                                       </div>
                                       </div>
-                                      <div class="form-group has-success	">
-                                       <label class="control-label col-md-4">Descripcion:</label>
-                                       <div class="col-md-7">
-                                         <select  class="form-control" name="idlaboratorio"  >
-                                                   <option value="M">Tableta</option>
-                                                   <option value="F">Jarabe</option>
-                                                    <option value="F">Unguento</option>
-                                                     <option value="F">Inyeccion</option>
-                                                    <option value="F">Pomo en gotas</option>
-                                                    <option value="F">Crema</option>
-                                                      <option value="F">Polvo</option>
-                                           </select>
-                                      </div>
-                                      </div>
 
                                     </div>
                                         <div class="col-md-6">
-                                          <div class="form-group has-success">
-                                           <label  class="control-label col-md-4">Nombre Laboratorio:</label>
-                                           <div class="col-md-6">
-                                               <select  class="form-control" name="idlaboratorio"  >
-                                                         <option value="M">Laboratorio 1</option>
-                                                         <option value="F">Laboratorio 2</option>
-                                                 </select>
-                                            </div>
-                                          </div>
-
-                                          </div>
-                            </div>
-                      </div>
-              </div>
-              <div class="panel panel-primary">
-                    <div class="panel-heading"> <h3>Tipo presentation</h3></div>
-                        <div class="panel-body">
-                              <div class="row container">
-                                    <div class="col-md-6">
-                                        <div class="form-group has-success	">
-                                         <label class="control-label col-md-4">Nombre de Presentacion:</label>
-                                         <div class="col-md-7">
-                                           <select  class="form-control" name="idlaboratorio"  >
-                                                     <option value="M">solida</option>
-                                                     <option value="F">semisolida</option>
-                                                      <option value="F">liquida</option>
-                                                       <option value="F">Gaseosa</option>
-
-                                             </select>
-                                        </div>
-                                        </div>
-                                        <div class="form-group has-success	">
-                                         <label class="control-label col-md-4">Descripcion:</label>
-                                         <div class="col-md-7">
-                                           <select  class="form-control" name="idlaboratorio"  >
-                                                     <option value="M">Tableta</option>
-                                                     <option value="F">Jarabe</option>
-                                                      <option value="F">Unguento</option>
-                                                       <option value="F">Inyeccion</option>
-                                                      <option value="F">Pomo en gotas</option>
-                                                      <option value="F">Crema</option>
-                                                        <option value="F">Polvo</option>
-                                             </select>
-                                        </div>
-                                        </div>
-
-                                      </div>
-                                          <div class="col-md-6">
-                                            <div class="form-group has-success">
-                                             <label  class="control-label col-md-4">Nombre Laboratorio:</label>
-                                             <div class="col-md-6">
-                                                 <select  class="form-control" name="idlaboratorio"  >
-                                                           <option value="M">Laboratorio 1</option>
-                                                           <option value="F">Laboratorio 2</option>
-                                                   </select>
-                                              </div>
-                                            </div>
-
-                                            </div>
-                              </div>
-                        </div>
-                </div>
-                <div class="panel panel-primary">
-                      <div class="panel-heading"> <h3>Tipo presentation</h3></div>
-                          <div class="panel-body">
-                                <div class="row container">
-                                      <div class="col-md-6">
-                                          <div class="form-group has-success	">
-                                           <label class="control-label col-md-4">Nombre de Presentacion:</label>
-                                           <div class="col-md-7">
-                                             <select  class="form-control" name="idlaboratorio"  >
-                                                       <option value="M">solida</option>
-                                                       <option value="F">semisolida</option>
-                                                        <option value="F">liquida</option>
-                                                         <option value="F">Gaseosa</option>
-
-                                               </select>
-                                          </div>
-                                          </div>
                                           <div class="form-group has-success	">
                                            <label class="control-label col-md-4">Descripcion:</label>
                                            <div class="col-md-7">
@@ -193,22 +100,96 @@ margin-top:110px;
                                           </div>
                                           </div>
 
+
+                                          </div>
+                            </div>
+                      </div>
+              </div>
+              <div class="panel panel-primary">
+                    <div class="panel-heading"> <h3>Detalle Medicamento</h3></div>
+                        <div class="panel-body">
+                              <div class="row container">
+                                    <div class="col-md-6">
+                                        <div class="form-group has-success	">
+                                         <label class="control-label col-md-4">Psicotropico:</label>
+                                         <div class="col-md-7">
+                                           <select  class="form-control" name="idlaboratorio"  >
+                                                     <option value="M">Si</option>
+                                                     <option value="F">No</option>
+                                         </select>
+                                        </div>
+                                        </div>
+                                        <div class="form-group has-success	">
+                                         <label class="control-label col-md-4">Peso Unitario:</label>
+                                         <div class="col-md-7">
+                                           <input  class =" form-control" type="text" name="pesounitario" placeholder="Peso" required >
+                                        </div>
+                                        </div>
+
+                                            </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group has-success	">
+                                             <label class="control-label col-md-4">Fecha Vencimiento:</label>
+                                             <div class="col-md-7">
+                                               <input  class =" form-control" type="date" name="fecvenc"   >
+                                            </div>
+                                            </div>
+                                            <div class="form-group has-success	">
+                                             <label class="control-label col-md-4">Descripcion:</label>
+                                             <div class="col-md-7">
+                                               <input  class =" form-control" type="text" placeholder="Descripcion" name="descripcion"   >
+                                            </div>
+                                            </div>
+
+                                            </div>
+                              </div>
+                        </div>
+                </div>
+                <div class="panel panel-primary">
+                      <div class="panel-heading"> <h3>Posologia</h3></div>
+                          <div class="panel-body">
+                                <div class="row container">
+                                      <div class="col-md-6">
+                                          <div class="form-group has-success	">
+                                           <label class="control-label col-md-4">Dosis:</label>
+                                           <div class="col-md-7">
+                                            <textarea name="name" rows="5" cols="45"></textarea>
+                                          </div>
+                                          </div>
+
+
                                         </div>
                                             <div class="col-md-6">
-                                              <div class="form-group has-success">
-                                               <label  class="control-label col-md-4">Nombre Laboratorio:</label>
-                                               <div class="col-md-6">
-                                                   <select  class="form-control" name="idlaboratorio"  >
-                                                             <option value="M">Laboratorio 1</option>
-                                                             <option value="F">Laboratorio 2</option>
-                                                     </select>
-                                                </div>
-                                              </div>
 
+                                              <div class="form-group has-success	">
+                                               <label class="control-label col-md-4">Indicaciones:</label>
+                                               <div class="col-md-7">
+                                               <textarea name="name" rows="5" cols="45"></textarea>
+                                              </div>
+                                              </div>
                                               </div>
                                 </div>
                           </div>
                   </div>
+                  <div class="panel panel-primary">
+                        <div class="panel-heading"> <h3>Almacen</h3></div>
+                            <div class="panel-body">
+                                  <div class="row container">
+                                        <div class="col-md-6">
+                                            <div class="form-group has-success	">
+                                             <label class="control-label col-md-4">Ubicacion</label>
+                                             <div class="col-md-7">
+                                               <select  class="form-control" name="idlaboratorio"  >
+                                                         <option value="M">Si</option>
+                                                         <option value="F">No</option>
+                                             </select>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                  </div>
+                            </div>
+                    </div>
 
                        <div class="form-group">
                         <div  class="col-md-3 col-md-offset-2">
