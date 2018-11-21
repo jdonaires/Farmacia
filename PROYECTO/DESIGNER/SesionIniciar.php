@@ -1,11 +1,11 @@
 <?php
 require_once('../BOL/persona.php');
-require_once('../BOL/empleado.php');
+require_once('../BOL/login.php');
 require_once('../DAO/personaDAO.php');
 
 $per = new Persona();
 $perDAO = new PersonaDAO();
-$log = new empleado();
+$log = new login();
 
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ $log = new empleado();
         <div class="pure-g">
             <div class="pure-u-1-12">
 
-                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" class="pure-form pure-form-stacked" style="margin-bottom:30px;">
+                <form action="sesioniniciar.php" method="post" class="pure-form pure-form-stacked" style="margin-bottom:30px;">
 
                     <table style="width:500px;" border="0">
                         <tr>
@@ -75,7 +75,7 @@ $log = new empleado();
 						<?php endforeach;
 
 						$_SESSION['ultimo_ingreso']= date("Y-n-j H:i:s");
-						header('location:../DESIGNER/Inicio.php');
+						header('location:Inicio.php');
 					}
 					else
 					{
