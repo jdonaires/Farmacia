@@ -155,7 +155,7 @@ CREATE TABLE Factura(
 
 ________________________________________________________________
 
---------REGISTRO DE PERSONA 
+--------REGISTRO DE PERSONA
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
 	      VALUES('21394873','Jorge' ,'RAMOS QUISPE','jorgeramos@hotmail.com',to_date('15/08/1979','DD/MM/RR'),'M','Calle Grau 530','Empleado');
 INSERT INTO persona (DNI,Nombre,Apellido ,Correo,FecNac,Genero,Direccion,TipoPersona)
@@ -186,10 +186,10 @@ INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPers
 	      VALUES('98745632','Orlando' ,'RAMOS VERGARA','orlandoramos@hotmail.com',to_date('14/09/1999','DD/MM/RR'),'M,'PANAMERICANA SUR KM. 175','Transportista');
 INSERT INTO persona (DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona)
 	      VALUES('56321478','Julian' ,'ARIAS PEÑA','julianarias@hotmail.com',to_date('06/08/1977','DD/MM/RR'),'M','Calle Ramirez 50','Transportista');
-	      
---------REGISTRO DE TRASNPORTISTA 
+
+--------REGISTRO DE TRASNPORTISTA
 INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
-	      VALUES('32014569','01' ,'84526574');	
+	      VALUES('32014569','01' ,'84526574');
 INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
 	      VALUES('98632140','02' ,'54215896');
 INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
@@ -198,31 +198,48 @@ INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
 	      VALUES('98745632','04' ,'32145684');
 INSERT INTO Transportista (DNI,IdTransporte,NroLicencia)
 	      VALUES('56321478','05' ,'32145332');
---------REGISTRO DE EMPLEADO 
+--------REGISTRO DE EMPLEADO
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
 	      VALUES('001','Mañana','Químico','JorgeRAMOS','1234','21394873');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
 	      VALUES('002','Tarde','Bioquímico','IvanALIAGA','5678','30498632');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
-	      VALUES('003','Mañana','Bioquímico','HumbertoVELASQUEZ','5620','36527809');	      
+	      VALUES('003','Mañana','Bioquímico','HumbertoVELASQUEZ','5620','36527809');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
 	      VALUES('004','Mañana','Químico','LucaRAMOS','1232','3100928');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
 	      VALUES('005','Mañana','Bioquímico','AntonyRAMOS','5965','27091256');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
-	      VALUES('006','Tarde','Químico','JulianQUIJAITE','8458','65289140');	      
+	      VALUES('006','Tarde','Químico','JulianQUIJAITE','8458','65289140');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
-	      VALUES('007','Mañana','Bioquímico','JulianaCARRILO','5621','58963245');	      
+	      VALUES('007','Mañana','Bioquímico','JulianaCARRILO','5621','58963245');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
-	      VALUES('008','Tarde','Químico','LuisaORTIZ','45632','80456321');	      
+	      VALUES('008','Tarde','Químico','LuisaORTIZ','45632','80456321');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
-	      VALUES('009','Mañana','Bioquímico','LucianaCACEREZ','45689','45896320');	      
+	      VALUES('009','Mañana','Bioquímico','LucianaCACEREZ','45689','45896320');
 INSERT INTO Empleado (IdEmpleado,Turno,Especialidad,Usuario,Clave,DNI)
-	      VALUES('0010','Tarde','Químico','AnaLUQUE','84562','56320125');	
+	      VALUES('0010','Tarde','Químico','AnaLUQUE','84562','56320125');
 --------REGISTRO DE EMPRESA
 INSERT INTO Empresa (RUC,RazónSocial,Telefono,Dirección,TipoEmpresa)
 	      VALUES('65123879','inventario','934863659','UniversidadSJB-Chincha','Natural');
-	      
+
+--------Registro Transporte
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("930544440672","Empresa","056-784414","409-5232 Nullam","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("627519149676","Empresa","056-523670","Apdo.:149-9065 Est Carretera","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("459883493735","Empresa","056-039505","Apartado núm.: 722, 9995 Egestas","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("463610073235","Empresa","056-984056","Apdo.:469-5470 Turpis ","Transporte");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("381412652343","Empresa","056-276309","906-7294 Sed Calle","Transporte");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("784301317062","Empresa","056-393579","Apdo.:119-7831 Consequat Av.","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("726039720111","Empresa","056-855059","699-616 Iaculis Calle","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("861777222727","Empresa","056-615003","9461 Tempor","Transporte");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("590705575721","Empresa","056-666803","Apdo.:558-5245 Penatibus ","Transporte");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("823519035120","Empresa","056-876804","3554 Imperdiet","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("615343199861","Empresa","056-724880","Apartado núm.: 641, 1334 Lacus. Avenida","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("558205335840","Empresa","056-215408","3730 Non, Calle","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("095396072303","Empresa","056-424358","807-6819 Dictum","Transporte");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("362992650719","Empresa","056-838206","Apdo.:708-2339 Et Calle","Laboratorio");
+INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("326837590167","Empresa","056-682821","561-4062 Sagittis ","Transporte");
+
 _________________________________________________________________
 --Creacion de procedimientos almacenados
 

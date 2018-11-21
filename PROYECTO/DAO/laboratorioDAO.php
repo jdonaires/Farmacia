@@ -1,21 +1,20 @@
 <?php
   require_once('../DAL/DBAccess.php');
-  require_once('../BOL/Laboratorio.php');
+  require_once('../BOL/laboratorio.php');
   class laboratorioDAO
   {
     private $pdo;
     public function __CONSTRUCT()
     {
       $dba = new DBAccess();
-      $this->pdgo = $dba->get_connection();
+      $this->pdo = $dba->get_connection();
     }
     public function Registrar(Laboratorio $laboratorio)
     {
       try {
-        $statement = $this->pdo->persona("insert into laboratorio values(?,?,?)");
+        $statement = $this->pdo->prepare("insert into laboratorio (RUC,RegSanitario) values (?,?)");
         $statement->bindValue(1,$laboratorio->__GET('RUC'));
-        $statement->bindValue(2,$laboratorio->__GET('IdLaboratorio'));
-        $statement->bindValue(3,$laboratorio->__GET('RegSanitario'));
+        $statement->bindValue(2,$laboratorio->__GET('RegSanitario'));
         $statement -> execute();
       } catch (Exception $e)
       {
@@ -23,7 +22,7 @@
       }
 
     }
-    
+
     public function insertarLaboratorio(laboratorio $laboratorio)
   {
     try
