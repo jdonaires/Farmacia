@@ -54,9 +54,10 @@ class transporteDAO
             }
             return $result;
         } catch (Exception $e) {
-            die($e->getMessage());
+            die("listarTransporte -> err -->" . $e->getMessage());
         }
     }
+
 }
 
 ?>
