@@ -6,7 +6,7 @@ require_once("../BOL/tipopresentacion.php");
 /**
  * Class tipopresentacionDAO
  */
-class tipopresentacionDAO
+class TipoPresentacionDAO
 {
     private $pdo;
 
