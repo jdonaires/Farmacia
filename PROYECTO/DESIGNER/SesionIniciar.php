@@ -50,7 +50,7 @@ $log = new empleado();
 				{
 					$resultado = array();//VARIABLE TIPO RESULTADO
 					$log->__SET('usuario',          $_POST['usuario']);//ESTABLECEMOS EL VALOR DEL DNI
-					$log->__SET('contrasenia',          $_POST['contrasenia']);//ESTABLECEMOS EL VALOR DEL DNI
+					$log->__SET('clave',          $_POST['contrasenia']);//ESTABLECEMOS EL VALOR DEL DNI
 					$resultado = $perDAO->registrarse($log); //CARGAMOS LOS REGISTRO EN EL ARRAY RESULTADO
 					if(!empty($resultado)) //PREGUNTAMOS SI NO ESTA VACIO EL ARRAY
 					{
@@ -77,6 +77,7 @@ $log = new empleado();
 						$_SESSION['ultimo_ingreso']= date("Y-n-j H:i:s");
 						header('location:../designer/Inicio.php');
 					}
+
 					else
 					{
 						echo '<center>USUARIO NO REGISTRADO';
