@@ -245,25 +245,25 @@ INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("36
 INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) VALUES ("326837590167","Empresa","056-682821","561-4062 Sagittis ","Transporte");
 --------REGISTRO DE GUIAREMISION	      
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('1','Calle-huanuco' ,'laboratorio',to_date('01/08/2018','DD/MM/RR'),to_date('01/08/2018','DD/MM/RR'),'Medicamento','01');
+	      VALUES('1','Calle-huanuco' ,'laboratorio','01/08/2018','01/08/2018','Medicamento','01');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('2','Calle-huanuco' ,'laboratorio',to_date('02/08/2018','DD/MM/RR'),to_date('02/08/2018','DD/MM/RR'),'Medicamento','02');
+	      VALUES('2','Calle-huanuco' ,'laboratorio','02/08/2018','02/08/2018','Medicamento','02');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('3','Calle-huanuco' ,'laboratorio',to_date('03/08/2018','DD/MM/RR'),to_date('03/08/2018','DD/MM/RR'),'Medicamento','03');
+	      VALUES('3','Calle-huanuco' ,'laboratorio','03/08/2018','03/08/2018','Medicamento','03');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('4','Calle-huanuco' ,'laboratorio',to_date('04/08/2018','DD/MM/RR'),to_date('04/08/2018','DD/MM/RR'),'Medicamento','04');	      	      	      
+	      VALUES('4','Calle-huanuco' ,'laboratorio','04/08/2018','04/08/2018','Medicamento','04');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('5','Calle-huanuco' ,'laboratorio',to_date('05/08/2018','DD/MM/RR'),to_date('05/08/2018','DD/MM/RR'),'Medicamento','05');	
+	      VALUES('5','Calle-huanuco' ,'laboratorio','05/08/2018','05/08/2018','Medicamento','05');	
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('6','Calle-huanuco' ,'laboratorio',to_date('06/08/2018','DD/MM/RR'),to_date('06/08/2018','DD/MM/RR'),'Medicamento','06');
+	      VALUES('6','Calle-huanuco' ,'laboratorio','06/08/2018','06/08/2018','Medicamento','06');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('7','Calle-huanuco' ,'laboratorio',to_date('07/08/2018','DD/MM/RR'),to_date('07/08/2018','DD/MM/RR'),'Medicamento','07');
+	      VALUES('7','Calle-huanuco' ,'laboratorio','07/08/2018','07/08/2018','Medicamento','07');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('8','Calle-huanuco' ,'laboratorio',to_date('08/08/2018','DD/MM/RR'),to_date('08/08/2018','DD/MM/RR'),'Medicamento','08');
+	      VALUES('8','Calle-huanuco' ,'laboratorio','08/08/2018','08/08/2018','Medicamento','08');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('9','Calle-huanuco' ,'laboratorio',to_date('09/08/2018','DD/MM/RR'),to_date('09/08/2018','DD/MM/RR'),'Medicamento','09');	      	      	      
+	      VALUES('9','Calle-huanuco' ,'laboratorio','09/08/2018','09/08/2018','Medicamento','09');
 INSERT INTO GuiaRemision (NroGuia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
-	      VALUES('10','Calle-huanuco' ,'laboratorio',to_date('10/08/2018','DD/MM/RR'),to_date('10/08/2018','DD/MM/RR'),'Medicamento','010');	            	      
+	      VALUES('10','Calle-huanuco' ,'laboratorio','10/08/2018','10/08/2018','Medicamento','010');	            	      
 	      
 ----------REGISTRO UNIDADMEDIDA
 INSERT INTO UnidadMedida (ID,Descripcion)
