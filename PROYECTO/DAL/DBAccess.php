@@ -9,7 +9,7 @@
     public function __CONSTRUCT()
     {
       try {
-          $this->conn = new PDO('mysql:host=localhost;dbname=farmacia', 'root', 'abc123');
+        $this->conn = new PDO("mysql:host=software-if.mysql.database.azure.com;dbname=farmacia", "bd_usuario@software-if", "123456");
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       } catch (PDOException $e ) {
         echo "DBAcess error: " .$e->getMessage();
