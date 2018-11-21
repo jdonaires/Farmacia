@@ -1,7 +1,7 @@
 <?php
 	require_once("../BOL/persona.php");
 	require_once("../DAL/DBAccess.php");
-
+	require_once('../BOL/empleado.php');
 	class PersonaDAO
 	{
 		private $pdo;
@@ -12,7 +12,7 @@
 				$this->pdo = $dba->get_connection();
 		}
 
-			public function registrarse(Login $login)
+			public function registrarse(empleado $login)
 			{
 				try
 				{
@@ -28,7 +28,7 @@
 						$per = new Persona();
 
 						$per->__SET('dni', $r->dni);
-						$per->__SET('nombres', $r->apellidos_nombres);
+						$per->__SET('nombres', $r->apellidosnombres);
 
 						$result[] = $per;
 					}

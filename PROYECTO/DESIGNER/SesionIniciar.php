@@ -1,11 +1,11 @@
 <?php
 require_once('../BOL/persona.php');
-require_once('../BOL/login.php');
+require_once('../BOL/empleado.php');
 require_once('../DAO/personaDAO.php');
 
 $per = new Persona();
 $perDAO = new PersonaDAO();
-$log = new Login();
+$log = new empleado();
 
 ?>
 <!DOCTYPE html>
