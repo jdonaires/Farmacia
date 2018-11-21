@@ -1,5 +1,5 @@
 <?php
-class componentes
+class Componentes
 {
 	private $coddtmedicamento;
 	private $nombre;
