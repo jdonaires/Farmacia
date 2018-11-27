@@ -23,15 +23,14 @@
 }
 
 .referencia img{
+
 	margin-top:0px;
 	margin-left: 500px;
 	width: 55px;
 	height: 30px;
 
 }
-.referencia img:hover{
-	border-bottom: 1px solid #35BFEE;
-}
+
 
 body{
 	background-image: url(https://www.alchemywithalex.com/wp-content/uploads/2018/03/5jxh4o.jpg);
@@ -52,7 +51,7 @@ body{
 .seccion img{
 	width:240px;
 	height:240px;
-	
+	margin-left: 50%;
 	position: relative;
 	
 }

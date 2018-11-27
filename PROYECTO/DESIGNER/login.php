@@ -12,6 +12,7 @@ $log = new empleado();
 <html lang="es">
 
 <head>
+	 <meta charset="utf-8">
 	<title>FARMISALUD</title>
 	<link rel="stylesheet" type="text/css" href="../estilo/menu.css">
 	<link rel="icon" type="image/png" href="../img/icon.png" />
@@ -22,8 +23,8 @@ $log = new empleado();
 
 		<nav class="navegador">
 			<span class="titPrinc">bdFarmacia +</span>
-			<span class="referencia"><a href=""><img src="../img/log_white.png"></a></span>
-			</a>
+			<span class="referencia"><img src="../img/log_white.png"></span>
+			
 			<ul class="lista">
 				
 				<li><a href="login.php" >LOGIN</a></li>

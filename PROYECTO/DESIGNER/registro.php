@@ -29,8 +29,9 @@ if (isset($_POST['guardar'])) {
 }
  ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+	 <meta charset="utf-8">
 	<title>LEANDING PAGE</title>
 	<link rel="stylesheet" type="text/css" href="../estilo/menu.css">
 </head>
@@ -40,7 +41,10 @@ if (isset($_POST['guardar'])) {
 
 		<nav class="navegador">
 			<span class="titPrinc">bdFarmacia +</span>
-			<ul>
+			<span class="referencia"><img src="../img/log_white.png"></span>
+			
+			<ul class="lista">
+				
 				<li><a href="login.php" >LOGIN</a></li>
 				<li><a href="registro.php">REGISTRARSE</a></li>
 				
@@ -49,9 +53,12 @@ if (isset($_POST['guardar'])) {
 	</header>
 	<section class="seccion" >
 		<article class="articulo">
+			
 			<h1>TRABAJO IF FARMACIA</h1>
 			<p>Este es nuestro trabajo de Investigación Formativa, teniendo encuenta almacén como nuestro alcance.</p>
+			<img src="../img/logo.png">
 		</article>
+
 	</section>
 	<aside class="aside" >
 		
