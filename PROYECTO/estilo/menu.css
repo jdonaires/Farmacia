@@ -1,0 +1,163 @@
+*{
+	margin:0px;
+	font-family: "century gothic";
+}
+.cabecera{
+	
+
+}
+.navegador{
+	background: #364145;
+	
+	width: 100%;
+	height:50px;
+	text-align: right;
+}
+.navegador span{
+	float:left;
+	position: relative;
+	color:white;
+	margin-top:10px;
+	margin-left: 10px;
+	font-size: 25px;
+}
+
+.referencia img{
+	margin-top:0px;
+	margin-left: 500px;
+	width: 55px;
+	height: 30px;
+
+}
+.referencia img:hover{
+	border-bottom: 1px solid #35BFEE;
+}
+
+body{
+	background-image: url(https://www.alchemywithalex.com/wp-content/uploads/2018/03/5jxh4o.jpg);
+	height: 100%;
+	width: 100%;
+}
+
+.seccion{
+	background: rgba(242, 243, 244,0.3);
+	position: relative;
+	width:940px;
+	height: 550px;
+	float:left;
+	margin:10px;
+	margin-left: 0px;
+	box-shadow: 0px 0px 3px black;
+}
+.seccion img{
+	width:240px;
+	height:240px;
+	
+	position: relative;
+	
+}
+.seccion2{
+	background: rgba(242, 243, 244,0.9);
+	position: relative;
+	width:100%;
+	height: 850px;
+	float:left;
+	margin:10px;
+	margin-left: 0px;
+	box-shadow: 0px 0px 1px black;
+}
+.articulo{
+	text-align: left;
+	color:#364145;
+	background: transparent;
+	width:600px;
+	height:200px;
+	margin-left:100px;
+	margin-top:60px;
+}
+.articulo h1{
+	text-align: left;
+	font-size: 30px;
+}
+
+.aside{
+	background: #364145;
+	margin:10px;
+	margin-right: 0px;
+	position: relative;
+	float:right;
+	width: 300px;
+	height: 550px;
+	box-shadow: 0px 0px 9px black;
+}
+.aside form{
+	margin:auto;
+	margin-top:10%;
+	position: relative;
+	width:215px;
+	height: 300px;
+	
+	
+}
+.aside select{
+	width: 214px;
+	height: 30px;
+	outline: none;
+	border:transparent;
+}
+.aside input{
+	width: 200px;
+	height: 20px;
+	padding: 5px;
+	outline: none;
+	border: 2px solid transparent;
+	transition: border 0.3s;
+}
+.aside input::placeholder{
+	font-size: 12px;
+	text-align: center;
+
+}
+.aside input[type=text]:hover,input[type=password]:hover{
+	border-bottom:solid 2px #35BFEE;
+}
+.aside input[type=submit]{
+	width:100%;
+	height:40px;
+	background: #35BFEE;
+	color:white;
+	transition:color,background 0.3s;
+}
+.aside input[type=submit]:hover{
+	
+	background: white;
+	color:#35BFEE;
+	
+}
+.lista a{
+	text-decoration: none;
+	color:white;
+	padding:10px;
+	border:transparent;
+}
+.lista a:hover{
+	
+	color:#35BFEE;
+	border-bottom:solid 1px #35BFEE;
+}
+li{
+	top:15px;
+	position: relative;
+	list-style: none;
+	display: inline;
+	margin:15px;
+}
+.pie{
+	background: linear-gradient( to top,#364145,rgba(255,255,255,0));
+	position: fixed;
+	width: 100%;
+	height:50px;
+	bottom:0;
+	color:white;
+	text-align: center;
+}

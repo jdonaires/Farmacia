@@ -9,10 +9,12 @@ $log = new empleado();
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-	<title>LEANDING PAGE</title>
+	<title>FARMISALUD</title>
 	<link rel="stylesheet" type="text/css" href="../estilo/menu.css">
+	<link rel="icon" type="image/png" href="../img/icon.png" />
 </head>
 <body>
 	<div class="fondo">
@@ -20,7 +22,10 @@ $log = new empleado();
 
 		<nav class="navegador">
 			<span class="titPrinc">bdFarmacia +</span>
-			<ul>
+			<span class="referencia"><a href=""><img src="../img/log_white.png"></a></span>
+			</a>
+			<ul class="lista">
+				
 				<li><a href="login.php" >LOGIN</a></li>
 				<li><a href="registro.php">REGISTRARSE</a></li>
 				
@@ -29,9 +34,12 @@ $log = new empleado();
 	</header>
 	<section class="seccion" >
 		<article class="articulo">
+			
 			<h1>TRABAJO IF FARMACIA</h1>
 			<p>Este es nuestro trabajo de Investigación Formativa, teniendo encuenta almacén como nuestro alcance.</p>
+			<img src="../img/logo.png">
 		</article>
+
 	</section>
 	<aside class="aside" >
 		<br>
