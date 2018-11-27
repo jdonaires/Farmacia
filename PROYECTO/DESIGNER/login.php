@@ -36,9 +36,28 @@ $log = new empleado();
 	<section class="seccion" >
 		<article class="articulo">
 			
+			<img src="../img/logo_white.png">
+			<br>
 			<h1>TRABAJO IF FARMACIA</h1>
-			<p>Este es nuestro trabajo de Investigación Formativa, teniendo encuenta almacén como nuestro alcance.</p>
-			<img src="../img/logo.png">
+			<p>
+			El presente trabajo fue creado considerando las breves pautas de nuestro docente Juán Moisés Donayrez Ruiz, en el cual también hemos sido partícipes los compañeros: <br><br>
+			- Matías Saravia, Erick Stalin <br>
+			- Cuadros Lévano, Yorman Piero <br>
+			- Gonzales Cabrera, Miriam	<br>
+			- Yataco Blas, Juan Moisés	<br>
+			- Vergara Chacaliaza, Flavio	<br>
+			- Guerra Choque, Cristopher	<br>
+			- Amoretti Saravia, Jhair	<br>
+			- Geldres Huaycochea, Geldres	<br>
+			- Hernández Elías, Juán	<br>
+			- Guerra Huarcaya, Richard	<br>
+			- Bendezú Yarasca, Aldair	<br>
+			- Alvarez Tataje, José	<br>
+			- Carbajal Gonzales, Francesca	<br>
+			- Flores Balarezo, Sugei	<br><br>
+			Esperamos que este aporte sirva de mucho para nuestros usuarios.
+		</p>
+			
 		</article>
 
 	</section>
@@ -71,7 +90,8 @@ $log = new empleado();
 		
 	</aside>
 	<footer class="pie">
-		EPICS 2018
+		<p class="text">	EPICS 2018</p>
+	
 	</footer>
 	<?php
 				if(isset($_POST['ingresar']))

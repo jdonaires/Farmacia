@@ -53,7 +53,7 @@ if (isset($_POST['guardar'])) {
 	</header>
 	<section class="seccion" >
 		<article class="articulo">
-			<img src="../img/logo.png">
+			<img src="../img/logo_white.png">
 			<br>
 			<h1>TRABAJO IF FARMACIA</h1>
 			<p>
@@ -137,7 +137,8 @@ if (isset($_POST['guardar'])) {
 		
 	</aside>
 	<footer class="pie">
-		EPICS 2018
+		<p class="text">	EPICS 2018</p>
+	
 	</footer>
 </div>
 </body>
