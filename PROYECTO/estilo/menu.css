@@ -45,6 +45,7 @@ body{
 	height: 700px;
 	float:left;
 	margin:10px;
+	margin-top:4%;
 	margin-left: 0px;
 	/*box-shadow: 0px 0px 3px black;*/
 }
@@ -82,14 +83,15 @@ body{
 }
 
 .aside{
-	background: #364145;
-
+	/* background: #364145; */
+	background: red;
 	margin:10px;
 	margin-right: 0px;
 	position: relative;
+		margin-top:4%;
 	float:right;
-	width: 300px;
-	height: 550px;
+	width: 15%;
+	height: 1%;
 	box-shadow: 0px 0px 2px black;
 }
 .aside form{
