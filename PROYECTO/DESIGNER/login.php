@@ -23,19 +23,19 @@ $log = new empleado();
 
 		<nav class="navegador">
 			<span class="titPrinc">bdFarmacia +</span>
-			<span class="referencia"><img src="../img/log_white.png"></span>
 			
+
 			<ul class="lista">
-				
+
 				<li><a href="login.php" >LOGIN</a></li>
 				<li><a href="registro.php">REGISTRARSE</a></li>
-				
+
 			</ul>
 		</nav>
 	</header>
 	<section class="seccion" >
 		<article class="articulo">
-			
+
 			<img src="../img/logo_white.png">
 			<br>
 			<h1>TRABAJO IF FARMACIA</h1>
@@ -57,7 +57,7 @@ $log = new empleado();
 			- Flores Balarezo, Sugei	<br><br>
 			Esperamos que este aporte sirva de mucho para nuestros usuarios.
 		</p>
-			
+
 		</article>
 
 	</section>
@@ -82,16 +82,16 @@ $log = new empleado();
 				</tr>
 			</table>
 		</form>
-		
+
 		</div>
-		
-	
-		
-		
+
+
+
+
 	</aside>
 	<footer class="pie">
 		<p class="text">	EPICS 2018</p>
-	
+
 	</footer>
 	<?php
 				if(isset($_POST['ingresar']))

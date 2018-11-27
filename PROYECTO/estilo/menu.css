@@ -3,7 +3,7 @@
 	font-family: "century gothic";
 }
 .cabecera{
-	
+
 
 }
 .navegador{
@@ -42,7 +42,7 @@ body{
 	background: #35BFEE;
 	position: relative;
 	width:70%;
-	height: 550px;
+	height: 700px;
 	float:left;
 	margin:10px;
 	margin-left: 0px;
@@ -52,10 +52,10 @@ body{
 	width:200px;
 	height:200px;
 	float: right;
-	
+
 	margin-top: 10%;
 	position: relative;
-	
+
 }
 .seccion2{
 	background: rgba(242, 243, 244,0.9);
@@ -83,7 +83,7 @@ body{
 
 .aside{
 	background: #364145;
-	
+
 	margin:10px;
 	margin-right: 0px;
 	position: relative;
@@ -98,8 +98,8 @@ body{
 	position: relative;
 	width:215px;
 	height: 300px;
-	
-	
+
+
 }
 .aside select{
 	width: 214px;
@@ -131,10 +131,10 @@ body{
 	transition:color,background 0.3s;
 }
 .aside input[type=submit]:hover{
-	
+
 	background: white;
 	color:#35BFEE;
-	
+
 }
 .lista a{
 	text-decoration: none;
@@ -143,7 +143,7 @@ body{
 	border:transparent;
 }
 .lista a:hover{
-	
+
 	color:#35BFEE;
 	border-bottom:solid 1px #35BFEE;
 
@@ -169,5 +169,5 @@ li{
 }
 .pie .text{
 	margin-top:0.8%;
-	
+
 }
