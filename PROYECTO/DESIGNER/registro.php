@@ -53,10 +53,27 @@ if (isset($_POST['guardar'])) {
 	</header>
 	<section class="seccion" >
 		<article class="articulo">
-			
-			<h1>TRABAJO IF FARMACIA</h1>
-			<p>Este es nuestro trabajo de Investigación Formativa, teniendo encuenta almacén como nuestro alcance.</p>
 			<img src="../img/logo.png">
+			<br>
+			<h1>TRABAJO IF FARMACIA</h1>
+			<p>
+			El presente trabajo fue creado considerando las breves pautas de nuestro docente Juán Moisés Donayrez Ruiz, en el cual también hemos sido partícipes los compañeros: <br>
+			- Matías Saravia, Erick Stalin <br>
+			- Cuadros Lévano, Yorman Piero <br>
+			- Gonzales Cabrera, Miriam	<br>
+			- Yataco Blas, Juan Moisés	<br>
+			- Vergara Chacaliaza, Flavio	<br>
+			- Guerra Choque, Cristopher	<br>
+			- Amoretti Saravia, Jhair	<br>
+			- Geldres Huaycochea, Geldres	<br>
+			- Hernández Elías, Juán	<br>
+			- Guerra Huarcaya, Richard	<br>
+			- Bendezú Yarasca, Aldair	<br>
+			- Alvarez Tataje, José	<br>
+			- Carbajal Gonzales, Francesca	<br>
+			- Flores Balarezo, Sugei	<br>
+		</p>
+			
 		</article>
 
 	</section>

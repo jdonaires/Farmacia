@@ -43,7 +43,7 @@ nav{
 <div class="panel panel-primary">
 <div class="panel-heading"><h3>Transportista</h3></div>
 <div class="panel-body">
-<form class="form-horizontal" action="empleado.php" method="post">
+<form class="form-horizontal" action="transportista.php" method="post">
   <div class="row container">
    <div class="col-md-6">
      <div class="form-group has-success	">

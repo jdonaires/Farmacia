@@ -21,8 +21,7 @@
 }
 .tabla td{
 	background: white;
-
-	border:inset 0pt;
+	border:solid white 2px; 
 }
 td img{
 	width:100px;
@@ -30,7 +29,8 @@ td img{
 	margin:auto;
 	position: relative;
 	border: 1px transparent solid;
+	transition: border 0.3s;
 }
 td img:hover{
-	border-bottom:1px red solid;
+	border-bottom:1px #364145 solid;
 }

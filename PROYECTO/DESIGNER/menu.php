@@ -22,12 +22,12 @@
 			<th colspan="6">Operaciones</th>
 		</tr>
 		<tr>
-			<td align="center"><a href=""><img src="imagenes/empleado.png" alt="Empleado"></a></td>
-			<td align="center"><a href=""><img src="imagenes/transporte.png"></a></td>
-			<td align="center"><a href=""><img src="imagenes/transportista.png"></a></td>
-			<td align="center"><a href=""><img src="imagenes/guiaremision.png"></a></td>
-			<td align="center"><a href=""><img src="imagenes/medicamento.png"></a></td>
-			<td align="center"><a href=""><img src="imagenes/laboratorio.png"></a></td>
+			<td align="center"><a href="regempleado.php"><img src="imagenes/empleado.png" alt="Empleado"></a></td>
+			<td align="center"><a href="transporte.php"><img src="imagenes/transporte.png"></a></td>
+			<td align="center"><a href="transportista.php"><img src="imagenes/transportista.png"></a></td>
+			<td align="center"><a href="guiaremision.php"><img src="imagenes/guiaremision.png"></a></td>
+			<td align="center"><a href="medicamento.php"><img src="imagenes/medicamento.png"></a></td>
+			<td align="center"><a href="laboratorio.php"><img src="imagenes/laboratorio.png"></a></td>
 		</tr>
 	</table>
 	<br>

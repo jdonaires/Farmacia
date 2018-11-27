@@ -51,23 +51,19 @@ nav{
   color: white;
 
 }
-.cuerpo{
-  margin-top:110px;
-}
+
+
 </style>
+<link rel="stylesheet" type="text/css" href="../estilo/menu.css">
 <body>
-  <header>
+  <header class="cabecera">
 
-    <nav class="navbar navbar-fixed-top ">
-<div class="container">
-  <h3><span class="glyphicon glyphicon-fire"> </span > Registrar Empleado</h3>
-
-<ul class="nav nav-pills">
-  <li role="presentation"><a href="inicio.php">Inicio</a></li>
-</ul>
-</div>
+    <nav class="navegador">
+      <span class="titPrinc">bdFarmacia +</span>
+      <span class="referencia"><img src="../img/log_white.png"></span>
+      
+      
     </nav>
-
   </header>
   <div class=" container cuerpo">
  <section class="main">
