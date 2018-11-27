@@ -1,25 +1,30 @@
 <?php
 require_once('../BOL/transportista.php');
-require_once('../BOL/transporte.php');
+require_once('../BOL/persona.php');
 require_once('../DAO/transportistaDAO.php');
 
 $tran = new transportista();
-$empDAO = new transportistaDAO();
-$log = new transporte();
+$tranDao = new transportistaDAO();
+$per = new persona();
+
 if (isset($_POST['guardar'])) {
-    $tran->__SET('ruc', $_POST['ruc']);
-    $tran->__SET('placa',$_POST['placa']);
-    $log->__SET('ruc',$_POST['ruc']);
-    $log->__SET('razonsocial', $_POST['razonsocial']);
-    $log->__SET('telefono', $_POST['telefono']);
-    $log->__SET('direccion',$_POST['direccion']);
-    $log->__SET('tipoempresa',$_POST['tipoempresa']);
+    $tran->__SET('dni', $_POST['dni']);
+    $tran->__SET('turno',$_POST['turno']);
+    $tran->__SET('especialidad',$_POST['especialidad']);
+    $tran->__SET('clave', $_POST['clave']);
+    $tran->__SET('usuario', $_POST['usuario']);
+    $per->__SET('dni',$_POST['dni']);
+    $per->__SET('nombre',$_POST['nombre']);
+    $per->__SET('apellido',$_POST['apellido']);
+    $per->__SET('correo',$_POST['correo']);
+    $per->__SET('fecnac',$_POST['fecnac']);
+    $per->__SET('genero',$_POST['genero']);
+    $per->__SET('direccion',$_POST['direccion']);
+    $per->__SET('tipopersona',"Transportista");
+    $tranDao->insertarEmpleado($tran,$per);
 
-    $empDAO->insertarTransporte($log,$tran);
-
-    header('Location: transporte.php');
+    header('Location: transportista.php');
 }
-
 
 
  ?>
@@ -133,7 +138,8 @@ nav{
          <div class="form-group has-success">
           <label  class="control-label col-md-2" >Placa Transporte:</label>
           <div class="col-md-7">
-            <input class="form-control" type="text" name="usuario" placeholder="Usuario" required>
+
+
            </div>
          </div>
          <div class="form-group has-primary">

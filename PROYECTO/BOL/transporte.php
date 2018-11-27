@@ -4,7 +4,7 @@ class transporte
 {
 
 
-    private $idTransporte;
+    private $idtransporte;
     private $ruc;
     private $placa;
 
