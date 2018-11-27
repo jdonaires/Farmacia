@@ -1,3 +1,28 @@
+<?php
+require_once('../BOL/transportista.php');
+require_once('../BOL/transporte.php');
+require_once('../DAO/transportistaDAO.php');
+
+$tran = new transportista();
+$empDAO = new transportistaDAO();
+$log = new transporte();
+if (isset($_POST['guardar'])) {
+    $tran->__SET('ruc', $_POST['ruc']);
+    $tran->__SET('placa',$_POST['placa']);
+    $log->__SET('ruc',$_POST['ruc']);
+    $log->__SET('razonsocial', $_POST['razonsocial']);
+    $log->__SET('telefono', $_POST['telefono']);
+    $log->__SET('direccion',$_POST['direccion']);
+    $log->__SET('tipoempresa',$_POST['tipoempresa']);
+
+    $empDAO->insertarTransporte($log,$tran);
+
+    header('Location: transporte.php');
+}
+
+
+
+ ?>
    <html lang="en">
 <head>
   <meta charset="UTF-8">

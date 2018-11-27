@@ -21,10 +21,10 @@ class transporteDAO
             $statement->bindValue(1, $transporte->__GET('ruc'));
             $statement->bindValue(2, $transporte->__GET('placa'));
             $statement->bindValue(3, $empresa->__GET('ruc'));
-            $statement->bindValue(4, $empresa->__GET('razonSocial'));
+            $statement->bindValue(4, $empresa->__GET('razonsocial'));
             $statement->bindValue(5, $empresa->__GET('telefono'));
             $statement->bindValue(6, $empresa->__GET('direccion'));
-            $statement->bindValue(7, $empresa->__GET('tipoEmpresa'));
+            $statement->bindValue(7, $empresa->__GET('tipoempresa'));
 
             $statement->execute();
 
