@@ -3,8 +3,6 @@
 	font-family: "century gothic";
 }
 .tabla{
-
-	
 	margin:auto;
 	margin-top: 30px;
 	width: 80%;
@@ -31,4 +29,8 @@ td img{
 	height:100px;
 	margin:auto;
 	position: relative;
+	border: 1px transparent solid;
+}
+td img:hover{
+	border-bottom:1px red solid;
 }

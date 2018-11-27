@@ -121,7 +121,7 @@ margin-top: 80px;
 
                            </div>
                            <div class="col-md-2">
-                                <img src="imagenes/trasnporte.png" alt="" width="100%" class="img img-rounded">
+                                <img src="imagenes/transporte.png" alt="" width="100%" class="img img-rounded">
                                 <div><a href="transporte.php" class="btn btn-success btn-block " >Transporte</a></div>
 
                            </div>
@@ -185,7 +185,7 @@ margin-top: 80px;
 
                                                     </div>
                                                     <div class="col-md-2">
-                                                      <img src="imagenes/trasnporte.png" alt="" width="100%"  class="img img-rounded">
+                                                      <img src="imagenes/transporte.png" alt="" width="100%"  class="img img-rounded">
                                                       <div><a href="informetransporte.php" class="btn  btn-danger btn-block" >Transporte</a></div>
 
                                                     </div>
