@@ -9,10 +9,9 @@ $per = new persona();
 
 if (isset($_POST['guardar'])) {
     $tran->__SET('dni', $_POST['dni']);
-    $tran->__SET('turno',$_POST['turno']);
-    $tran->__SET('especialidad',$_POST['especialidad']);
-    $tran->__SET('clave', $_POST['clave']);
-    $tran->__SET('usuario', $_POST['usuario']);
+    $tran->__SET('$idtransporte',$_POST['$idtransporte']);
+    $tran->__SET('nrolicencia',$_POST['nrolicencia']);
+
     $per->__SET('dni',$_POST['dni']);
     $per->__SET('nombre',$_POST['nombre']);
     $per->__SET('apellido',$_POST['apellido']);
