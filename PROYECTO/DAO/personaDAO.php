@@ -18,7 +18,7 @@
 				{
 					$result = array();
 
-					$statement = $this->pdo->prepare("call up_registrarse(?,?)");
+					$statement = $this->pdo->prepare("call up_registrar(?,?)");
 					$statement->bindValue(1,$login->__GET('usuario'));
 					$statement->bindValue(2,$login->__GET('clave'));
 					$statement->execute();
