@@ -47,7 +47,7 @@
 
 				$statement->bindValue(1,$persona->__GET('dni'));
 				$statement -> execute();
-                $result = (array)$statement->fetchAll(PDO::FETCH_CLASS,"Persona");
+        $result = (array)$statement->fetchAll(PDO::FETCH_CLASS,"Persona");
 
 				return $result;
 

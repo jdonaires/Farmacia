@@ -121,13 +121,17 @@ nav{
          </div>
 
          <div class="form-group has-success">
-          <label  class="control-lab  el col-md-2" >Nro Licencia:</label>
+          <label  class="control-lab  el col-md-2" >Tipo Empleado:</label>
           <div class="col-md-7">
-            <input class="form-control" type="text" name="especialidad" placeholder="Especialidad" required>
+            <select  class="form-control" name="tipopersona"  >
+                      <option value="Empleado">Empleado</option>
+                      <option value="Transportista">Transportista</option>
+              </select>
+
            </div>
          </div>
          <div class="form-group has-success">
-          <label  class="control-label col-md-2" >Transporte:</label>
+          <label  class="control-label col-md-2" >Placa Transporte:</label>
           <div class="col-md-7">
             <input class="form-control" type="text" name="usuario" placeholder="Usuario" required>
            </div>
