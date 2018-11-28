@@ -27,11 +27,13 @@ if (isset($_POST['guardar'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Registrar Laboratorio</title>
+  <link rel="icon" type="image/png" href="../img/icon.png" />
 </head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/funciones.js"></script>
 <style>
 header{
   background: #202E37;
@@ -75,7 +77,7 @@ nav{
      <div class="form-group 	">
       <label class="control-label col-md-3">RUC:</label>
       <div class="col-md-5 has-success">
-       <input  class =" form-control " type="text" name="ruc" placeholder="ruc" required >
+       <input  class =" form-control " type="text" name="ruc" placeholder="RUC" onkeypress="return comprobarnumero(event);" maxlength="11" required >
      </div>
         <div  class="col-md-3 ">
           <button class="btn btn-primary btn-block" name="guardar">Agregar</button>
@@ -84,7 +86,7 @@ nav{
     <div class="form-group ">
      <label class="control-label col-md-3" >Razon Social:</label>
      <div class="col-md-5 has-success">
-     <input type="text" name="razonsocial" class="form-control" placeholder="razonsocial" required>
+     <input type="text" name="razonsocial" class="form-control" placeholder="Razon Social" required>
      </div>
      <div  class="col-md-3 ">
        <button class="btn btn-primary btn-block">Eliminar</button>
@@ -93,7 +95,7 @@ nav{
    <div class="form-group ">
     <label class="control-label col-md-3" >Telefono:</label>
     <div class="col-md-5 has-success">
-    <input type="text" name="telefono" class="form-control" placeholder="telefono" required>
+    <input type="text" name="telefono" class="form-control" placeholder="Telefono" required>
     </div>
     <div  class="col-md-3 ">
       <button class="btn btn-primary btn-block">Modificar</button>
@@ -102,14 +104,14 @@ nav{
   <div class="form-group ">
    <label class="control-label col-md-3" >Direccion:</label>
    <div class="col-md-5 has-success">
-   <input type="text" name="direccion" class="form-control" placeholder="direccion" required>
+   <input type="text" name="direccion" class="form-control" placeholder="Direccion" required>
    </div>
 
  </div>
    <div class="form-group ">
     <label class="control-label col-md-3" >Registro Sanitario:</label>
     <div class="col-md-5 has-success">
-    <input type="text" name="regsanitario" class="form-control" placeholder="regsanitario" required>
+    <input type="text" name="regsanitario" class="form-control" placeholder="Registro Sanitario" required>
     </div>
 
   </div>

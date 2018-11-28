@@ -32,7 +32,8 @@ if (isset($_POST['guardar'])) {
 <html lang="es">
 <head>
 	 <meta charset="utf-8">
-	<title>LEANDING PAGE</title>
+	<title>Registrarse</title>
+	<link rel="icon" type="image/png" href="../img/icon.png" />
 	<link rel="stylesheet" type="text/css" href="../estilo/menu.css">
 </head>
 <body>
@@ -53,27 +54,29 @@ if (isset($_POST['guardar'])) {
 	</header>
 	<section class="seccion" >
 		<article class="articulo">
+
 			<img src="../img/logo_white.png">
 			<br>
 			<h1>TRABAJO IF FARMACIA</h1>
 			<p>
-			El presente trabajo fue creado considerando las breves pautas de nuestro docente Juán Moisés Donayrez Ruiz, en el cual también hemos sido partícipes los compañeros: <br>
-			- Matías Saravia, Erick Stalin <br>
-			- Cuadros Lévano, Yorman Piero <br>
-			- Gonzales Cabrera, Miriam	<br>
-			- Yataco Blas, Juan Moisés	<br>
-			- Vergara Chacaliaza, Flavio	<br>
-			- Guerra Choque, Cristopher	<br>
-			- Amoretti Saravia, Jhair	<br>
-			- Geldres Huaycochea, Geldres	<br>
-			- Hernández Elías, Juán	<br>
-			- Guerra Huarcaya, Richard	<br>
-			- Bendezú Yarasca, Aldair	<br>
+			El presente trabajo fue creado considerando las breves pautas de nuestro docente Juán Moisés Donayrez Ruiz, en el cual también hemos sido partícipes los compañeros: <br><br>
 			- Alvarez Tataje, José	<br>
+			- Amoretti Saravia, Jhair	<br>
+			- Bendezú Yarasca, Aldair	<br>
 			- Carbajal Gonzales, Francesca	<br>
+			- Cuadros Lévano, Yorman Piero <br>
 			- Flores Balarezo, Sugei	<br>
+			- Geldres Huaycochea, Geldres	<br>
+			- Gonzales Cabrera, Miriam	<br>
+			- Guerra Choque, Cristopher	<br>
+			- Guerra Huarcaya, Richard	<br>
+			- Hernández Elías, Juán	<br>
+			- Matías Saravia, Erick Stalin <br>
+			- Vergara Chacaliaza, Flavio	<br>
+			- Yataco Blas, Juan Moisés	<br><br>
+			Esperamos que este aporte sirva de mucho para nuestros usuarios.
 		</p>
-			
+
 		</article>
 
 	</section>

@@ -41,20 +41,20 @@ $log = new empleado();
 			<h1>TRABAJO IF FARMACIA</h1>
 			<p>
 			El presente trabajo fue creado considerando las breves pautas de nuestro docente Juán Moisés Donayrez Ruiz, en el cual también hemos sido partícipes los compañeros: <br><br>
-			- Matías Saravia, Erick Stalin <br>
-			- Cuadros Lévano, Yorman Piero <br>
-			- Gonzales Cabrera, Miriam	<br>
-			- Yataco Blas, Juan Moisés	<br>
-			- Vergara Chacaliaza, Flavio	<br>
-			- Guerra Choque, Cristopher	<br>
-			- Amoretti Saravia, Jhair	<br>
-			- Geldres Huaycochea, Geldres	<br>
-			- Hernández Elías, Juán	<br>
-			- Guerra Huarcaya, Richard	<br>
-			- Bendezú Yarasca, Aldair	<br>
 			- Alvarez Tataje, José	<br>
+			- Amoretti Saravia, Jhair	<br>
+			- Bendezú Yarasca, Aldair	<br>
 			- Carbajal Gonzales, Francesca	<br>
-			- Flores Balarezo, Sugei	<br><br>
+			- Cuadros Lévano, Yorman Piero <br>
+			- Flores Balarezo, Sugei	<br>
+			- Geldres Huaycochea, Geldres	<br>
+			- Gonzales Cabrera, Miriam	<br>
+			- Guerra Choque, Cristopher	<br>
+			- Guerra Huarcaya, Richard	<br>
+			- Hernández Elías, Juán	<br>
+			- Matías Saravia, Erick Stalin <br>
+			- Vergara Chacaliaza, Flavio	<br>
+			- Yataco Blas, Juan Moisés	<br><br>
 			Esperamos que este aporte sirva de mucho para nuestros usuarios.
 		</p>
 
@@ -81,19 +81,7 @@ $log = new empleado();
 					<td><input type="submit" name="ingresar" value="LOGIN"></td>
 				</tr>
 			</table>
-		</form>
-
-		</div>
-
-
-
-
-	</aside>
-	<footer class="pie">
-		<p class="text">	EPICS 2018</p>
-
-	</footer>
-	<?php
+			<?php
 				if(isset($_POST['ingresar']))
 				{
 					$resultado = array();//VARIABLE TIPO RESULTADO
@@ -128,7 +116,7 @@ $log = new empleado();
 
 					else
 					{
-						echo '<center>USUARIO NO REGISTRADO';
+						echo '<br><p style="color:white">USUARIO NO REGISTRADO</p>';
 					}
 					?>
 					</table>
@@ -136,6 +124,19 @@ $log = new empleado();
 				}
 				?>
 
+		</form>
+
+		</div>
+
+
+
+
+	</aside>
+	<footer class="pie">
+		<p class="text">	EPICS 2018</p>
+
+	</footer>
+	
 </div>
 </body>
 </html>

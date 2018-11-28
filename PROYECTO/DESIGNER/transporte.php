@@ -13,7 +13,7 @@ if (isset($_POST['guardar'])) {
     $log->__SET('razonsocial', $_POST['razonsocial']);
     $log->__SET('telefono', $_POST['telefono']);
     $log->__SET('direccion',$_POST['direccion']);
-    $log->__SET('tipoempresa',$_POST['tipoempresa']);
+    $log->__SET('tipoempresa','Transporte');
 
     $empDAO->insertarTransporte($log,$tran);
 
@@ -27,6 +27,7 @@ if (isset($_POST['guardar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="../img/icon.png" />
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -64,7 +65,7 @@ if (isset($_POST['guardar'])) {
     </nav>
 
 </header>
-
+<script type="text/javascript" src="../js/funciones.js"></script>
 <section class="main">
     <BR>
 
@@ -87,48 +88,37 @@ if (isset($_POST['guardar'])) {
 
                                 </div>
                                 <div class="form-group 	">
-                                    <label class="control-label col-md-2">placa:</label>
+                                    <label class="control-label col-md-2">Placa:</label>
                                     <div class="col-md-5 has-success">
-                                        <input class=" form-control " type="text" name="placa" placeholder="placa" required>
+                                        <input class=" form-control " type="text" name="placa" placeholder="Placa" required>
                                     </div>
 
                                 </div>
 
                                 <div class="form-group 	">
-                                    <label class="control-label col-md-2">razonsocial</label>
+                                    <label class="control-label col-md-2">Razonsocial:</label>
                                     <div class="col-md-5 has-success">
-                                        <input class=" form-control " type="text" name="razonsocial" placeholder="razonsocial" required>
+                                        <input class=" form-control " type="text" name="razonsocial" placeholder="Razonsocial" required>
                                     </div>
 
                                 </div>
                                 <div class="form-group 	">
-                                    <label class="control-label col-md-2">telefono:</label>
+                                    <label class="control-label col-md-2">Telefono:</label>
                                     <div class="col-md-5 has-success">
-                                        <input class=" form-control " type="text" name="telefono" placeholder="telefono" required>
+                                        <input class=" form-control " type="text" name="telefono"  onkeypress="return comprobarnumero(event);" maxlength="9"placeholder="Telefono" required>
                                     </div>
 
                                 </div>
                                 <div class="form-group 	">
-                                    <label class="control-label col-md-2">direccion:</label>
+                                    <label class="control-label col-md-2">Dirección:</label>
                                     <div class="col-md-5 has-success">
-                                        <input class=" form-control " type="text" name="direccion" placeholder="direccion" required>
+                                        <input class=" form-control " type="text" name="direccion" placeholder="Dirección" required>
                                     </div>
 
                                 </div>
 
 
-                                <div class="form-group ">
-                                    <label class="control-label col-md-2" for="">Empresa:</label>
-                                    <div class="col-md-5 has-success">
-
-                                        <select class="form-control" name="tipoempresa">
-                                            <option value="TRANSPORTE">TRANSPORTE</option>
-                                            <option value="LABORATORIO">LABORATORIO</option>
-                                        </select>
-
-                                    </div>
-
-                                </div>
+                                
                                 <div class="form-group ">
                                   <div class="col-md-4 ">
                                       <button class="btn btn-primary btn-block">Modificar</button>
