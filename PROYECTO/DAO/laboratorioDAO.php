@@ -1,6 +1,7 @@
 <?php
-  require_once('../DAL/DBAccess.php');
-  require_once('../BOL/laboratorio.php');
+require_once('../DAL/DBAccess.php');
+require_once('../BOL/laboratorio.php');
+require_once('../BOL/empresa.php');
   class laboratorioDAO
   {
     private $pdo;
@@ -12,7 +13,7 @@
     public function Registrar(Laboratorio $laboratorio)
     {
       try {
-        $statement = $this->pdo->prepare("insert into laboratorio (RUC,RegSanitario) values (?,?)");
+        $statement = $this->pdo->prepare("call insertar_empresa_laboratorio()");
         $statement->bindValue(1,$laboratorio->__GET('RUC'));
         $statement->bindValue(2,$laboratorio->__GET('RegSanitario'));
         $statement -> execute();
