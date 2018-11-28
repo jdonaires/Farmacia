@@ -12,15 +12,9 @@ class transporte
     {
         return $this->$x;
     }
-
     public function __SET($x, $y)
     {
-
         return $this->$x = $y;
-
-
     }
-
 }
-
 ?>
