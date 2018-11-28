@@ -10,28 +10,20 @@ require_once('../BOL/empresa.php');
       $dba = new DBAccess();
       $this->pdo = $dba->get_connection();
     }
-    public function Registrar(Laboratorio $laboratorio)
-    {
-      try {
-        $statement = $this->pdo->prepare("call insertar_empresa_laboratorio()");
-        $statement->bindValue(1,$laboratorio->__GET('RUC'));
-        $statement->bindValue(2,$laboratorio->__GET('RegSanitario'));
-        $statement -> execute();
-      } catch (Exception $e)
-      {
-          die($e->getMessage());
-      }
 
-    }
 
-    public function insertarLaboratorio(laboratorio $laboratorio)
+    public function insertarLaboratorio(Empresa $empresa,laboratorio $laboratorio)
   {
     try
     {
-      $statement = $this->pdo->prepare("CALL up_insertar_laboratorio(?,?)");
+      $statement = $this->pdo->prepare("CALL insertar_empresa_laboratorio(?,?,?,?,?,?,?)");
       $statement->bindValue(1,$empresa->__GET('RUC'));
       $statement->bindValue(2,$empresa->__GET('RegSanitario'));
-
+      $statement->bindValue(3,$empresa->__GET('RegSanitario'));
+      $statement->bindValue(4,$empresa->__GET('RegSanitario'));
+      $statement->bindValue(5,$empresa->__GET('RegSanitario'));
+      $statement->bindValue(6,$laboratorio->__GET('$RUC'));
+        $statement->bindValue(7,$laboratorio->__GET('$regsanitario'));
       $statement -> execute();
     } catch (Exception $e)
     {
