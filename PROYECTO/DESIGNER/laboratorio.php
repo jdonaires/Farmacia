@@ -1,22 +1,21 @@
 <?php
-require_once('../BOL/Laboratorio.php');
+require_once('../BOL/laboratorio.php');
 require_once('../BOL/empresa.php');
 require_once('../DAO/laboratorioDAO.php');
 
-$lab = new Laboratorio();
-$empDAO = new transporteDAO();
+$lab = new laboratorio();
+$empDAO = new laboratorioDAO();
 $emp = new empresa();
 if (isset($_POST['guardar'])) {
     $lab->__SET('ruc', $_POST['ruc']);
-    $lab->__SET('IdLaboratorio',$_POST['IdLaboratorio']);
     $lab->__SET('regsanitario',$_POST['regsanitario']);
     $emp->__SET('ruc',$_POST['ruc']);
     $emp->__SET('razonsocial', $_POST['razonsocial']);
     $emp->__SET('telefono', $_POST['telefono']);
     $emp->__SET('direccion',$_POST['direccion']);
-    $emp->__SET('tipoempresa',$_POST['tipoempresa']);
+    $emp->__SET('tipoempresa',$_POST['Laboratorio']);
 
-    $empDAO->insertarTransporte($lab,$emp);
+    $empDAO->insertarLaboratorio($emp,$lab);
 
     header('Location: laboratorio.php');
 }
@@ -65,7 +64,7 @@ nav{
  <section class="main">
    <BR>
 
-<form class="form-horizontal" action="empleado.php" method="post">
+<form class="form-horizontal" action="laboratorio.php" method="post">
 <div class=" container cuerpo">
   <div class="row">
 <div class="col-md-6">
@@ -76,16 +75,16 @@ nav{
      <div class="form-group 	">
       <label class="control-label col-md-3">RUC:</label>
       <div class="col-md-5 has-success">
-       <input  class =" form-control " type="text" name="dni" placeholder="DNI" required >
+       <input  class =" form-control " type="text" name="ruc" placeholder="ruc" required >
      </div>
         <div  class="col-md-3 ">
-          <button class="btn btn-primary btn-block">Agregar</button>
+          <button class="btn btn-primary btn-block" name="guardar">Agregar</button>
         </div>
      </div>
     <div class="form-group ">
      <label class="control-label col-md-3" >Razon Social:</label>
      <div class="col-md-5 has-success">
-     <input type="text" name="nombre" class="form-control" placeholder="Nombres" required>
+     <input type="text" name="razonsocial" class="form-control" placeholder="razonsocial" required>
      </div>
      <div  class="col-md-3 ">
        <button class="btn btn-primary btn-block">Eliminar</button>
@@ -94,7 +93,7 @@ nav{
    <div class="form-group ">
     <label class="control-label col-md-3" >Telefono:</label>
     <div class="col-md-5 has-success">
-    <input type="text" name="telefono" class="form-control" placeholder="Nombres" required>
+    <input type="text" name="telefono" class="form-control" placeholder="telefono" required>
     </div>
     <div  class="col-md-3 ">
       <button class="btn btn-primary btn-block">Modificar</button>
@@ -103,14 +102,14 @@ nav{
   <div class="form-group ">
    <label class="control-label col-md-3" >Direccion:</label>
    <div class="col-md-5 has-success">
-   <input type="text" name="direccion" class="form-control" placeholder="Nombres" required>
+   <input type="text" name="direccion" class="form-control" placeholder="direccion" required>
    </div>
 
  </div>
    <div class="form-group ">
     <label class="control-label col-md-3" >Registro Sanitario:</label>
     <div class="col-md-5 has-success">
-    <input type="text" name="nombre" class="form-control" placeholder="Nombres" required>
+    <input type="text" name="regsanitario" class="form-control" placeholder="regsanitario" required>
     </div>
 
   </div>
@@ -124,7 +123,7 @@ nav{
   </div>
 </div>
 </div>
-<div class="col-md-6">
+<!-- <div class="col-md-6">
 
 
 <div class="panel panel-primary">
@@ -149,7 +148,7 @@ nav{
 </div>
 </div>
 </div>
-</div>
+</div> -->
   </div>
 
 </form>

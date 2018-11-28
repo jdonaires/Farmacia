@@ -1,8 +1,8 @@
 <?php
 class Laboratorio
 {
-	private $RUC;
-	private $IdLaboratorio;
+	private $ruc;
+	private $idlaboratorio;
 	private $regsanitario;
 	public function __GET($x)
 	{

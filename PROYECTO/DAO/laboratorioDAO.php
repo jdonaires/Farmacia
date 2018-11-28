@@ -14,33 +14,25 @@ require_once('../BOL/empresa.php');
 
     public function insertarLaboratorio(Empresa $empresa,laboratorio $laboratorio)
   {
-    try
-    {
-      $statement = $this->pdo->prepare("CALL insertar_empresa_laboratorio(?,?,?,?,?,?,?)");
-      $statement->bindValue(1,$empresa->__GET('RUC'));
-      $statement->bindValue(2,$empresa->__GET('RegSanitario'));
-      $statement->bindValue(3,$empresa->__GET('RegSanitario'));
-      $statement->bindValue(4,$empresa->__GET('RegSanitario'));
-      $statement->bindValue(5,$empresa->__GET('RegSanitario'));
-      $statement->bindValue(6,$laboratorio->__GET('$RUC'));
-        $statement->bindValue(7,$laboratorio->__GET('$regsanitario'));
-      $statement -> execute();
-    } catch (Exception $e)
-    {
-      die("insertarLaboratorio function  ->".$e->getMessage());
-    }
-  }
-    public function eliminarLaboratorio($RUC){
-    try
-    {
-      $statement = $this->pdo->prepare("call up_eliminar_laboratorio(?)");
-      $statement->bindValue(1,$RUC);
-      $statement -> execute();
+    try {
 
-    } catch (Exception $e)
-    {
-      die("eliminarLaboratorio function  ->".$e->getMessage());
+        $statement = $this->pdo->prepare("call insertar_empresa_laboratorio(?,?,?,?,?,?,?);");
+
+        $statement->bindValue(1, $empresa->__GET('ruc'));
+        $statement->bindValue(2, $empresa->__GET('razonsocial'));
+        $statement->bindValue(3, $empresa->__GET('telefono'));
+        $statement->bindValue(4, $empresa->__GET('direccion'));
+        $statement->bindValue(5, $empresa->__GET('tipoempresa'));
+        $statement->bindValue(6,$laboratorio->__GET('ruc'));
+        $statement->bindValue(7,$laboratorio->__GET('regsanitario'));
+
+        $statement->execute();
+
+        return $statement->rowCount();
+
+    } catch (Exception $e) {
+        die("insertarTransporte --> err -->" . $e->getMessage());
     }
-  }
-  }
+
+  }}
 ?>
