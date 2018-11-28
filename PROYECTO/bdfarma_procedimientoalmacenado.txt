@@ -1,0 +1,391 @@
+﻿CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_almacen`(
+	in p_id int,
+    IN p_CodDtMed int(11),
+	IN	p_StockActual smallint,
+	IN	p_Ubicacion varchar(20)
+)
+BEGIN
+	update almacen set CodDtMed=p_CodDtMed, StockActual= p_StockActual, Ubicacion = p_Ubicacion
+		WHERE id=p_id;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_medicamento`(
+	IN p_codmed		    varchar(20),       
+	IN p_Nombre 		VARCHAR(20),
+	IN p_NomLaboratorio 		VARCHAR(20),    
+	IN p_IdLaboratorio 			int(11)
+)
+BEGIN
+			UPDATE medicamento SET CodMed=p_codmed, Nombre=p_Nombre, NomLaboratorio=p_NomLaboratorio, 
+			IdLaboratorio=p_IdLaboratorio 		
+			where CodMed=p_codmed;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_unidad_medida`(
+	IN p_id int,
+    IN p_descripcion varchar(10)
+)
+BEGIN
+	UPDATE UnidadMedida SET descripcion=p_descripcion WHERE id=p_id;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_medicamento`(
+	IN p_codmed varchar(20)
+)
+BEGIN
+	DELETE FROM medicamento WHERE CodMed=p_codmed;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_transporte`(
+	IN pRUC VARCHAR(20)
+)
+BEGIN
+	DELETE FROM transporte WHERE RUC = pRUC;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_dtguiamed`(
+  IN p_NroGuiaRemision varchar(20),
+  IN p_CodMed varchar(20),
+  IN p_IdDt int(11),
+  IN p_Cantidad varchar(20),
+  IN p_PesoTotal decimal(6,2),
+  IN p_Lote varchar(20),
+  IN p_Descripcion varchar(20)
+)
+BEGIN
+	INSERT INTO dtguiamed(NroGuiaRemision,CodMed,IdDt,Cantidad,PesoTotal,Lote,Descripcion) 
+    VALUES (p_NroGuiaRemision,p_CodMed,p_IdDt,p_Cantidad,p_PesoTotal,p_Lote,p_Descripcion);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_factura`(
+  IN p_IdDt int(11),
+  IN p_CostoUnitario decimal(6,2),
+  IN p_CostoTotal decimal(6,2),
+  IN p_IGV decimal(6,2),
+  IN p_SubTotal decimal(6,2)
+)
+BEGIN
+	INSERT INTO factura(IdDt,CostoUnitario,CostoTotal,IGV,SubTotal) 
+    VALUES (p_IdDt,p_CostoUnitario,p_CostoTotal,p_IGV,p_SubTotal);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_persona`(
+    IN p_dni		    CHAR(8),       
+	IN p_nombre 		VARCHAR(25),
+	IN p_apellido 	VARCHAR(20),    
+	IN p_fecnac 		DATE,    
+	IN p_genero 		varchar(1),
+	IN p_direccion	VARCHAR(40), 
+	IN p_tipo_persona	varchar(20),
+    IN p_correo 	VARCHAR(50)
+)
+BEGIN
+	INSERT INTO Persona(dni,nombre,apellido,fecnac,genero,direccion,tipoPersona,correo) 
+    VALUES (p_dni,p_nombre,p_apellido,p_fecnac,p_genero,p_direccion,p_tipo_persona,p_correo);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_transporte`(
+  IN p_RUC varchar(20),
+  IN p_Placa varchar(20)
+  )
+BEGIN
+	INSERT INTO transporte(RUC,Placa) 
+    VALUES (p_RUC,p_Placa);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_empleado`(
+	IN p_dni CHAR(8)
+)
+BEGIN
+	
+    select * from empleado where dni like concat(p_dni,'%');
+    
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_unidad_medida`(
+	IN p_descripcion varchar(10)
+)
+BEGIN
+	select * from UnidadMedida where descripcion like concat(p_descripcion,'%');
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `insertar_empresa_laboratorio`(IN e_RUC VARCHAR(20),IN e_RazónSocial VARCHAR(40),IN e_Telefono VARCHAR(10),IN e_Dirección VARCHAR(20),IN e_TipoEmpresa VARCHAR(30),IN l_RUC VARCHAR(20),IN l_RegSanitario VARCHAR(20))
+begin
+INSERT INTO EMPRESA values (e_RUC,e_RazonSocial,e_Telefono,e_Direccion,e_TipoEmpresa);
+INSERT INTO LABORATORIO(RUC,RegSanitario) values (l_RUC,l_RegSanitario);
+end
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_empleado`(
+	in p_id int,
+    IN p_turno VARCHAR(20),
+    IN p_especialidad VARCHAR(40),
+    IN p_usuario VARCHAR(20),
+    IN p_clave VARCHAR(20),
+    IN p_dni CHAR(8)
+)
+BEGIN
+	UPDATE Empleado SET turno=p_turno, especialidad=p_especialidad, 
+			usuario=p_usuario, clave=p_clave,dni=p_dni WHERE IdEmpleado=p_id;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_persona`(
+	IN p_dni		    CHAR(8),       
+	IN p_nombre 		VARCHAR(25),
+	IN p_apellido 	VARCHAR(20),    
+	IN p_fecnac 		DATE,    
+	IN p_genero 		varchar(1),
+	IN p_direccion	VARCHAR(40), 
+	IN p_tipo_persona	varchar(20),
+    IN p_correo 	VARCHAR(50)
+)
+BEGIN
+	UPDATE Persona SET nombre=p_nombre, apellido=p_apellido,    fecnac=p_fecnac, genero=p_genero, 
+			direccion=p_direccion, tipoPersona=p_tipo_persona, correo=p_correo where dni=p_dni;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_almacen`(
+	in p_id int
+)
+BEGIN
+	delete from almacen where id = p_id;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_persona`(
+	IN p_dni char(8)
+)
+BEGIN
+	DELETE FROM Persona WHERE dni=p_dni;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_unidad_medida`(
+	IN p_id int
+)
+BEGIN
+	DELETE FROM UnidadMedida WHERE id=p_id;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_dtmed`(
+  IN CodMed varchar(20),
+  IN CodPre int(11),
+  IN CodDtMed int(11),
+  IN Psicotrópico enum('Si','No'),
+  IN PesoUnitario decimal(6,2),
+  IN FecVenc date ,
+  IN Descripcion varchar(20)
+)
+BEGIN
+	INSERT INTO dtmed(CodMed,CodPre,CodDtMed,Psicotrópico,PesoUnitario,FecVenc,Descripcion) 
+    VALUES (p_CodMed,p_CodPre,P_CodDtMed,p_Psicotrópico,p_PesoUnitario,p_FecVenc,p_Descripcion);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_guia_remision`(
+	IN p_nro_guia 	VARCHAR(20),
+    IN p_punto_partida 	VARCHAR(20),
+	IN p_punto_llegada	VARCHAR(20),
+	IN p_fec_emision 	DATE,
+	IN p_fec_inic_traslado DATE,
+	IN p_motiv_traslado	VARCHAR(20),
+	IN p_id_transporte	INT
+)
+BEGIN
+	INSERT INTO GuiaRemision(nroguia,PuntoPartida,PuntoLLegada,FecEmision,FecInicTraslado,MotTraslado,IdTransporte)
+	 values(p_nro_guia,p_punto_partida,p_punto_llegada,p_fec_emision,p_fec_inic_traslado,p_motiv_traslado,p_id_transporte);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_posologia`(
+  IN CodDtMed int(11),
+  IN Dosis varchar(20),
+  IN Indicaciones varchar(20)
+  )
+BEGIN
+	INSERT INTO posologia(CodDtMed,Dosis,Indicaciones) 
+    VALUES (p_CodDtMed,p_Dosis,p_Indicaciones);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_transporte_empresa`(
+	IN t_RUC VARCHAR(20),
+	IN t_Placa VARCHAR(20),
+    IN e_RUC VARCHAR(20),
+    IN e_RazónSocial VARCHAR(40),
+    IN e_Telefono VARCHAR(10),
+    IN e_Dirección VARCHAR(20),
+    IN e_TipoEmpresa VARCHAR(30)
+)
+begin
+	call up_insertar_empresa(e_RUC,e_RazonSocial,e_Telefono,e_Direccion,e_TipoEmpresa);
+	call up_insertar_transporte(t_RUC,t_Placa);
+end
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_persona`(
+	IN p_dni char(8)
+)
+BEGIN
+	select * from persona where dni like CONCAT(p_dni,'%');
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_registrar`(IN up_usuario varchar(20),IN up_clave varchar(20))
+select p.dni, concat(p.nombre,' ',p.apellido)as 'apellidos_nombres' from persona p inner join empleado l on p.dni=l.dni where l.usuario=up_usuario and l.clave =up_clave;
+CREATE DEFINER=`meister`@`%` PROCEDURE `insertar_persona_empleado`(IN p_DNI CHAR(8),IN p_nombre VARCHAR(25),IN p_apellido VARCHAR(20),IN p_correo VARCHAR(20),IN p_fecNac DATE,IN p_genero ENUM ('M','F'),IN p_direccion VARCHAR(20),IN p_tipoPersona ENUM ('Empleado','Transportista'),IN e_turno VARCHAR(20),IN e_especialidad VARCHAR(20),IN e_usuario VARCHAR(20),IN e_clave VARCHAR(20),IN e_DNI VARCHAR(20))
+begin
+INSERT INTO PERSONA(DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona) VALUES (p_DNI,p_nombre,p_apellido,p_correo,p_fecNac,p_genero,p_direccion,p_tipoPersona);
+INSERT INTO EMPLEADO (turno,especialidad,usuario,clave,DNI) VALUES (e_turno,e_especialidad,e_usuario,e_clave,e_DNI);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_empresa`(
+	in p_RUC varchar(20),
+    IN p_RazonSocial VARCHAR(40),
+    IN p_Telefono VARCHAR(10),
+    IN p_Direccion VARCHAR(20),
+    IN p_TipoEmpresa VARCHAR(20)
+)
+BEGIN
+	UPDATE empresa SET RUC=p_RUC, RazónSocial=p_RazonSocial, 
+		   Telefono=p_Telefono, Direccion=p_Direccion,TipoEmpresa=p_TipoEmpresa WHERE RUC=p_RUC;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_posologia`(
+
+	in p_codDtMed int(11),
+    IN p_Dosis VARCHAR(20),
+    IN p_Indicaciones VARCHAR(20)
+    
+)
+BEGIN
+	UPDATE posologia SET  CodDtMed=p_codDtMed, Dosis=p_Dosis, 
+			Indicaciones=p_Indicaciones WHERE CodDtMed=p_codDtMed;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_empleado`(
+	IN pDNI VARCHAR(20)
+)
+BEGIN
+	DELETE FROM empleado WHERE DNI = pDNI;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_posologia`(
+	IN p_codDtMed VARCHAR(20)
+)
+BEGIN
+	DELETE FROM posologia WHERE CodDtMed = p_codDtMed;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_almacen`(
+	IN p_CodDtMed int(11),
+	IN	p_StockActual smallint,
+	IN	p_Ubicacion varchar(20)
+)
+BEGIN
+	INSERT INTO almacen(CodDtMed,StockActual,Ubicacion) 
+    VALUES (p_CodDtMed,p_StockActual,p_Ubicacion);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_empleado`(
+	IN p_turno VARCHAR(20),
+    IN p_especialidad VARCHAR(40),
+    IN p_usuario VARCHAR(20),
+    IN p_clave VARCHAR(20),
+    IN p_dni CHAR(8)
+)
+BEGIN
+	INSERT INTO Empleado(turno,especialidad,usuario,clave,dni) 
+    VALUES(p_turno,p_especialidad,p_usuario,p_clave,p_dni);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_laboratorio`(
+  IN p_RUC varchar(20),
+  IN p_RegSanitario varchar(20)
+  )
+BEGIN
+	INSERT INTO laboratorio(RUC,RegSanitario) 
+    VALUES (p_RUC,p_RegSanitario);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_precioactual`(
+  IN CodDtMed int(11),
+  IN Precio decimal(6,2),
+  IN Estado enum('True','False'),
+  IN FecAct date
+  )
+BEGIN
+	INSERT INTO precioactual(CodDtMed,Precio,Estado,FecAct) 
+    VALUES (p_CodDtMed,p_Precio,p_Estado,p_FecAct);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_unidad_medida`(
+	IN p_descripcion varchar(10)
+)
+BEGIN
+	INSERT INTO UnidadMedida(descripcion) values(p_descripcion);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_tipo_presentacion`(
+	in p_nombre varchar(20)
+)
+BEGIN
+	select * from tipopresentacion where nombre like concat(p_nombre,'%');
+END
+CREATE DEFINER=`meister`@`%` FUNCTION `verificar_usuario_clave`(p_usuario varchar(20), p_contraseña varchar(20)) RETURNS tinyint(1)
+    READS SQL DATA
+BEGIN
+	RETURN EXISTS (SELECT dni FROM empleado WHERE usuario = p_usuario AND clave = p_contraseña);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `insertar_persona_transportista`(IN p_DNI CHAR(8),IN p_nombre VARCHAR(25),IN p_apellido VARCHAR(20),IN p_correo VARCHAR(20),IN p_fecNac DATE,IN p_genero ENUM ('M','F'),IN p_direccion VARCHAR(20),IN p_tipoPersona ENUM ('Empleado','Transportista'),IN t_DNI VARCHAR(8),IN t_IdTransporte INT,IN t_NroLicencia VARCHAR(15))
+begin
+INSERT INTO PERSONA(DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona) VALUES (p_DNI,p_nombre,p_apellido,p_correo,p_fecNac,p_genero,p_direccion,p_tipoPersona);
+INSERT INTO TRANSPORTISTA (DNI,IdTransporte,NroLicencia) VALUES (t_DNI,t_IdTransporte,t_NroLicencia);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_guiaremision`(
+	IN p_nroguia		    varchar(20),       
+	IN p_puntopartida 		VARCHAR(20),
+	IN p_puntollegada 		VARCHAR(20),    
+	IN p_fecemision 			DATE,    
+	IN p_fecinictraslado 		DATE,
+	IN p_mottraslado		VARCHAR(20), 
+	IN p_idtransporte	varchar(20)
+)
+BEGIN
+	UPDATE guiaremision SET NroGuia=p_nroguia, PuntoPartida=p_puntopartida, PuntoLLegada=p_puntollegada, 
+			FecEmision=p_fecemision, FecInicTraslado=p_fecinictraslado, MotTraslado=p_mottraslado, 
+			IdTransporte=p_idtransporte where NroGuia=p_nroguia;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_actualizar_tipo_presentacion`(
+	IN p_id		INT,
+	IN p_nombre		VARCHAR(20),
+	IN p_descripcion	VARCHAR(30)
+)
+BEGIN
+	UPDATE TipoPresentacion SET nombre=p_nombre,descripcion=p_descripcion WHERE id=p_id;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_empresa`(
+	IN pRUC VARCHAR(20)
+)
+BEGIN
+	DELETE FROM empresa WHERE RUC = pRUC;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_eliminar_tipo_presentacion`(
+	IN p_id int
+)
+BEGIN
+	DELETE FROM TipoPresentacion WHERE id=p_id;
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_componentes`(
+  IN p_CodDtMed		    int(11),    
+	IN p_Nombre 	varchar(20),    
+	IN p_Tipo 	varchar(20),    
+	IN p_Cantidad int(11),
+	IN p_CodUniMedida int(11)
+)
+BEGIN
+	INSERT INTO Componentes(CodDtMed,Nombre,Tipo,Cantidad,CodUniMedida) 
+    VALUES (p_CodDtMed,p_Nombre,p_Tipo,p_Cantidad,p_CodUniMedida);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_empresa`(
+	IN p_ruc char(11) ,
+    IN p_razonsocial varchar(40) ,
+    IN p_telefono varchar(10) ,
+    IN p_direccion varchar(40) ,
+    IN p_tipoempresa varchar(13)
+)
+BEGIN
+	INSERT INTO Empresa (RUC,RazonSocial,Telefono,Direccion,TipoEmpresa) 
+    values (p_ruc,p_razonsocial,p_telefono,p_direccion,p_tipoempresa);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_medicamento`(
+	IN p_cod_med varchar(20),
+    IN p_nombre varchar(20),
+    IN p_nom_laboratorio varchar(20),
+    IN p_id_laboratorio int
+)
+BEGIN
+	INSERT INTO Medicamento (codmed,nombre,nomlaboratorio,idlaboratorio)
+    VALUES(p_cod_med,p_nombre,p_nom_laboratorio,p_id_laboratorio);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_insertar_tipo_presentacion`(
+	in p_nombre varchar(20),
+    in p_descripcion varchar(30)
+)
+BEGIN
+	INSERT INTO TipoPresentacion(Nombre,Descripcion) VALUES(p_nombre,p_descripcion);
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_almacen`(
+	IN p_coddtmed int
+)
+BEGIN
+	select * from almacen where CodDtMed like concat(p_coddtmed,'%');
+END
+CREATE DEFINER=`meister`@`%` PROCEDURE `up_listar_transporte_empresa`(
+	in p_ruc varchar(11)
+)
+BEGIN
+	select tr.idtransporte,emp.ruc,tr.placa,emp.razonsocial,emp.telefono,emp.direccion,emp.tipoempresa 
+	from transporte tr inner join empresa emp on tr.ruc=emp.ruc
+	where emp.ruc like concat(p_ruc,'%') order by tr.idtransporte asc;
+END
