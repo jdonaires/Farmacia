@@ -1,3 +1,26 @@
+<?php
+require_once('../BOL/guiaremision.php');
+require_once('../DAL/DBAccess.php');
+require_once('../DAO/guiaremisionDAO.php');
+
+$guia = new guiaremision();
+$guiaDAO = new guiaremisionDAO();
+
+if (isset($_POST['guardar']))
+{
+  $guia->__SET('nroguia', $_POST['nroguia']);
+  $guia->__SET('puntopartida', $_POST['puntopartida']);
+  $guia->__SET('puntollegada', $_POST['puntollegada']);
+  $guia->__SET('fecemision', $_POST['fecemision']);
+  $guia->__SET('fecinitraslado', $_POST['fecinitraslado']);
+  $guia->__SET('mottraslado', $_POST['mottraslado']);
+  $guia->__SET('idtransporte', $_POST['idtransporte']);
+  $guiaDAO->Registrar($guia);
+
+  header('Location: guiaremision.php')
+}
+ ?>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
