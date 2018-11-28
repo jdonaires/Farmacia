@@ -10,7 +10,7 @@ if (isset($_POST['guardar']))
 {
   $medi->__SET('codmed', $_POST['codmed']);
   $medi->__SET('nombre', $_POST['nombre']);
-  $medi->__SET('nombrelaboratorio', $_POST['nombrelaboratorio']);
+  $medi->__SET('nombrelaboratorio', $_POST['nomlaboratorio']);
   $medi->__SET('idlaboratorio', $_POST['idlaboratorio']);
   $mediDAO->Registrar($medi);
 

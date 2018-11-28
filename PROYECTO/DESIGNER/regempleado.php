@@ -56,15 +56,21 @@ nav{
 </style>
 <link rel="stylesheet" type="text/css" href="../estilo/menu.css">
 <body>
-  <header class="cabecera">
+   <header>
 
-    <nav class="navegador">
-      <span class="titPrinc">bdFarmacia +</span>
-      <span class="referencia"><img src="../img/log_white.png"></span>
-      
-      
+    <nav class="navbar navbar-fixed-top ">
+<div class="container">
+  <h3><span class="glyphicon glyphicon-fire"> </span >  Registrar Transportista</h3>
+
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="inicio.php">Inicio</a></li>
+
+</ul>
+</div>
     </nav>
+
   </header>
+  <div class=" container cuerpo">
   <div class=" container cuerpo">
  <section class="main">
    <BR>
