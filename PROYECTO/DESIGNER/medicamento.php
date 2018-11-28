@@ -1,7 +1,7 @@
 <?php
 require_once('../DAL/DBAccess.php');
 require_once('../BOL/medicamento.php');
-require_once('../BOL/medicamentodao.php');
+require_once('../DAO/medicamentodao.php');
 
 
  ?>
