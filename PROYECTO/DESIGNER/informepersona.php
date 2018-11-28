@@ -1,4 +1,10 @@
+<?php
+require_once('../BOL/persona.php');
+require_once('../DAO/personaDAO.php');
 
+$per = new Persona();
+$perDAO = new PersonaDAO();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +16,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/funciones.js"></script>
 <style>
 header{
   background: #202E37;
@@ -36,7 +43,7 @@ nav{
     </nav>
   </header>
  <section class="main">
-<form class="form-horizontal" action="informealmacen.php" method="post">
+<form class="form-horizontal" action="informepersona.php" method="post">
 <div class=" container cuerpo">
   <div class="row">
 <div class="col-md-6">
@@ -47,18 +54,10 @@ nav{
    <div class="form-group ">
     <label class="control-label col-md-3" >DNI:</label>
     <div class="col-md-5 has-success">
-     <input type="text" name="dni" class="form-control" placeholder="Nombres" required>
+     <input type="text" name="dni" class="form-control" placeholder="DNI" onkeypress="return comprobarnumero(event);" maxlength="8" required>
     </div>
   </div>
-  <div class="form-group ">
-   <label class="control-label col-md-3" >Tipo Persona:</label>
-   <div class="col-md-5 has-success">
-     <select  class="form-control" name="tipopersona"  >
-               <option value="1"> Persona 1</option>
-               <option value="2"> Persona 2</option>
-    </select>
-   </div>
- </div>
+  
  <div class="form-group">
   <div  class="col-md-7 col-md-offset-2">
     <button class="btn btn-primary btn-block" name="guardar">Buscar</button>
@@ -73,7 +72,45 @@ nav{
 <div class="panel-heading"><h3>Tabla</h3></div>
 <div class="panel-body">
 <div class="row ">
+ <?php
+                if(isset($_POST['buscar']))
+                {
+                    $resultado = array();//VARIABLE TIPO RESULTADO
+                    $per->__SET('dni',$_POST['dni']);//ESTABLECEMOS EL VALOR DEL DNI
+                    $resultado = $perDAO->listarPersona($per); //CARGAMOS LOS REGISTRO EN EL ARRAY RESULTADO
+                    if(!empty($resultado)) //PREGUNTAMOS SI NO ESTA VACIO EL ARRAY
+                    {
+                        ?>
+                        <table class="pure-table pure-table-horizontal">
+                                <thead>
+                                        <tr>
 
+                                                <th style="text-align:left;">Nombres</th>
+                                                <th style="text-align:left;">Apellidos</th>
+                                                <th style="text-align:left;">DNI</th>
+                                        </tr>
+                                </thead>
+                        <?php
+                        foreach( $resultado as $r): //RECORREMOS EL ARRAY RESULTADO A TRAVES DE SUS CAMPOS
+                            ?>
+                                <tr>
+
+                                        <td><?php echo $r->__GET('Nombre'); ?></td>
+                                        <td><?php echo $r->__GET('Apellido'); ?></td>
+                                        <td><?php echo $r->__GET('DNI'); ?></td>
+                                </tr>
+                        <?php endforeach;
+                    }
+                    else
+                    {
+                        /*echo 'El Dni no se encuentra en la base de datos!';*/
+                        echo "<script> alert('El Dni no se encuentra en la base de datos!'); </script>";
+                    }
+                    ?>
+                    </table>
+                    <?php
+                }
+                ?>
 
 
 
