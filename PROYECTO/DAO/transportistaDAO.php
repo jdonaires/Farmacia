@@ -14,7 +14,7 @@ class transportistaDAO
   {
     try
     {
-    $statement = $this->pdo->prepare("CALL insertar_persona_transportista(?,?)");
+    $statement = $this->pdo->prepare("CALL insertar_persona_transportista(?,?,?,?,?,?,?,?,?,?,?)");
     $statement->bindValue(1, $persona->__GET('dni'));
     $statement->bindValue(2,  $persona->__GET('nombre'));
     $statement->bindValue(3,  $persona->__GET('apellido'));
