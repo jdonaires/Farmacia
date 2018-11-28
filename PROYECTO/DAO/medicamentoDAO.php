@@ -13,7 +13,7 @@
       {
         try
         {
-            $statement = $this->pdo->prepare("call up_insertar_medicamento(?,?,?,?)");
+            $statement = $this->pdo->prepare("call up_registrarmedicamento(?,?,?,?)");
             $statement->bindValue(1,$medicamento->__GET('codmed'));
             $statement->bindValue(2,$medicamento->__GET('nombre'));
             $statement->bindValue(3,$medicamento->__GET('nombrelaboratorio'));
