@@ -191,14 +191,6 @@ nav{
   </div>
 
 
-        <div class="form-group">
-         <div  class="col-md-7 col-md-offset-2">
-           <button class="btn btn-success btn-block">Enviar</button>
-         </div>
-        </div>
-
-
-
 </div>
 </section>
 </div>
