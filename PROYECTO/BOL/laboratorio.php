@@ -12,5 +12,6 @@ class Laboratorio
 	{
 		return $this->$x = $y;
 	}
+	
 }
 ?>
