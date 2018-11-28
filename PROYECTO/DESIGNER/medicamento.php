@@ -8,6 +8,7 @@ $mediDAO = new medicamentoDAO();
 
 if (isset($_POST['guardar']))
 {
+  $medi->__SET('codmed', $_POST['codmed']);
   $medi->__SET('nombre', $_POST['nombre']);
   $medi->__SET('nombrelaboratorio', $_POST['nombrelaboratorio']);
   $medi->__SET('idlaboratorio', $_POST['idlaboratorio']);
@@ -80,7 +81,7 @@ margin-top:110px;
                           </div>
                     </div>
             </div>
-            <div class="panel panel-primary">
+           <!--  <div class="panel panel-primary">
                   <div class="panel-heading"> <h3>Tipo presentation</h3></div>
                       <div class="panel-body">
                             <div class="row container">
@@ -203,7 +204,7 @@ margin-top:110px;
 
                                   </div>
                             </div>
-                    </div>
+                    </div> -->
 
                        <div class="form-group">
                         <div  class="col-md-3 col-md-offset-2">
