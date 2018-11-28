@@ -3,7 +3,18 @@ require_once('../DAL/DBAccess.php');
 require_once('../BOL/medicamento.php');
 require_once('../DAO/medicamentodao.php');
 
+$medi = new medicamento();
+$mediDAO = new medicamentoDAO();
 
+if (isset($_POST['guardar']))
+{
+  $medi->__SET('nombre', $_POST['nombre']);
+  $medi->__SET('nombrelaboratorio', $_POST['nombrelaboratorio']);
+  $medi->__SET('idlaboratorio', $_POST['idlaboratorio']);
+  $mediDAO->Registrar($medi);
+
+  header('Location: medicamento.php')
+}
  ?>
 <html lang="en">
 <head>
