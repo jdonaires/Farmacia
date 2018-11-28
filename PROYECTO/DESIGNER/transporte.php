@@ -82,7 +82,7 @@ if (isset($_POST['guardar'])) {
                                 <div class="form-group 	">
                                     <label class="control-label col-md-2">RUC:</label>
                                     <div class="col-md-5 has-success">
-                                        <input class=" form-control " type="text" name="ruc" placeholder="RUC" required>
+                                        <input class=" form-control " type="text" name="ruc" placeholder="RUC" onkeypress="return comprobarnumero(event);" maxlength="11" required>
                                     </div>
 
                                 </div>

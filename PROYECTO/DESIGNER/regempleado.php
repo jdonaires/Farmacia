@@ -89,7 +89,7 @@ nav{
      <div class="form-group has-success	">
       <label class="control-label col-md-2">DNI:</label>
       <div class="col-md-7">
-       <input  class =" form-control" type="text" name="dni" placeholder="DNI" onkeypress="return comprobardni(event);" maxlength="8" required >
+       <input  class =" form-control" type="text" name="dni" placeholder="DNI" onkeypress="return comprobarnumero(event);" maxlength="8" required >
      </div>
      </div>
     <div class="form-group has-success">
