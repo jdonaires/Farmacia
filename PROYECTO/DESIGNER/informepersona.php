@@ -60,7 +60,7 @@ nav{
   
  <div class="form-group">
   <div  class="col-md-7 col-md-offset-2">
-    <button class="btn btn-primary btn-block" name="guardar">Buscar</button>
+    <button class="btn btn-primary btn-block" name="buscar">Buscar</button>
   </div>
  </div>
   </div>
@@ -82,6 +82,13 @@ nav{
                     {
                         ?>
                         <table class="pure-table pure-table-horizontal">
+                          <div class="form-group  ">
+                                    <label class="control-label col-md-2">Razonsocial:</label>
+                                    <div class="col-md-5 has-success">
+                                        <input class=" form-control " type="text" name="razonsocial" placeholder="Razonsocial" required>
+                                    </div>
+
+                                </div>
                                 <thead>
                                         <tr>
 
