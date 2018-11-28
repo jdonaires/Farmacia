@@ -126,16 +126,7 @@ nav{
            </div>
          </div>
 
-         <div class="form-group has-success">
-          <label  class="control-lab  el col-md-2" >Tipo Empleado:</label>
-          <div class="col-md-7">
-            <select  class="form-control" name="tipopersona"  >
-                      <option value="Empleado">Empleado</option>
-                      <option value="Transportista">Transportista</option>
-              </select>
-
-           </div>
-         </div>
+      
          <div class="form-group has-success">
           <label  class="control-label col-md-2" >$idtransporte:</label>
           <div class="col-md-7">
