@@ -62,18 +62,36 @@ margin-top:110px;
                           <div class="row container">
                                 <div class="col-md-6">
                                     <div class="form-group has-success	">
-                                     <label class="control-label col-md-4">Nombre General:</label>
+                                     <label class="control-label col-md-4">Codigo Medicamento</label>
                                      <div class="col-md-7">
-                                      <input  class =" form-control" type="text" name="nombre" placeholder="Nombre General" required >
+                                      <input  class =" form-control" type="text" name="codmed" placeholder="Nombre General" required >
                                     </div>
                                     </div>
 
                                   </div>
                                       <div class="col-md-6">
                                         <div class="form-group has-success">
+                                         <label  class="control-label col-md-4">Nombre </label>
+                                         <div class="col-md-6">
+                                               <input  class =" form-control" type="text" name="nombre" placeholder="Nombre  de Laboratorio" required >
+                                          </div>
+                                        </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                        <div class="form-group has-success">
                                          <label  class="control-label col-md-4">Nombre de Laboratorio:</label>
                                          <div class="col-md-6">
                                                <input  class =" form-control" type="text" name="nomlaboratorio" placeholder="Nombre  de Laboratorio" required >
+                                          </div>
+                                        </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                        <div class="form-group has-success">
+                                         <label  class="control-label col-md-4">Laboratorio:</label>
+                                         <div class="col-md-6">
+                                               <input  class =" form-control" type="text" name="idlaboratorio" placeholder="Nombre  de Laboratorio" required >
                                           </div>
                                         </div>
 
@@ -213,7 +231,7 @@ margin-top:110px;
                      </div>
 </form>
 
-
+s
 </section>
 
 
