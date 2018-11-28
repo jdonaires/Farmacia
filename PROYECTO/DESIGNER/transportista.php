@@ -69,6 +69,8 @@ nav{
   <div class=" container cuerpo">
  <section class="main">
    <BR>
+
+     </form>
 <div class="panel panel-primary">
 <div class="panel-heading"><h3>Transportista</h3></div>
 <div class="panel-body">
@@ -135,12 +137,24 @@ nav{
            </div>
          </div>
          <div class="form-group has-success">
-          <label  class="control-label col-md-2" >Placa Transporte:</label>
+          <label  class="control-label col-md-2" >$idtransporte:</label>
           <div class="col-md-7">
-
-
+            <input class="form-control" type="text" name="$idtransporte" placeholder="Direccion" required>
            </div>
          </div>
+         <div class="form-group has-success">
+          <label  class="control-label col-md-2" >nrolicencia:</label>
+          <div class="col-md-7">
+            <input class="form-control" type="text" name="nrolicencia" placeholder="Direccion" required>
+           </div>
+         </div>
+        </div>
+        <div class="form-group">
+         <div  class="col-md-7 col-md-offset-2">
+           <button class="btn btn-success btn-block" name="guardar">Enviar</button>
+         </div>
+        </div>
+        </form>
          <div class="form-group has-primary">
           <div  class="col-md-7 col-md-offset-2">
             <div><a href="#ventana1" class="btn btn-danger btn-block "data-toggle="modal">Añadir Transporte</a></div>
@@ -183,7 +197,7 @@ nav{
          </div>
         </div>
 
-</form>
+
 
 </div>
 </section>
