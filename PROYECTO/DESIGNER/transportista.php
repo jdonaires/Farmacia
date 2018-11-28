@@ -20,7 +20,7 @@ if (isset($_POST['guardar'])) {
     $per->__SET('genero',$_POST['genero']);
     $per->__SET('direccion',$_POST['direccion']);
     $per->__SET('tipopersona',"Transportista");
-    $tranDao->insertarEmpleado($tran,$per);
+    $tranDao->insertarTransportista($tran,$per);
 
     header('Location: transportista.php');
 }
@@ -70,7 +70,7 @@ nav{
  <section class="main">
    <BR>
 
-     </form>
+
 <div class="panel panel-primary">
 <div class="panel-heading"><h3>Transportista</h3></div>
 <div class="panel-body">
@@ -155,7 +155,7 @@ nav{
          </div>
         </div>
         </form>
-         <div class="form-group has-primary">
+         <!-- <div class="form-group has-primary">
           <div  class="col-md-7 col-md-offset-2">
             <div><a href="#ventana1" class="btn btn-danger btn-block "data-toggle="modal">Añadir Transporte</a></div>
             <div class="modal fade" id="ventana1">
@@ -184,7 +184,7 @@ nav{
                </div>
              </div>
           </div>
-         </div>
+         </div> -->
 
 
    </div>
