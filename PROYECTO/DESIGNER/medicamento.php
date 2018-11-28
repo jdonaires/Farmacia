@@ -1,7 +1,7 @@
 <?php
 require_once('../DAL/DBAccess.php');
 require_once('../BOL/medicamento.php');
-require_once('../BOL/medicamentodao.php');
+require_once('../DAO/medicamentodao.php');
 
 
  ?>
@@ -35,7 +35,7 @@ margin-top:110px;
 <div class="container">
 <h3><span class="glyphicon glyphicon-fire"> </span >  Registrar Medicamento</h3>
 <ul class="nav nav-pills">
-  <li role="presentation"><a href="inicio.php">Inicio</a></li>
+  <li role="presentation"><a href="medicamento.php">Inicio</a></li>
 </ul>
 </div>
  </nav>
