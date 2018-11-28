@@ -1,6 +1,25 @@
 <?php
+require_once('../BOL/Laboratorio.php');
+require_once('../BOL/empresa.php');
+require_once('../DAO/laboratorioDAO.php');
 
+$lab = new Laboratorio();
+$empDAO = new transporteDAO();
+$emp = new empresa();
+if (isset($_POST['guardar'])) {
+    $lab->__SET('ruc', $_POST['ruc']);
+    $lab->__SET('IdLaboratorio',$_POST['IdLaboratorio']);
+    $lab->__SET('regsanitario',$_POST['regsanitario']);
+    $emp->__SET('ruc',$_POST['ruc']);
+    $emp->__SET('razonsocial', $_POST['razonsocial']);
+    $emp->__SET('telefono', $_POST['telefono']);
+    $emp->__SET('direccion',$_POST['direccion']);
+    $emp->__SET('tipoempresa',$_POST['tipoempresa']);
 
+    $empDAO->insertarTransporte($lab,$emp);
+
+    header('Location: laboratorio.php');
+}
  ?>
 
 <!DOCTYPE html>

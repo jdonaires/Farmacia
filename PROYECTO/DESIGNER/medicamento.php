@@ -1,3 +1,10 @@
+<?php
+require_once('../DAL/DBAccess.php');
+require_once('../BOL/medicamento.php');
+require_once('../BOL/medicamentodao.php');
+
+
+ ?>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -36,7 +43,7 @@ margin-top:110px;
 <div class=" container cuerpo">
 <section class="main">
 
-<form class="form-horizontal" action="empleado.php" method="post">
+<form class="form-horizontal" action="medicamento.php" method="post">
           <div class="panel panel-primary">
                 <div class="panel-heading"> <h3>Medicamento</h3></div>
                     <div class="panel-body">
