@@ -203,6 +203,8 @@ BEGIN
 END
 CREATE DEFINER=`meister`@`%` PROCEDURE `up_registrar`(IN up_usuario varchar(20),IN up_clave varchar(20))
 select p.dni, concat(p.nombre,' ',p.apellido)as 'apellidos_nombres' from persona p inner join empleado l on p.dni=l.dni where l.usuario=up_usuario and l.clave =up_clave;
+
+
 CREATE DEFINER=`meister`@`%` PROCEDURE `insertar_persona_empleado`(IN p_DNI CHAR(8),IN p_nombre VARCHAR(25),IN p_apellido VARCHAR(20),IN p_correo VARCHAR(20),IN p_fecNac DATE,IN p_genero ENUM ('M','F'),IN p_direccion VARCHAR(20),IN p_tipoPersona ENUM ('Empleado','Transportista'),IN e_turno VARCHAR(20),IN e_especialidad VARCHAR(20),IN e_usuario VARCHAR(20),IN e_clave VARCHAR(20),IN e_DNI VARCHAR(20))
 begin
 INSERT INTO PERSONA(DNI,Nombre,Apellido,Correo,FecNac,Genero,Direccion,TipoPersona) VALUES (p_DNI,p_nombre,p_apellido,p_correo,p_fecNac,p_genero,p_direccion,p_tipoPersona);

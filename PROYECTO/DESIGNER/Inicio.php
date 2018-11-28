@@ -170,13 +170,13 @@ margin-top: 80px;
 
                                                     </div>
                                                     <div class="col-md-2">
-                                                      <img src="imagenes/informemedicamento.jpg" alt="" width="100%"  class="img img-rounded">
+                                                      <img src="imagenes/medicamento.png" alt="" width="100%"  class="img img-rounded">
                                                       <div><a href="informemedicamento.php" class="btn  btn-danger btn-block" >Medicamento</a></div>
 
 
                                                     </div>
                                                     <div class="col-md-2">
-                                                      <img src="imagenes/informeempresa.jpg" alt="" width="100%"  class="img img-rounded">
+                                                      <img src="imagenes/guiaremision.png" alt="" width="100%"  class="img img-rounded">
                                                       <div><a href="informeguiaremision.php" class="btn  btn-danger btn-block" >Guia de Remision </a></div>
 
                                                     </div>
