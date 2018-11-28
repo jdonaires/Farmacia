@@ -51,6 +51,7 @@ nav{
   margin-top:110px;
 }
 </style>
+<script type="text/javascript" src="../js/funciones.js"></script>
 <body>
   <header>
 
@@ -80,7 +81,7 @@ nav{
      <div class="form-group has-success	">
       <label class="control-label col-md-2">DNI:</label>
       <div class="col-md-7">
-       <input  class =" form-control" type="text" name="dni" placeholder="DNI" required >
+       <input  class =" form-control" type="text" name="dni" placeholder="DNI" onkeypress="return comprobardni(event);" maxlength="8" required >
      </div>
      </div>
     <div class="form-group has-success">
@@ -146,7 +147,9 @@ nav{
          </div>
         </div>
         </form>
-         <!-- <div class="form-group has-primary">
+
+    <!--     
+         <div class="form-group has-primary">
           <div  class="col-md-7 col-md-offset-2">
             <div><a href="#ventana1" class="btn btn-danger btn-block "data-toggle="modal">Añadir Transporte</a></div>
             <div class="modal fade" id="ventana1">

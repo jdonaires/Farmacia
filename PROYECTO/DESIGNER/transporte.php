@@ -2,7 +2,7 @@
 require_once('../BOL/transporte.php');
 require_once('../BOL/empresa.php');
 require_once('../DAO/transporteDAO.php');
-
+require_once('../DAL/DBAccess.php');
 $tran = new transporte();
 $empDAO = new transporteDAO();
 $log = new empresa();
@@ -19,6 +19,7 @@ if (isset($_POST['guardar'])) {
 
     header('Location: transporte.php');
 }
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +48,7 @@ if (isset($_POST['guardar'])) {
         margin-top: 110px;
     }
 </style>
+
 <body>
 <header>
 

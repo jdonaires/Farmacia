@@ -43,15 +43,15 @@ margin-top:110px;
 </style>
 <body>
 <header>
- <nav class="navbar navbar-fixed-top ">
+    <nav class="navbar navbar-fixed-top ">
 <div class="container">
-<h3><span class="glyphicon glyphicon-fire"> </span >  Registrar Medicamento</h3>
-<ul class="nav nav-pills">
+  <h2><span class="glyphicon glyphicon-fire"> </span > Informe Persona</h2>
+  <ul class="nav nav-pills">
   <li role="presentation"><a href="inicio.php">Inicio</a></li>
 </ul>
 </div>
- </nav>
-</header>
+    </nav>
+  </header>
 <div class=" container cuerpo">
 <section class="main">
 

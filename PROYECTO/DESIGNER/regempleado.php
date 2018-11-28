@@ -54,8 +54,14 @@ nav{
 
 
 </style>
-<link rel="stylesheet" type="text/css" href="../estilo/menu.css">
+<script type="text/javascript" src="../js/funciones.js"></script>
 <body>
+  <BR>
+  <BR>
+  <BR>
+  <BR>
+  <BR>
+  <BR>
    <header>
 
     <nav class="navbar navbar-fixed-top ">
@@ -73,7 +79,7 @@ nav{
   <div class=" container cuerpo">
   <div class=" container cuerpo">
  <section class="main">
-   <BR>
+   
 <div class="panel panel-primary">
 <div class="panel-heading"><h3>Empleado</h3></div>
 <div class="panel-body">
@@ -83,7 +89,7 @@ nav{
      <div class="form-group has-success	">
       <label class="control-label col-md-2">DNI:</label>
       <div class="col-md-7">
-       <input  class =" form-control" type="text" name="dni" placeholder="DNI" required >
+       <input  class =" form-control" type="text" name="dni" placeholder="DNI" onkeypress="return comprobardni(event);" maxlength="8" required >
      </div>
      </div>
     <div class="form-group has-success">
@@ -139,11 +145,15 @@ nav{
                           </div>
          </div >
          <div class="form-group has-success">
-          <label  class="control-label col-md-2" >Especialidad:</label>
-          <div class="col-md-7">
-            <input class="form-control" type="text" name="especialidad" placeholder="Especialidad" required>
-           </div>
-         </div>
+          <label  class="control-label col-md-2" for="">Especialidad:</label>
+                          <div class="col-md-7">
+                            <select  class="form-control" name="especialidad"  >
+                                      <option value="Quimico">Quimico</option>
+                                      <option value="Quimico-Farmacéutico">Quimico-Farmacéutico</option>
+                                      
+                              </select>
+                          </div>
+         </div >
          <div class="form-group has-success">
           <label  class="control-label col-md-2" >Usuario:</label>
           <div class="col-md-7">
