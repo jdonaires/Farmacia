@@ -82,36 +82,34 @@ nav{
                     {
                         ?>
                         <table class="pure-table pure-table-horizontal">
-                          <div class="form-group  ">
-                                    <label class="control-label col-md-2">Razonsocial:</label>
-                                    <div class="col-md-5 has-success">
-                                        <input class=" form-control " type="text" name="razonsocial" placeholder="Razonsocial" required>
-                                    </div>
 
-                                </div>
-                                <thead>
+                                <!-- <thead>
                                         <tr>
 
                                                 <th style="text-align:left;">Nombres</th>
                                                 <th style="text-align:left;">Apellidos</th>
                                                 <th style="text-align:left;">DNI</th>
                                         </tr>
-                                </thead>
+                                </thead> -->
                         <?php
                         foreach( $resultado as $r): //RECORREMOS EL ARRAY RESULTADO A TRAVES DE SUS CAMPOS
                             ?>
-                                <tr>
-
-                                        <td><?php echo $r->__GET('Nombre'); ?></td>
-                                        <td><?php echo $r->__GET('Apellido'); ?></td>
-                                        <td><?php echo $r->__GET('DNI'); ?></td>
-                                </tr>
+                               <div class="form-group  ">
+                                    <label class="control-label col-md-2">NOMBRE</label>
+                                    <label class="control-label col-md-2">APELLIDO</label>
+                                    <label class="control-label col-md-2">DNI</label>
+                                </div>
+                                <div class="form-group  ">
+                                    <label class="control-label col-md-2"><?php echo $r->__GET('Nombre'); ?></label>
+                                    <label class="control-label col-md-2"><?php echo $r->__GET('Apellido'); ?></label>
+                                    <label class="control-label col-md-2"><?php echo $r->__GET('DNI'); ?></label>
+                                </div>
                         <?php endforeach;
                     }
                     else
                     {
                         /*echo 'El Dni no se encuentra en la base de datos!';*/
-                        echo "<script> alert('El Dni no se encuentra en la base de datos!'); </script>";
+                        echo "El Dni no se encuentra en la base de datos!";
                     }
                     ?>
                     </table>
